@@ -29,6 +29,8 @@ public class PlayerAbilities : MonoBehaviour
     bool ability3 = false;
     bool ability4 = false;
 
+    bool dentro = false;
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -91,63 +93,84 @@ public class PlayerAbilities : MonoBehaviour
     */
     void GetAbility(InputAction.CallbackContext obj)
     {
-        if (AbilitiesNum < 4)
+        if (dentro)
         {
-            ability = Random.Range(1, 3);
-
-            switch (ability)
+            dentro = false;
+            if (AbilitiesNum < 4)
             {
-                case 5:
+                ability = Random.Range(1, 3);
 
-                    break;
-                case 4:
-                    /*
-                    mano.cadencia = mano.cadencia / 2;
-                    Debug.Log("3");
-                    */
-                    break;
-                case 3:
-                    /*
-                    if (gameObject.GetComponent<Invisibility>().enabled == false)
-                    {
-                        gameObject.GetComponent<Invisibility>().enabled = true;
-                        AbilitiesNum++;
-                    }
-                    else
-                    {
+                switch (ability)
+                {
+                    case 5:
+
+                        break;
+                    case 4:
+                        /*
+                        mano.cadencia = mano.cadencia / 2;
+                        Debug.Log("3");
+                        */
+                        break;
+                    case 3:
+                        /*
+                        if (gameObject.GetComponent<Invisibility>().enabled == false)
+                        {
+                            gameObject.GetComponent<Invisibility>().enabled = true;
+                            AbilitiesNum++;
+                        }
+                        else
+                        {
+                            input.CharacterControls.GetAbility.performed += GetAbility;
+                        }
+                        */
+                        break;
+                    case 2:
+                        if (gameObject.GetComponent<CreateShield>().enabled == false)
+                        {
+                            gameObject.GetComponent<CreateShield>().enabled = true;
+                            AbilitiesNum++;
+                        }
+                        else
+                        {
+                            input.CharacterControls.GetAbility.performed += GetAbility;
+                        }
+                        break;
+                    case 1:
+                        if (gameObject.GetComponent<Laser>().enabled == false)
+                        {
+                            gameObject.GetComponent<Laser>().enabled = true;
+                            AbilitiesNum++;
+                        }
+                        else
+                        {
+                            input.CharacterControls.GetAbility.performed += GetAbility;
+                        }
+                        Debug.Log("1");
+                        break;
+                    default:
                         input.CharacterControls.GetAbility.performed += GetAbility;
-                    }
-                    */
-                    break;
-                case 2:
-                    if (gameObject.GetComponent<CreateShield>().enabled == false)
-                    {
-                        gameObject.GetComponent<CreateShield>().enabled = true;
-                        AbilitiesNum++;
-                    }
-                    else
-                    {
-                        input.CharacterControls.GetAbility.performed += GetAbility;
-                    }
-                    break;
-                case 1:
-                    if (gameObject.GetComponent<Laser>().enabled == false)
-                    {
-                        gameObject.GetComponent<Laser>().enabled = true;
-                        AbilitiesNum++;
-                    }
-                    else
-                    {
-                        input.CharacterControls.GetAbility.performed += GetAbility;
-                    }
-                    Debug.Log("1");
-                    break;
-                default:
-                    input.CharacterControls.GetAbility.performed += GetAbility;
-                    break;
+                        break;
+                }
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pergamino"))
+        {
+            dentro = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Pergamino"))
+        {
+            dentro = false;
+        }
+    }
+
     /*
     private List<SkillType> unlockedSkillTypeList;
 

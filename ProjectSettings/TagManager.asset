@@ -9,6 +9,7 @@ TagManager:
   - Limit
   - Shield
   - LevelLoader
+  - Pergamino
   layers:
   - Default
   - TransparentFX
