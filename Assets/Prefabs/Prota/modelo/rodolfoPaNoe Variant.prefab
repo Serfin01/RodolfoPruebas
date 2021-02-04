@@ -48,6 +48,7 @@ MonoBehaviour:
   bala: {fileID: 3860963109481446490, guid: 9960ea6309c529c48b74e15467c5ba86, type: 3}
   Muzzle: {fileID: 3152312808854966011}
   cadencia: 0
+  _animator: {fileID: 3665401678767252363}
 --- !u!95 &3665401678767252363
 Animator:
   serializedVersion: 3

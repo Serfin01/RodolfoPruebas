@@ -5791,11 +5791,6 @@ PrefabInstance:
       objectReference: {fileID: 2028417227}
     - target: {fileID: 1384049456097661835, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
-      propertyPath: modelo
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384049456097661835, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 500223019}

@@ -62,7 +62,6 @@ public class MovePlayer : MonoBehaviour
 
         Vector3 localVelocity = rotatingElement.InverseTransformDirection(r_body.velocity);
         localVelocity.Normalize();
-        //localVelocity /= speed;
 
         Debug.Log("LocalVelocity " + localVelocity);
         _animator.SetFloat("velZ", localVelocity.z, 0.1f, Time.deltaTime);

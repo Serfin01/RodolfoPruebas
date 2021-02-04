@@ -304,12 +304,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.145
+      value: 0.263
       objectReference: {fileID: 0}
     - target: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.353
+      objectReference: {fileID: 0}
+    - target: {fileID: 358884175, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 562935878587934332}
     - target: {fileID: 195396125270206986, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
       propertyPath: m_RootOrder
@@ -490,7 +498,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9000000, guid: f7ff29d80f1792c4ca376e3621f45c9b, type: 3}
     - target: {fileID: 3836595938933301257, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
       propertyPath: m_RootOrder
@@ -692,6 +700,12 @@ Transform:
 --- !u!1 &271332540142113291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3950250451033151484, guid: cbd63cea7a2b5e847a472aa85667188f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3824097433873581559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &562935878587934332 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3665401678767252363, guid: cbd63cea7a2b5e847a472aa85667188f,
     type: 3}
   m_PrefabInstance: {fileID: 3824097433873581559}
   m_PrefabAsset: {fileID: 0}
