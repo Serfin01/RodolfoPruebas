@@ -43,7 +43,7 @@ public class Mano : MonoBehaviour
     {
         //rb = GetComponent<Rigidbody>();
         timer = 0;
-        cadencia = 0.01f;
+        cadencia = 100f;
     }
     
     void Update()
@@ -61,10 +61,9 @@ public class Mano : MonoBehaviour
             Muzzle.Play();
             
             timer = 0;
+
+            _animator.SetBool("shoot", true);
         }
-
-        _animator.SetBool("shoot", true);
-
     }
 
     
