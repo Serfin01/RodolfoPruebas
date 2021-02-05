@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
+[System.Serializable]
+public class Espacios
+{
+    public bool isfull = false;
+    public Image abilityImage;
+
+}
 
 public class PlayerAbilities : MonoBehaviour
 {
@@ -31,6 +40,10 @@ public class PlayerAbilities : MonoBehaviour
 
     bool dentro = false;
 
+    [SerializeField] Espacios[] espacios = new Espacios[4];
+
+    [SerializeField] Sprite[] abilitySprite = new Sprite[4];
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -55,6 +68,10 @@ public class PlayerAbilities : MonoBehaviour
         //activationTime = 0;
         gameObject.GetComponent<Laser>().enabled = false;
         gameObject.GetComponent<CreateShield>().enabled = false;
+        for (int i = 0; i < espacios.Length; i++)
+        {
+            espacios[i].abilityImage.sprite = null;
+        }
     }
 
     void Update()
@@ -129,6 +146,7 @@ public class PlayerAbilities : MonoBehaviour
                         {
                             gameObject.GetComponent<CreateShield>().enabled = true;
                             AbilitiesNum++;
+                            AddAbilityImage(0);
                         }
                         else
                         {
@@ -140,6 +158,7 @@ public class PlayerAbilities : MonoBehaviour
                         {
                             gameObject.GetComponent<Laser>().enabled = true;
                             AbilitiesNum++;
+                            AddAbilityImage(1);
                         }
                         else
                         {
@@ -168,6 +187,23 @@ public class PlayerAbilities : MonoBehaviour
         if (other.CompareTag("Pergamino"))
         {
             dentro = false;
+        }
+    }
+
+    void AddAbilityImage(int abilityNum)
+    {
+        for (int i = 0; i < espacios.Length; i++)
+        {
+            if (!espacios[i].isfull)
+            {
+                espacios[i].abilityImage.sprite = abilitySprite[abilityNum];
+                espacios[i].isfull = true;
+                break;
+            }
+        }
+        if (AbilitiesNum >= 4)
+        {
+            //tamo lleno bro
         }
     }
 

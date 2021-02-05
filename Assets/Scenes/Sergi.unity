@@ -272,6 +272,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 622250421121312449, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523246543006381643, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661996463962042855, guid: a39b4be4a1f02544abcf02b72dc7a88b,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -291,6 +301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186831830747504207, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3678988899872962222, guid: a39b4be4a1f02544abcf02b72dc7a88b,
         type: 3}
@@ -1457,6 +1472,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428222622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1523246543006381643, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+    type: 3}
+  m_PrefabInstance: {fileID: 30258010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498167136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1713,18 @@ AudioSource:
 --- !u!114 &500223019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3505754774576011924, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+    type: 3}
+  m_PrefabInstance: {fileID: 30258010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &649022019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6190210633018528362, guid: a39b4be4a1f02544abcf02b72dc7a88b,
     type: 3}
   m_PrefabInstance: {fileID: 30258010}
   m_PrefabAsset: {fileID: 0}
@@ -3225,6 +3264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader_Game
       objectReference: {fileID: 0}
+    - target: {fileID: 8934841377152513923, guid: 1551a1eb8505bbc4699a82787ed15818,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9027333253686006953, guid: 1551a1eb8505bbc4699a82787ed15818,
         type: 3}
       propertyPath: resolutionDropdown
@@ -3252,6 +3296,30 @@ MonoBehaviour:
 --- !u!114 &1345217797 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3193367520632658027, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+    type: 3}
+  m_PrefabInstance: {fileID: 30258010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368753997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2518176353019125998, guid: a39b4be4a1f02544abcf02b72dc7a88b,
+    type: 3}
+  m_PrefabInstance: {fileID: 30258010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1399987447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2186831830747504207, guid: a39b4be4a1f02544abcf02b72dc7a88b,
     type: 3}
   m_PrefabInstance: {fileID: 30258010}
   m_PrefabAsset: {fileID: 0}
@@ -5883,6 +5951,50 @@ PrefabInstance:
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 1071651279}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: espacios.Array.data[0].abilityImage
+      value: 
+      objectReference: {fileID: 1399987447}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: espacios.Array.data[1].abilityImage
+      value: 
+      objectReference: {fileID: 428222622}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: espacios.Array.data[2].abilityImage
+      value: 
+      objectReference: {fileID: 649022019}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: espacios.Array.data[3].abilityImage
+      value: 
+      objectReference: {fileID: 1368753997}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: abilitySprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: de5f7787cd6463b4990adf611086d61a,
+        type: 3}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: abilitySprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3,
+        type: 3}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: abilitySprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3,
+        type: 3}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: abilitySprite.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3,
+        type: 3}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
