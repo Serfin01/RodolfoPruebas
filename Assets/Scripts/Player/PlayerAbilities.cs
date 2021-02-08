@@ -44,6 +44,14 @@ public class PlayerAbilities : MonoBehaviour
 
     [SerializeField] Sprite[] abilitySprite = new Sprite[4];
 
+    enum AbilityImages
+    {
+        Shield,
+        Ray,
+        Invisibility,
+        AttackSpeed,
+    };
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -142,15 +150,20 @@ public class PlayerAbilities : MonoBehaviour
                         */
                         break;
                     case 2:
-                        if (gameObject.GetComponent<CreateShield>().enabled == false)
                         {
-                            gameObject.GetComponent<CreateShield>().enabled = true;
-                            AbilitiesNum++;
-                            AddAbilityImage(0);
-                        }
-                        else
-                        {
-                            input.CharacterControls.GetAbility.performed += GetAbility;
+                            CreateShield createShield = GetComponent<CreateShield>();
+                            if (createShield.enabled == false)
+                            {
+                                AbilitiesNum++;
+                                int slot = AddAbilityImage(AbilityImages.Shield);
+                                createShield.NotifyAddedAtSlot(slot);
+                                //createShield.enabled = true;
+
+                            }
+                            else
+                            {
+                                input.CharacterControls.GetAbility.performed += GetAbility;
+                            }
                         }
                         break;
                     case 1:
@@ -158,7 +171,7 @@ public class PlayerAbilities : MonoBehaviour
                         {
                             gameObject.GetComponent<Laser>().enabled = true;
                             AbilitiesNum++;
-                            AddAbilityImage(1);
+                            AddAbilityImage(AbilityImages.Ray);
                         }
                         else
                         {
@@ -190,21 +203,26 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
-    void AddAbilityImage(int abilityNum)
+    int AddAbilityImage(AbilityImages abilityImage)
     {
-        for (int i = 0; i < espacios.Length; i++)
+        int espacioSeleccionado = -1;
+
+        for (int i = 0; (i < espacios.Length) && (espacioSeleccionado == -1); i++)
         {
             if (!espacios[i].isfull)
             {
-                espacios[i].abilityImage.sprite = abilitySprite[abilityNum];
+                espacioSeleccionado = i;
+                espacios[i].abilityImage.sprite = abilitySprite[(int)abilityImage];
                 espacios[i].isfull = true;
-                break;
             }
         }
+
         if (AbilitiesNum >= 4)
         {
             //tamo lleno bro
         }
+
+        return espacioSeleccionado;
     }
 
     /*

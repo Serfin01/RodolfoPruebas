@@ -32,7 +32,7 @@ public class MovePlayer : MonoBehaviour
         input.CharacterControls.Movement.performed += ctx => {
             currentMovement = ctx.ReadValue<Vector2>();
             movementPressed = currentMovement.x != 0 || currentMovement.y != 0;
-            Debug.Log(ctx.ReadValueAsObject());
+            //Debug.Log(ctx.ReadValueAsObject());
         };
         input.CharacterControls.GodMode.performed += GodMode;
         input.CharacterControls.Dash.performed += Dash;
@@ -63,7 +63,7 @@ public class MovePlayer : MonoBehaviour
         Vector3 localVelocity = rotatingElement.InverseTransformDirection(r_body.velocity);
         localVelocity.Normalize();
 
-        Debug.Log("LocalVelocity " + localVelocity);
+        //Debug.Log("LocalVelocity " + localVelocity);
         _animator.SetFloat("velZ", localVelocity.z, 0.1f, Time.deltaTime);
         _animator.SetFloat("velX", localVelocity.x, 0.1f, Time.deltaTime);
     }

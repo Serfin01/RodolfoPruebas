@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Laser : MonoBehaviour
 {
@@ -15,19 +16,28 @@ public class Laser : MonoBehaviour
     [SerializeField] float iniCooldown;
     [SerializeField] Image imageCooldown;
 
+    PlayerInput input;
+
     void Start()
     {
         rayo.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
     }
 
+    private void Awake()
+    {
+        input = new PlayerInput();
+        //input.CharacterControls.Ability1.performed += UseSpell;
+    }
+
     void Update()
     {
+        /*
         if (Input.GetKeyDown("4"))
         {
             UseSpell();
         }
-
+        */
         if (canShoot == true)
         {
             rayo.SetActive(true);
@@ -58,7 +68,7 @@ public class Laser : MonoBehaviour
         }
     }
 
-    public void UseSpell()
+    public void UseSpell(InputAction.CallbackContext obj)
     {
         if (isCooldown)
         {
@@ -81,5 +91,36 @@ public class Laser : MonoBehaviour
         isCooldown = true;
         //overlayCooldown.GetComponent<Image>().fillAmount = 0.5;
         Debug.Log("off");
+    }
+
+    public void NotifyAddedAtSlot(int slot)
+    {
+        enabled = true;
+        //input = new PlayerInput();
+        switch (slot)
+        {
+            case 0:
+                input.CharacterControls.Ability1.performed += UseSpell;
+                break;
+            case 1:
+                input.CharacterControls.Ability2.performed += UseSpell;
+                break;
+            case 2:
+                input.CharacterControls.Ability3.performed += UseSpell;
+                break;
+            case 3:
+                input.CharacterControls.Ability4.performed += UseSpell;
+                break;
+        }
+    }
+
+    private void OnEnable()
+    {
+        input.CharacterControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.CharacterControls.Disable();
     }
 }

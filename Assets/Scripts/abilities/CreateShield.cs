@@ -36,17 +36,7 @@ public class CreateShield : MonoBehaviour
     private void Awake()
     {
         input = new PlayerInput();
-        input.CharacterControls.Ability1.performed += UseSpell;
-    }
-
-    private void OnEnable()
-    {
-        input.CharacterControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        input.CharacterControls.Disable();
+        //input.CharacterControls.Ability1.performed += UseSpell;
     }
 
     void Update()
@@ -117,5 +107,36 @@ public class CreateShield : MonoBehaviour
     {
         Instantiate(shield, hit.point, Quaternion.identity);
         cooldown = iniCooldown;
+    }
+
+    public void NotifyAddedAtSlot(int slot)
+    {
+        enabled = true;
+        //input = new PlayerInput();
+        switch (slot)
+        {
+            case 0:
+                input.CharacterControls.Ability1.performed += UseSpell;
+                break;
+            case 1:
+                input.CharacterControls.Ability2.performed += UseSpell;
+                break;
+            case 2:
+                input.CharacterControls.Ability3.performed += UseSpell;
+                break;
+            case 3:
+                input.CharacterControls.Ability4.performed += UseSpell;
+                break;
+        }
+    }
+
+    private void OnEnable()
+    {
+        input.CharacterControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.CharacterControls.Disable();
     }
 }
