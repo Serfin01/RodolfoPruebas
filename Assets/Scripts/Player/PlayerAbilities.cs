@@ -47,7 +47,7 @@ public class PlayerAbilities : MonoBehaviour
     enum AbilityImages
     {
         Shield,
-        Ray,
+        Rayo,
         Invisibility,
         AttackSpeed,
     };
@@ -56,7 +56,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         input = new PlayerInput();
         //input.CharacterControls.Invisibility.performed += InviCooldown;
-        input.CharacterControls.GetAbility.performed += GetAbility;
+        input.CharacterControls.GetAbility.performed += ctx => GetAbility();
     }
 
     private void OnEnable()
@@ -84,6 +84,7 @@ public class PlayerAbilities : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(dentro);
         /*
         activationTime += Time.deltaTime;
         
@@ -116,15 +117,17 @@ public class PlayerAbilities : MonoBehaviour
         modelo.SetActive(false);
     }
     */
-    void GetAbility(InputAction.CallbackContext obj)
+    void GetAbility()
     {
+        //Debug.Log("empezando");
         if (dentro)
         {
-            dentro = false;
+            
+            Debug.Log("empezando");
             if (AbilitiesNum < 4)
             {
                 ability = Random.Range(1, 3);
-
+                Debug.Log(ability);
                 switch (ability)
                 {
                     case 5:
@@ -158,29 +161,33 @@ public class PlayerAbilities : MonoBehaviour
                                 int slot = AddAbilityImage(AbilityImages.Shield);
                                 createShield.NotifyAddedAtSlot(slot);
                                 //createShield.enabled = true;
-
+                                Debug.Log("obtener escudo");
+                                dentro = false;
                             }
                             else
                             {
-                                input.CharacterControls.GetAbility.performed += GetAbility;
+                                Debug.Log("repetir escudo");
+                                GetAbility();
                             }
                         }
                         break;
                     case 1:
-                        if (gameObject.GetComponent<Laser>().enabled == false)
                         {
-                            gameObject.GetComponent<Laser>().enabled = true;
-                            AbilitiesNum++;
-                            AddAbilityImage(AbilityImages.Ray);
+                            Laser rayo = GetComponent<Laser>();
+                            if (rayo.enabled == false)
+                            {
+                                AbilitiesNum++;
+                                int slot = AddAbilityImage(AbilityImages.Rayo);
+                                rayo.NotifyAddedAtSlot(slot);
+                                Debug.Log("obtener rayo");
+                                dentro = false;
+                            }
+                            else
+                            {
+                                Debug.Log("repetir rayo");
+                                GetAbility();
+                            }
                         }
-                        else
-                        {
-                            input.CharacterControls.GetAbility.performed += GetAbility;
-                        }
-                        Debug.Log("1");
-                        break;
-                    default:
-                        input.CharacterControls.GetAbility.performed += GetAbility;
                         break;
                 }
             }

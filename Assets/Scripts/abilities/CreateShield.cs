@@ -74,7 +74,7 @@ public class CreateShield : MonoBehaviour
         }
     }
 
-    public void UseSpell(InputAction.CallbackContext obj)
+    public void UseSpell()
     {
         if (Physics.Raycast(myRay, out hit))
         {
@@ -116,16 +116,16 @@ public class CreateShield : MonoBehaviour
         switch (slot)
         {
             case 0:
-                input.CharacterControls.Ability1.performed += UseSpell;
+                input.CharacterControls.Ability1.performed += ctx => UseSpell();
                 break;
             case 1:
-                input.CharacterControls.Ability2.performed += UseSpell;
+                input.CharacterControls.Ability2.performed += ctx => UseSpell();
                 break;
             case 2:
-                input.CharacterControls.Ability3.performed += UseSpell;
+                input.CharacterControls.Ability3.performed += ctx => UseSpell();
                 break;
             case 3:
-                input.CharacterControls.Ability4.performed += UseSpell;
+                input.CharacterControls.Ability4.performed += ctx => UseSpell();
                 break;
         }
     }
