@@ -43,7 +43,7 @@ public class Mano : MonoBehaviour
     {
         //rb = GetComponent<Rigidbody>();
         timer = 0;
-        cadencia = 100f;
+        cadencia = 0.5f;
     }
     
     void Update()
@@ -62,7 +62,7 @@ public class Mano : MonoBehaviour
             
             timer = 0;
 
-            _animator.SetBool("shoot", true);
+            _animator.SetTrigger("shoot");
         }
     }
 
