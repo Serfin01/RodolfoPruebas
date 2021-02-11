@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
+    [SerializeField] Transform planePosition;
+
     public int sensivility = 10;
     void Update()
     {
-        Plane plane = new Plane(Vector3.up, transform.position);
+        Plane plane = new Plane(Vector3.up, planePosition.position);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         float hitDist = 0.0f;

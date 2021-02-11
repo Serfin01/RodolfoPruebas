@@ -76,6 +76,8 @@ public class PlayerAbilities : MonoBehaviour
         //activationTime = 0;
         gameObject.GetComponent<Laser>().enabled = false;
         gameObject.GetComponent<CreateShield>().enabled = false;
+        gameObject.GetComponent<Invisibility>().enabled = false;
+        gameObject.GetComponent<AttackSpeed>().enabled = false;
         for (int i = 0; i < espacios.Length; i++)
         {
             espacios[i].abilityImage.sprite = null;
@@ -126,7 +128,7 @@ public class PlayerAbilities : MonoBehaviour
             Debug.Log("empezando");
             if (AbilitiesNum < 4)
             {
-                ability = Random.Range(1, 3);
+                ability = Random.Range(1, 5);
                 Debug.Log(ability);
                 switch (ability)
                 {
@@ -134,23 +136,40 @@ public class PlayerAbilities : MonoBehaviour
 
                         break;
                     case 4:
-                        /*
-                        mano.cadencia = mano.cadencia / 2;
-                        Debug.Log("3");
-                        */
+                        {
+                            AttackSpeed attSpeed = GetComponent<AttackSpeed>();
+                            if (attSpeed.enabled == false)
+                            {
+                                AbilitiesNum++;
+                                int slot = AddAbilityImage(AbilityImages.Invisibility);
+                                attSpeed.NotifyAddedAtSlot(slot);
+                                Debug.Log("obtener speed");
+                                dentro = false;
+                            }
+                            else
+                            {
+                                Debug.Log("repetir speed");
+                                GetAbility();
+                            }
+                        }
                         break;
                     case 3:
-                        /*
-                        if (gameObject.GetComponent<Invisibility>().enabled == false)
                         {
-                            gameObject.GetComponent<Invisibility>().enabled = true;
-                            AbilitiesNum++;
+                            Invisibility invi = GetComponent<Invisibility>();
+                            if (invi.enabled == false)
+                            {
+                                AbilitiesNum++;
+                                int slot = AddAbilityImage(AbilityImages.Invisibility);
+                                invi.NotifyAddedAtSlot(slot);
+                                Debug.Log("obtener invi");
+                                dentro = false;
+                            }
+                            else
+                            {
+                                Debug.Log("repetir invi");
+                                GetAbility();
+                            }
                         }
-                        else
-                        {
-                            input.CharacterControls.GetAbility.performed += GetAbility;
-                        }
-                        */
                         break;
                     case 2:
                         {

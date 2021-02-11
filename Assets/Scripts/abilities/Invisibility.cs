@@ -22,7 +22,6 @@ public class Invisibility : MonoBehaviour
     private void Awake()
     {
         input = new PlayerInput();
-        input.CharacterControls.Invisibility.performed += UseSpell;
     }
 
     private void OnEnable()
@@ -108,13 +107,34 @@ public class Invisibility : MonoBehaviour
         }
     }
 
-    public void UseSpell(InputAction.CallbackContext obj)
+    public void UseSpell()
     {
         if (!isCooldown)
         {
             StartCoroutine(InviOn());
             cooldown = iniCooldown;
             invi = true;
+        }
+    }
+
+    public void NotifyAddedAtSlot(int slot)
+    {
+        enabled = true;
+        //input = new PlayerInput();
+        switch (slot)
+        {
+            case 0:
+                input.CharacterControls.Ability1.performed += ctx => UseSpell();
+                break;
+            case 1:
+                input.CharacterControls.Ability2.performed += ctx => UseSpell();
+                break;
+            case 2:
+                input.CharacterControls.Ability3.performed += ctx => UseSpell();
+                break;
+            case 3:
+                input.CharacterControls.Ability4.performed += ctx => UseSpell();
+                break;
         }
     }
 
