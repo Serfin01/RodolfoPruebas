@@ -141,7 +141,7 @@ public class PlayerAbilities : MonoBehaviour
                             if (attSpeed.enabled == false)
                             {
                                 AbilitiesNum++;
-                                int slot = AddAbilityImage(AbilityImages.Invisibility);
+                                int slot = AddAbilityImage(AbilityImages.AttackSpeed);
                                 attSpeed.NotifyAddedAtSlot(slot);
                                 Debug.Log("obtener speed");
                                 dentro = false;
