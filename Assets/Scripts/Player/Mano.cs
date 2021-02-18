@@ -12,6 +12,7 @@ public class Mano : MonoBehaviour
     [SerializeField] GameObject bala;
     private float timer;
     [SerializeField] ParticleSystem Muzzle;
+    [SerializeField] GameObject granada;
     /*
     Vector3 mousePos;
     [SerializeField] Camera cam;
@@ -25,6 +26,7 @@ public class Mano : MonoBehaviour
     {
         input = new PlayerInput();
         input.CharacterControls.Shoot.performed += Disparar;
+        input.CharacterControls.Invisibility.performed += Granada;
         //input.CharacterControls.Shoot.started += IniciarRafaga;
         //input.CharacterControls.Shoot.canceled += FinalizarRafaga;
     }
@@ -65,8 +67,22 @@ public class Mano : MonoBehaviour
             _animator.SetTrigger("shoot");
         }
     }
+    void Granada(InputAction.CallbackContext obj)
+    {
+        Plane plane = new Plane(Vector3.up, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-    
+        float hitDist = 0.0f;
+
+
+        if (plane.Raycast(ray, out hitDist))
+        {
+            Vector3 targetPoint = ray.GetPoint(hitDist);
+            Instantiate(granada, transform.position, transform.rotation);
+        }
+
+    }
+
     /*
     void FixedUpdate()
     {

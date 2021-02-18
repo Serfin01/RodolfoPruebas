@@ -6514,6 +6514,12 @@ PrefabInstance:
       propertyPath: planePosition
       value: 
       objectReference: {fileID: 1776065008}
+    - target: {fileID: 3824097434097723064, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: granada
+      value: 
+      objectReference: {fileID: 7225208911139569613, guid: 376f512ab1ad5ac4898673ad1aea2b17,
+        type: 3}
     - target: {fileID: 3824097434097723065, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.y
