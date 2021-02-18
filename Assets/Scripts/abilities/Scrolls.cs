@@ -5,6 +5,41 @@ using System;
 
 public class Scrolls : MonoBehaviour
 {
+    [SerializeField] GameObject[] typeScrolls;
+    private int currenIndex = 0;
+
+    private Type myAbility;
+    enum Abilities
+    {
+        Shield,
+        Rayo,
+        Invisibility,
+        AttackSpeed,
+        None,
+    }
+
+    private Abilities currentAbility = Abilities.None;
+    private Dictionary<int, Type> abilities = new Dictionary<int, Type>()
+    {
+        /////Preguntar joanliqui como funciona bien el diccionario que el rayo no rula y el resto los pilla pero por script creo
+        /*
+        {1, typeof(Shield) },
+        {2, typeof(Rayo) },
+        {3, typeof(Invisibility) },
+        {4, typeof(AttackSpeed) },
+        */
+    };
+
+    void Start()
+    {
+        int newIndex = UnityEngine.Random.Range(0, typeScrolls.Length);
+        currenIndex = newIndex;
+
+        typeScrolls[currenIndex].SetActive(false);
+        typeScrolls[currenIndex].SetActive(true);
+
+        myAbility = abilities[currenIndex];
+    }
     /*
     [SerializeField] GameObject[] typeScrolls;
     //private int random;
