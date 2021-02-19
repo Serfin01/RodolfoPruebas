@@ -68,7 +68,7 @@ public class Laser : MonoBehaviour
         }
     }
 
-    public void UseSpell()
+    protected virtual void UseSpell()
     {
         if (isCooldown)
         {

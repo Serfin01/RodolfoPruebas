@@ -74,7 +74,7 @@ public class CreateShield : MonoBehaviour
         }
     }
 
-    public void UseSpell()
+    protected virtual void UseSpell()
     {
         if (Physics.Raycast(myRay, out hit))
         {

@@ -44,7 +44,9 @@ public class PlayerAbilities : MonoBehaviour
 
     [SerializeField] Sprite[] abilitySprite = new Sprite[4];
 
-    enum AbilityImages
+    Scrolls closeScroll;
+
+    public enum AbilityImages
     {
         Shield,
         Rayo,
@@ -74,10 +76,10 @@ public class PlayerAbilities : MonoBehaviour
         rayo.SetActive(false);
         //invi = false;
         //activationTime = 0;
-        gameObject.GetComponent<Laser>().enabled = false;
-        gameObject.GetComponent<CreateShield>().enabled = false;
-        gameObject.GetComponent<Invisibility>().enabled = false;
-        gameObject.GetComponent<AttackSpeed>().enabled = false;
+        //gameObject.GetComponent<Laser>().enabled = false;
+        //gameObject.GetComponent<CreateShield>().enabled = false;
+        //gameObject.GetComponent<Invisibility>().enabled = false;
+        //gameObject.GetComponent<AttackSpeed>().enabled = false;
         for (int i = 0; i < espacios.Length; i++)
         {
             espacios[i].abilityImage.sprite = null;
@@ -121,6 +123,14 @@ public class PlayerAbilities : MonoBehaviour
     */
     void GetAbility()
     {
+        if (dentro)
+        {
+            if(closeScroll != null)
+            {
+                closeScroll.AddScroll(gameObject);
+            }
+        }
+        /*
         //Debug.Log("empezando");
         if (dentro)
         {
@@ -211,6 +221,7 @@ public class PlayerAbilities : MonoBehaviour
                 }
             }
         }
+        */
     }
 
     private void OnTriggerEnter(Collider other)
@@ -229,7 +240,7 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
-    int AddAbilityImage(AbilityImages abilityImage)
+    public int AddAbilityImage(int currentAbility)
     {
         int espacioSeleccionado = -1;
 
@@ -238,7 +249,7 @@ public class PlayerAbilities : MonoBehaviour
             if (!espacios[i].isfull)
             {
                 espacioSeleccionado = i;
-                espacios[i].abilityImage.sprite = abilitySprite[(int)abilityImage];
+                espacios[i].abilityImage.sprite = abilitySprite[currentAbility];
                 espacios[i].isfull = true;
             }
         }

@@ -5,95 +5,48 @@ using System;
 
 public class Scrolls : MonoBehaviour
 {
-    [SerializeField] GameObject[] typeScrolls;
-    private int currenIndex = 0;
-
-    private Type myAbility;
-    enum Abilities
+    public int currentAbility;
+    private Dictionary<int, Type> abilitiesLibrary = new Dictionary<int, Type>()
     {
-        Shield,
-        Rayo,
-        Invisibility,
-        AttackSpeed,
-        None,
-    }
-
-    private Abilities currentAbility = Abilities.None;
-    private Dictionary<int, Type> abilities = new Dictionary<int, Type>()
-    {
-        /////Preguntar joanliqui como funciona bien el diccionario que el rayo no rula y el resto los pilla pero por script creo
-        /*
-        {1, typeof(Shield) },
-        {2, typeof(Rayo) },
+        {1, typeof(Shield)},
+        {2, typeof(Laser) },
         {3, typeof(Invisibility) },
         {4, typeof(AttackSpeed) },
-        */
     };
 
     void Start()
     {
-        int newIndex = UnityEngine.Random.Range(0, typeScrolls.Length);
-        currenIndex = newIndex;
-
-        typeScrolls[currenIndex].SetActive(false);
-        typeScrolls[currenIndex].SetActive(true);
-
-        myAbility = abilities[currenIndex];
-    }
-    /*
-    [SerializeField] GameObject[] typeScrolls;
-    //private int random;
-
-    private int currenIndex = 0;
-    // Start is called before the first frame update
-
-    private Type myAbility;
-
-    enum Abilities
-    {
-        A1, A2, A3, None
+        currentAbility = UnityEngine.Random.Range(0, abilitiesLibrary.Count);
     }
 
-    private Abilities currentAbility = Abilities.None;
-    
-    private Dictionary<int, Type> abilities = new Dictionary<int, Type>()
+    public void AddScroll(GameObject player)
     {
-        //{1, typeof(A1) },
-        //{2, typeof(A2) },
-        //{3, typeof(A3) },
+        Type scrollType = abilitiesLibrary[currentAbility];
 
-    };
+        player.AddComponent(scrollType);
 
-    void Start()
-    {
-        int newIndex = UnityEngine.Random.Range(0, typeScrolls.Length);
-        typeScrolls[currenIndex].SetActive(false);
-        currenIndex = newIndex;
-        typeScrolls[currenIndex].SetActive(true);
+        PlayerAbilities playerAbilities = GetComponent<PlayerAbilities>();
+        int slot = playerAbilities.AddAbilityImage(currentAbility);
 
-        int random = UnityEngine.Random.Range(0, abilities.Count);
-        myAbility = abilities[random];
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        CreateShield createShield = GetComponent<CreateShield>();
+        Laser laser = GetComponent<Laser>();
+        Invisibility invisibility = GetComponent<Invisibility>();
+        AttackSpeed attackSpeed = GetComponent<AttackSpeed>();
+        switch (currentAbility)
         {
-            other.gameObject.AddComponent(myAbility);
+            case 1:
+                createShield.NotifyAddedAtSlot(slot);
+                break;
+            case 2:
+                laser.NotifyAddedAtSlot(slot);
+                break;
+            case 3:
+                invisibility.NotifyAddedAtSlot(slot);
+                break;
+            case 4:
+                attackSpeed.NotifyAddedAtSlot(slot);
+                break;
         }
     }
-
-    
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-        //random = Random.Range(0, typeScrolls.Length);
-        int newIndex = Random.Range(0, typeScrolls.Length);
-        typeScrolls[currenIndex].SetActive(false);
-        currenIndex = newIndex;
-        typeScrolls[currenIndex].SetActive(true);
-        //Instantiate(typeScrolls[random], transform.position, transform.rotation);
-    }
-    */
+    //rayo.NotifyAddedAtSlot(slot);
 }

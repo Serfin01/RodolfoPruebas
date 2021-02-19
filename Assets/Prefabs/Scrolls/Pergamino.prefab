@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6314869747842163208}
   - component: {fileID: 6314869747842163209}
-  - component: {fileID: 6314869747842163210}
+  - component: {fileID: 9122126654548086236}
   m_Layer: 0
   m_Name: Pergamino
   m_TagString: Pergamino
@@ -360,7 +360,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6314869747842163210
+--- !u!114 &9122126654548086236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -369,6 +369,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6314869747842163211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426d3829038cbe0438e151fd3d53cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: c73bb1f78a2ebd74386c285ab7ad0c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

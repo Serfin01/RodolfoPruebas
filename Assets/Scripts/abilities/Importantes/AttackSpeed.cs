@@ -44,7 +44,7 @@ public class AttackSpeed : MonoBehaviour
         }
     }
 
-    public void UseSpell()
+    protected virtual void UseSpell()
     {
         Mano mano = GetComponentInChildren<Mano>();
         mano.cadencia = mano.cadencia / 2;
