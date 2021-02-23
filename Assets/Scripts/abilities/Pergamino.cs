@@ -30,7 +30,7 @@ public class Pergamino : MonoBehaviour
     {
         if (dentro)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 

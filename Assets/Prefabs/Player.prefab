@@ -281,10 +281,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 4.2
   m_AngularDrag: 0.04
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &8749059508418322397
 MonoBehaviour:
@@ -335,6 +335,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   transition: {fileID: 0}
+  _animator: {fileID: 562935878587934332}
   transitionTime: 1
 --- !u!114 &8749059508418322393
 MonoBehaviour:
@@ -362,8 +363,8 @@ MonoBehaviour:
   abilitySprite:
   - {fileID: 21300000, guid: de5f7787cd6463b4990adf611086d61a, type: 3}
   - {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3, type: 3}
-  - {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3, type: 3}
-  - {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3, type: 3}
+  - {fileID: 21300000, guid: 63a1b92cbb132b64d974e64a49ca73e9, type: 3}
+  - {fileID: 21300000, guid: 353f9860fb5f21d4a99166577c929b65, type: 3}
 --- !u!114 &3776611780559093936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDamaged: 1
-  modelo: {fileID: 0}
+  modelo: {fileID: 4389904953565721927}
   iniCooldown: 2
   imageCooldown: {fileID: 0}
   inviDuration: 2
@@ -566,7 +567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.353
+      value: 0.3449
       objectReference: {fileID: 0}
     - target: {fileID: 358884175, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
       propertyPath: _animator
@@ -576,10 +577,24 @@ PrefabInstance:
       propertyPath: cadencia
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 358884175, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
+      propertyPath: granada
+      value: 
+      objectReference: {fileID: 7225208911139569613, guid: 376f512ab1ad5ac4898673ad1aea2b17,
+        type: 3}
+    - target: {fileID: 1431794324, guid: cbd63cea7a2b5e847a472aa85667188f, type: 3}
+      propertyPath: planePosition
+      value: 
+      objectReference: {fileID: 3824097434097723065}
     - target: {fileID: 195396125270206986, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195396125270206986, guid: cbd63cea7a2b5e847a472aa85667188f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.042
       objectReference: {fileID: 0}
     - target: {fileID: 398163981161500904, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
@@ -790,7 +805,7 @@ PrefabInstance:
     - target: {fileID: 3950250451033151484, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4664149008705023760, guid: cbd63cea7a2b5e847a472aa85667188f,
         type: 3}
@@ -975,9 +990,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3824097433873581559}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3824097434097723065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3824097433873581559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &271332540142113291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3950250451033151484, guid: cbd63cea7a2b5e847a472aa85667188f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3824097433873581559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4389904953565721927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 720011964055007408, guid: cbd63cea7a2b5e847a472aa85667188f,
     type: 3}
   m_PrefabInstance: {fileID: 3824097433873581559}
   m_PrefabAsset: {fileID: 0}

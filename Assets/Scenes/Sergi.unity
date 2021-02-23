@@ -2025,18 +2025,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8749059507597749887}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &886789852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4389904953565721927, guid: 3d07f696c9f56744cbdd9e13677e4588,
-    type: 3}
-  m_PrefabInstance: {fileID: 8749059507597749887}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &886789854 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 562935878587934332, guid: 3d07f696c9f56744cbdd9e13677e4588,
-    type: 3}
-  m_PrefabInstance: {fileID: 8749059507597749887}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &912689314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,12 +4818,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1628253615}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1776065008 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3824097434097723065, guid: 3d07f696c9f56744cbdd9e13677e4588,
-    type: 3}
-  m_PrefabInstance: {fileID: 8749059507597749887}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805437279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,37 +6501,16 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2028417227}
+    - target: {fileID: 271332540142113291, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1384049456097661835, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 500223019}
-    - target: {fileID: 1384049456097661835, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: modelo
-      value: 
-      objectReference: {fileID: 886789852}
-    - target: {fileID: 3824097433023149923, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: planePosition
-      value: 
-      objectReference: {fileID: 1776065008}
-    - target: {fileID: 3824097434097723064, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: granada
-      value: 
-      objectReference: {fileID: 7225208911139569613, guid: 376f512ab1ad5ac4898673ad1aea2b17,
-        type: 3}
-    - target: {fileID: 3824097434097723065, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3449
-      objectReference: {fileID: 0}
-    - target: {fileID: 4010389392009162749, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.042
-      objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322389, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: imageCooldown
@@ -6580,18 +6541,6 @@ PrefabInstance:
       propertyPath: espacios.Array.data[3].abilityImage
       value: 
       objectReference: {fileID: 1368753997}
-    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: abilitySprite.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 63a1b92cbb132b64d974e64a49ca73e9,
-        type: 3}
-    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: abilitySprite.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 353f9860fb5f21d4a99166577c929b65,
-        type: 3}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6647,21 +6596,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8749059508418322395, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749059508418322395, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749059508418322395, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322397, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: canvas
@@ -6677,11 +6611,6 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 326770372}
-    - target: {fileID: 8749059508418322398, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 886789854}
     - target: {fileID: 8749059508418322399, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_Name
