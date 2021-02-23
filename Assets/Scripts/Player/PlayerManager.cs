@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : Player
 {
     public Animator transition;
+    public Animator _animator;
     public int transitionTime;
     
     void Update()
@@ -39,6 +40,7 @@ public class PlayerManager : Player
         if (other.CompareTag("BulletEnemy"))
         {
             FindObjectOfType<AudioManager>().Play("hitted");
+            _animator.SetTrigger("hitted");
 
         }
     }
