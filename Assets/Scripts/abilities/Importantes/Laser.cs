@@ -9,17 +9,18 @@ public class Laser : MonoBehaviour
     [SerializeField] GameObject rayo;
 
     private bool canShoot;
-    [SerializeField] float shotDuration;
+    [SerializeField] float shotDuration = 2;
 
     private bool isCooldown = false;
     private float cooldown;
-    [SerializeField] float iniCooldown;
+    [SerializeField] float iniCooldown = 2;
     [SerializeField] Image imageCooldown;
 
     PlayerInput input;
 
     void Start()
     {
+        rayo = GameObject.Find("Laser");
         rayo.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
     }

@@ -15,9 +15,9 @@ public class Invisibility : MonoBehaviour
 
     private bool isCooldown = false;
     private float cooldown;
-    [SerializeField] float iniCooldown;
+    [SerializeField] float iniCooldown = 2;
     [SerializeField] Image imageCooldown;
-    [SerializeField] float inviDuration;
+    [SerializeField] float inviDuration = 2;
 
     private void Awake()
     {
@@ -36,6 +36,7 @@ public class Invisibility : MonoBehaviour
 
     void Start()
     {
+        modelo = GameObject.Find("RodolfoBasicAnim");
         imageCooldown.fillAmount = 0.0f;
     }
 

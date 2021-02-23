@@ -5,6 +5,9 @@ using System;
 
 public class Scrolls : MonoBehaviour
 {
+    PlayerInput input;
+
+    GameObject playerTr;
     public int currentAbility;
     private Dictionary<int, Type> abilitiesLibrary = new Dictionary<int, Type>()
     {
@@ -14,9 +17,26 @@ public class Scrolls : MonoBehaviour
         {4, typeof(AttackSpeed) },
     };
 
+    private void Awake()
+    {
+        input = new PlayerInput();
+        input.CharacterControls.GetAbility.performed += ctx => AddScroll(playerTr);
+    }
+
+    private void OnEnable()
+    {
+        input.CharacterControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.CharacterControls.Disable();
+    }
+
     void Start()
     {
         currentAbility = UnityEngine.Random.Range(0, abilitiesLibrary.Count);
+        playerTr = GameObject.Find("Player");
     }
 
     public void AddScroll(GameObject player)
@@ -24,7 +44,7 @@ public class Scrolls : MonoBehaviour
         Type scrollType = abilitiesLibrary[currentAbility];
 
         player.AddComponent(scrollType);
-
+        /*
         PlayerAbilities playerAbilities = GetComponent<PlayerAbilities>();
         int slot = playerAbilities.AddAbilityImage(currentAbility);
 
@@ -47,6 +67,7 @@ public class Scrolls : MonoBehaviour
                 attackSpeed.NotifyAddedAtSlot(slot);
                 break;
         }
+        */
     }
     //rayo.NotifyAddedAtSlot(slot);
 }
