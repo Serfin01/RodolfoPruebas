@@ -20,7 +20,8 @@ public class Laser : MonoBehaviour
 
     void Start()
     {
-        rayo = GameObject.Find("Laser");
+        //rayo = GameObject.Find("Laser");
+        rayo = GameObject.FindGameObjectWithTag("Laser");
         //rayo.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
     }

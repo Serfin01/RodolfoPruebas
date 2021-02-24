@@ -10,6 +10,7 @@ TagManager:
   - Shield
   - LevelLoader
   - Pergamino
+  - Laser
   layers:
   - Default
   - TransparentFX

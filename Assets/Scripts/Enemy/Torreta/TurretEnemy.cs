@@ -75,7 +75,7 @@ public class TurretEnemy : Enemy
             FindObjectOfType<AudioManager>().Play("enemyDeath");
         }
     }
-
+    //que pida bool canShoot y le meto el if correspondiente
     void Shoot()
     {
         //Debug.Log("shoot");

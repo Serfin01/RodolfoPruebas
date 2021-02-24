@@ -14,6 +14,7 @@ public class TurretPatrol : MonoBehaviour
     private Vector3 point = new Vector3();
 
     bool canMove = true;
+    public bool canShoot = true;
     [SerializeField] Collider colTurret;
 
     public AudioSource audio;
@@ -50,6 +51,7 @@ public class TurretPatrol : MonoBehaviour
         {
             waitTime -= Time.deltaTime;
             canMove = false;
+            canShoot = true;
         }
 
         if(waitTime <= 0)
@@ -60,6 +62,7 @@ public class TurretPatrol : MonoBehaviour
                 target = 0;
             }
             canMove = true;
+            canShoot = false;
             waitTime = startWaitTime;
         }
 
