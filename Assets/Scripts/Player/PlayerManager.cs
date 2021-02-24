@@ -7,8 +7,10 @@ public class PlayerManager : Player
 {
     public Animator transition;
     public Animator _animator;
+    public Animator musicInPause;
     public int transitionTime;
-    
+    public static bool isGamePaused = false;
+
     void Update()
     {
         if (currentHealth <= 0)
@@ -19,6 +21,18 @@ public class PlayerManager : Player
             //Destroy(this.gameObject);
         }
         healthBar.SetHealth(currentHealth);
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isGamePaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 
     public void LoadNextLevel()
@@ -43,5 +57,17 @@ public class PlayerManager : Player
             _animator.SetTrigger("hitted");
 
         }
+    }
+
+    public void ResumeGame()
+    {
+        isGamePaused = false;
+        musicInPause.SetBool("Pause", false);
+    }
+
+    void PauseGame()
+    {
+        musicInPause.SetBool("Pause", true);
+        isGamePaused = true;
     }
 }

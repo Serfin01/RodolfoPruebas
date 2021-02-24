@@ -1737,6 +1737,11 @@ PrefabInstance:
       propertyPath: m_MaxValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 381182796685517499, guid: e9698639abf9626418d96bedb4e35eec,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e5652ad7543ffde48a384975c1bb3cfb, type: 3}
     - target: {fileID: 1322548943253972337, guid: e9698639abf9626418d96bedb4e35eec,
         type: 3}
       propertyPath: m_AnchorMin.x

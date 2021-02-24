@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 498167138}
   - component: {fileID: 498167137}
   - component: {fileID: 498167139}
+  - component: {fileID: 7090683900473336882}
   m_Layer: 0
   m_Name: MainTheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &498167138
 Transform:
   m_ObjectHideFlags: 0
@@ -43,16 +44,16 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -815520089167562485, guid: 2b606f523d4dc1c4eaf76528debfc17b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: ba13c1513fce787489da4c7dad92d5b8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dcd8203a9fc04e540a0285285a912d62, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.414
+  m_Volume: 0.344
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -226,6 +227,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7090683900473336882
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498167136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ad82b30a6446f24d9e55b1496deda21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8749059508418322399
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +356,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   transition: {fileID: 0}
   _animator: {fileID: 562935878587934332}
+  musicInPause: {fileID: 7090683900473336882}
   transitionTime: 1
 --- !u!114 &8749059508418322393
 MonoBehaviour:

@@ -761,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211665635
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &298170179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.77
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &298170181
 BoxCollider:
@@ -2068,7 +2068,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: hitted
     clip: {fileID: 8300000, guid: f6f0e5f08f5e3c8499fbf6eba08844e8, type: 3}
-    volume: 0.767
+    volume: 0.838
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.232
@@ -2086,7 +2086,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: enemyHitted
     clip: {fileID: 8300000, guid: 29e0864f9a0cb42459b428ee5a3867d3, type: 3}
-    volume: 0.638
+    volume: 0.869
     volumeVariance: 0
     pitch: 3
     pitchVariance: 0.128
@@ -6309,6 +6309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: capy
       objectReference: {fileID: 0}
+    - target: {fileID: 7111184906088781409, guid: 94a41598994ae8d4291a13095c2519dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7111184906088781414, guid: 94a41598994ae8d4291a13095c2519dd,
         type: 3}
       propertyPath: targetPoints.Array.data[0]
@@ -6501,11 +6506,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2028417227}
-    - target: {fileID: 271332540142113291, guid: 3d07f696c9f56744cbdd9e13677e4588,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1384049456097661835, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: imageCooldown
