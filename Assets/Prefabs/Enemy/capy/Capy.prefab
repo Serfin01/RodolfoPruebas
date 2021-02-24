@@ -280,6 +280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CapybaraExp
       objectReference: {fileID: 0}
+    - target: {fileID: 4713066464038261412, guid: f1950bb4b9c7c404fb66219b011fdbf3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342391033541871646, guid: f1950bb4b9c7c404fb66219b011fdbf3,
         type: 3}
       propertyPath: m_LocalPosition.x

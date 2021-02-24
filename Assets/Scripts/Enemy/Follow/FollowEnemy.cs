@@ -10,6 +10,7 @@ public class FollowEnemy : Enemy
     [SerializeField] Vector3 range;
     [SerializeField] float gzRange = 10;
     public int damage;
+    public Animator _animator;
 
     // Use this for initialization
     void Start()
@@ -30,7 +31,7 @@ public class FollowEnemy : Enemy
         
         if(health <= 0)
         {
-            GameObject.Destroy(gameObject);
+            //GameObject.Destroy(gameObject);
         }
         
     }
@@ -53,6 +54,7 @@ public class FollowEnemy : Enemy
         {
             Damage();
             other.GetComponent<Player>().Damaged(damage);
+            _animator.SetTrigger("Punch");
         }
     }
 }
