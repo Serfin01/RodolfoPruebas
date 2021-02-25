@@ -39,6 +39,11 @@ public abstract class BaseAbility : MonoBehaviour
         
     }
 
+    void Start()
+    {
+        imageCooldown.fillAmount = 0.0f;
+    }
+
     void Update()
     {
         if (isCooldown)
