@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691993540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cc1935f961a3b841b90bfc7d3dbbc56, type: 3}
   m_Name: 
@@ -6685,6 +6685,12 @@ PrefabInstance:
       propertyPath: espacios.Array.data[3].abilityImage
       value: 
       objectReference: {fileID: 1368753997}
+    - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: abilityTest
+      value: 
+      objectReference: {fileID: 11400000, guid: d1d9230d00120444da6c0ee0eaba3bdf,
+        type: 2}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -46,6 +46,8 @@ public class PlayerAbilities : MonoBehaviour
 
     Scrolls closeScroll;
 
+    public Spell abilityTest;
+
     public enum AbilityImages
     {
         Shield,
@@ -59,6 +61,7 @@ public class PlayerAbilities : MonoBehaviour
         input = new PlayerInput();
         //input.CharacterControls.Invisibility.performed += InviCooldown;
         input.CharacterControls.GetAbility.performed += ctx => GetAbility();
+        input.CharacterControls.Ability1.performed += ctx => Test();
     }
 
     private void OnEnable()
@@ -273,4 +276,9 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
     */
+
+    void Test()
+    {
+
+    }
 }
