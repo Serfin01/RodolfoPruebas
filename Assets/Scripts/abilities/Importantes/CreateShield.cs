@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class CreateShield : MonoBehaviour
+public class CreateShield : BaseAbility
 {
+    public override void UseSpell()
+    {
+        Debug.Log("Shield");
+    }
+    /*
     [SerializeField] GameObject shield;
 
     //[SerializeField] Image overlayCooldown;
@@ -55,7 +60,7 @@ public class CreateShield : MonoBehaviour
             {
                 UseSpell();
             }
-            */
+            
         }
     }
 
@@ -89,7 +94,7 @@ public class CreateShield : MonoBehaviour
                 cooldown = iniCooldown;
             }
         }
-        /*
+        
         if (isCooldown)
         {
             //StartCoroutine(Shot());
@@ -100,7 +105,7 @@ public class CreateShield : MonoBehaviour
             isCooldown = true;
             cooldown = iniCooldown;
         }
-        */
+        
     }
 
     void InstantiateShield()
@@ -139,4 +144,5 @@ public class CreateShield : MonoBehaviour
     {
         input.CharacterControls.Disable();
     }
+*/
 }

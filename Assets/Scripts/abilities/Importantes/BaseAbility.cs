@@ -6,39 +6,20 @@ using UnityEngine.InputSystem;
 
 public abstract class BaseAbility : MonoBehaviour
 {
-    PlayerInput input;
+    
 
     protected bool isCooldown = false;
     protected float cooldown;
     protected float iniCooldown;
     protected Image imageCooldown;
 
-    public void NotifyAddedAtSlot(int slot)
-    {
-        enabled = true;
-        //input = new PlayerInput();
-        switch (slot)
-        {
-            case 0:
-                input.CharacterControls.Ability1.performed += ctx => UseSpell();
-                break;
-            case 1:
-                input.CharacterControls.Ability2.performed += ctx => UseSpell();
-                break;
-            case 2:
-                input.CharacterControls.Ability3.performed += ctx => UseSpell();
-                break;
-            case 3:
-                input.CharacterControls.Ability4.performed += ctx => UseSpell();
-                break;
-        }
-    }
+    
 
-    protected virtual void UseSpell()
+    public virtual void UseSpell()
     {
         
     }
-
+    /*
     void Start()
     {
         imageCooldown.fillAmount = 0.0f;
@@ -65,15 +46,5 @@ public abstract class BaseAbility : MonoBehaviour
         {
             imageCooldown.fillAmount = cooldown / iniCooldown;
         }
-    }
-
-    private void OnEnable()
-    {
-        input.CharacterControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        input.CharacterControls.Disable();
-    }
+    }*/
 }

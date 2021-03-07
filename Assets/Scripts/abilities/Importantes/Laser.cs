@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class Laser : MonoBehaviour
+public class Laser : BaseAbility
 {
+    public override void UseSpell()
+    {
+        Debug.Log("Laser");
+    }
+    /*
     [SerializeField] GameObject rayo;
 
     private bool canShoot;
@@ -34,12 +39,12 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
-        /*
+        
         if (Input.GetKeyDown("4"))
         {
             UseSpell();
         }
-        */
+        
         if (canShoot == true)
         {
             rayo.SetActive(true);
@@ -125,4 +130,5 @@ public class Laser : MonoBehaviour
     {
         input.CharacterControls.Disable();
     }
+    */
 }

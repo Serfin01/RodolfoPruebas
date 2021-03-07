@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System;
 
 [System.Serializable]
 public class Espacios
 {
     public bool isfull = false;
     public Image abilityImage;
-
+    public BaseAbility slotAbility;
 }
 
 public class PlayerAbilities : MonoBehaviour
@@ -38,7 +39,7 @@ public class PlayerAbilities : MonoBehaviour
     bool ability3 = false;
     bool ability4 = false;
 
-    bool dentro = false;
+    public bool dentro = false;
 
     [SerializeField] Espacios[] espacios = new Espacios[4];
 
@@ -47,6 +48,8 @@ public class PlayerAbilities : MonoBehaviour
     Scrolls closeScroll;
 
     public Spell abilityTest;
+
+    int numberKey;
 
     public enum AbilityImages
     {
@@ -61,7 +64,15 @@ public class PlayerAbilities : MonoBehaviour
         input = new PlayerInput();
         //input.CharacterControls.Invisibility.performed += InviCooldown;
         input.CharacterControls.GetAbility.performed += ctx => GetAbility();
-        input.CharacterControls.Ability1.performed += ctx => Test();
+        input.CharacterControls.Ability1.performed += ctx => { numberKey = 0; CastSpell(); };
+        input.CharacterControls.Ability2.performed += ctx => { numberKey = 1; CastSpell(); };
+        input.CharacterControls.Ability3.performed += ctx => { numberKey = 2; CastSpell(); };
+        input.CharacterControls.Ability4.performed += ctx => { numberKey = 3; CastSpell(); };
+    }
+
+    void CastSpell()
+    {
+        espacios[numberKey].slotAbility.UseSpell();
     }
 
     private void OnEnable()
@@ -227,42 +238,37 @@ public class PlayerAbilities : MonoBehaviour
         */
     }
 
-    private void OnTriggerEnter(Collider other)
+    void UpdateEspacios()
     {
-        if (other.CompareTag("Pergamino"))
-        {
-            dentro = true;
-        }
+
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ScrollRange(bool isInside, Scrolls pergamino)
     {
-        if (other.CompareTag("Pergamino"))
-        {
-            dentro = false;
-        }
+        dentro = isInside;
+        closeScroll = pergamino;
     }
 
-    public int AddAbilityImage(int currentAbility)
+    //espacios [i]. slotAbility = 
+    public void AddAbilityImage(int currentAbility, BaseAbility baseAbility)
     {
-        int espacioSeleccionado = -1;
-
-        for (int i = 0; (i < espacios.Length) && (espacioSeleccionado == -1); i++)
+        if (AbilitiesNum < 4)
         {
-            if (!espacios[i].isfull)
+            for (int i = 0; (i < espacios.Length); i++)
             {
-                espacioSeleccionado = i;
-                espacios[i].abilityImage.sprite = abilitySprite[currentAbility];
-                espacios[i].isfull = true;
+                if (!espacios[i].isfull)
+                {
+                    espacios[i].slotAbility = baseAbility;
+                    espacios[i].abilityImage.sprite = abilitySprite[currentAbility];
+                    espacios[i].isfull = true;
+                    return;
+                }
             }
         }
-
-        if (AbilitiesNum >= 4)
+        else
         {
             //tamo lleno bro
         }
-
-        return espacioSeleccionado;
     }
 
     /*

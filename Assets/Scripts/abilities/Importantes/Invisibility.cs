@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Invisibility : MonoBehaviour
+public class Invisibility : BaseAbility
 {
+    public override void UseSpell()
+    {
+        Debug.Log("Invi");
+    }
+    /*
     PlayerInput input;
 
     private float activationTime = 0;
@@ -43,7 +48,7 @@ public class Invisibility : MonoBehaviour
     void Update()
     {
         activationTime += Time.deltaTime;
-        /*
+        
         if (invi == true && activationTime >= 3)
         {
             invi = false;
@@ -55,22 +60,22 @@ public class Invisibility : MonoBehaviour
         {
             InviOn();
         }
-        */
+        
         if (isCooldown)
         {
             ApplyCooldown();
         }
     }
 
-    /*
+    
     void InviCooldown(InputAction.CallbackContext obj)
     {
         activationTime = 0;
         invi = true;
     }
-    */
+    
 
-    /*
+    
     void InviOn()
     {
         //this.GetComponent<Collider>().enabled = false;
@@ -78,7 +83,7 @@ public class Invisibility : MonoBehaviour
         canBeDamaged = false;
         modelo.SetActive(false);
     }
-    */
+    
 
     private IEnumerator InviOn()
     {
@@ -138,5 +143,5 @@ public class Invisibility : MonoBehaviour
                 break;
         }
     }
-
+    */
 }

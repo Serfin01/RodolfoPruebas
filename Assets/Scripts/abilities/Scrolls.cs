@@ -5,50 +5,31 @@ using System;
 
 public class Scrolls : MonoBehaviour
 {
-    PlayerInput input;
-
-    bool dentro = false;
-    GameObject playerTr;
+    PlayerAbilities playerTr;
     public int currentAbility;
     private Dictionary<int, Type> abilitiesLibrary = new Dictionary<int, Type>()
     {
-        {1, typeof(Shield)},
-        {2, typeof(Laser) },
-        {3, typeof(Invisibility) },
-        {4, typeof(AttackSpeed) },
+        {0, typeof(CreateShield)},
+        {1, typeof(Laser) },
+        {2, typeof(Invisibility) },
+        {3, typeof(AttackSpeed) },
     };
 
-    private void Awake()
+    void OnEnable()
     {
-        input = new PlayerInput();
-        input.CharacterControls.GetAbility.performed += ctx => AddScroll(playerTr);
-    }
-
-    private void OnEnable()
-    {
-        input.CharacterControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        input.CharacterControls.Disable();
-    }
-
-    void Start()
-    {
-        currentAbility = UnityEngine.Random.Range(0, abilitiesLibrary.Count+1);
-        playerTr = GameObject.Find("Player");
+        currentAbility = UnityEngine.Random.Range(0, abilitiesLibrary.Count);
+        playerTr = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>();
     }
 
     public void AddScroll(GameObject player)
     {
-        if (dentro)
-        {
-            Type scrollType = abilitiesLibrary[currentAbility];
+        Type scrollType = abilitiesLibrary[currentAbility];
+        
+        BaseAbility abiliti = (BaseAbility)player.AddComponent(scrollType);
 
-            player.AddComponent(scrollType);
+        player.GetComponent<PlayerAbilities>().AddAbilityImage(currentAbility, abiliti);
 
-            Destroy();
+        Disable();
             /*
             PlayerAbilities playerAbilities = GetComponent<PlayerAbilities>();
             int slot = playerAbilities.AddAbilityImage(currentAbility);
@@ -73,19 +54,18 @@ public class Scrolls : MonoBehaviour
                     break;
             }
             */
-        }
     }
 
-    private void Destroy()
+    private void Disable()
     {
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            dentro = true;
+            playerTr.ScrollRange(true, this);
         }
     }
 
@@ -93,7 +73,7 @@ public class Scrolls : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            dentro = false;
+            playerTr.ScrollRange(false, null);
         }
     }
     //rayo.NotifyAddedAtSlot(slot);

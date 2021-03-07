@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class AttackSpeed : MonoBehaviour
+public class AttackSpeed : BaseAbility
 {
+    public override void UseSpell()
+    {
+        Debug.Log("Speed");
+    }
+    /*
     PlayerInput input;
 
     private void Awake()
@@ -49,4 +54,5 @@ public class AttackSpeed : MonoBehaviour
         Mano mano = GetComponentInChildren<Mano>();
         mano.cadencia = mano.cadencia / 2;
     }
+    */
 }
