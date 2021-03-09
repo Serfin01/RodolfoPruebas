@@ -7,10 +7,9 @@ public class BulletEnemy : MonoBehaviour
     [SerializeField] float bulletForce;
     [SerializeField] int damage;
 
-    
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         transform.Translate(0, 0, bulletForce * Time.deltaTime);
     }
@@ -23,10 +22,11 @@ public class BulletEnemy : MonoBehaviour
             /*
             if (other.GetComponent<Invisibility>().canBeDamaged)
             {
-                other.GetComponent<Player>().Damaged(damage);
-                Destroy(this.gameObject);
+                
             }
             */
+            other.GetComponent<Player>().Damaged(damage);
+            Destroy(this.gameObject);
         }
 
         if (other.CompareTag("Limit"))

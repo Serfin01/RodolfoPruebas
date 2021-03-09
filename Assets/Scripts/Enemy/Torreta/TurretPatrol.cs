@@ -19,10 +19,13 @@ public class TurretPatrol : MonoBehaviour
 
     public AudioSource audio;
 
+    TurretEnemy turretEnemy;
+
     void Start()
     {
         target = 0;
         waitTime = startWaitTime;
+        turretEnemy = GetComponent<TurretEnemy>();
     }
 
     void Update()
@@ -75,11 +78,13 @@ public class TurretPatrol : MonoBehaviour
                 audio.pitch = Random.Range(0.8f, 1.1f);
                 audio.Play();
             }
+            turretEnemy.canShoot = false;
         }
         else
         {
             GetComponent<Collider>().enabled = true;
             audio.Stop();
+            turretEnemy.canShoot = true;
         }
     }
 

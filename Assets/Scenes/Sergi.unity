@@ -7247,6 +7247,11 @@ PrefabInstance:
       propertyPath: targetPoints.Array.data[2]
       value: 
       objectReference: {fileID: 692384797}
+    - target: {fileID: 7111184906088781414, guid: 94a41598994ae8d4291a13095c2519dd,
+        type: 3}
+      propertyPath: startWaitTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7111184906088781415, guid: 94a41598994ae8d4291a13095c2519dd,
         type: 3}
       propertyPath: boss
@@ -7436,6 +7441,11 @@ PrefabInstance:
     - target: {fileID: 562935878587934332, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523817784027138224, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322393, guid: 3d07f696c9f56744cbdd9e13677e4588,

@@ -22,6 +22,8 @@ public class TurretEnemy : Enemy
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firePoint;
+
+    public bool canShoot;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -76,10 +78,12 @@ public class TurretEnemy : Enemy
         }
     }
     //que pida bool canShoot y le meto el if correspondiente
-    void Shoot()
+    public void Shoot()
     {
         //Debug.Log("shoot");
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if (canShoot) { 
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+        }
     }
 
     void OnDrawGizmosSelected()
