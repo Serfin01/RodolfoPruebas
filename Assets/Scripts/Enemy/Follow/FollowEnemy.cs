@@ -31,7 +31,7 @@ public class FollowEnemy : Enemy
         
         if(health <= 0)
         {
-            //GameObject.Destroy(gameObject);
+            GameObject.Destroy(gameObject);
         }
         
     }

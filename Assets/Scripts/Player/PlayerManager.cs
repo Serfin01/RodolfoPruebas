@@ -10,12 +10,16 @@ public class PlayerManager : Player
     public Animator musicInPause;
     public int transitionTime;
     public static bool isGamePaused = false;
+    [SerializeField] GameObject ragDoll;
 
     void Update()
     {
         if (currentHealth <= 0)
         {
             Debug.Log("maricon");
+            gameObject.GetComponentInChildren<Animator>().enabled = false;
+            gameObject.GetComponent<MovePlayer>().canMove = false;
+            ragDoll.SetActive(true);
             LoadNextLevel();
             FindObjectOfType<AudioManager>().Play("rodolfodeath");
             //Destroy(this.gameObject);

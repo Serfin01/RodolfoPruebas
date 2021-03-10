@@ -26,6 +26,8 @@ public class MovePlayer : MonoBehaviour
 
     Animator _animator;
 
+    public bool canMove = true;
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -43,20 +45,22 @@ public class MovePlayer : MonoBehaviour
 
     void HandleMovement()
     {
-        r_body.velocity = Vector3.zero;
-        if (movementPressed)
+        if (canMove)
         {
-            moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
-            r_body.velocity = moveDirection * Time.deltaTime * speed;
-            
-            if (audio.isPlaying == false)
+            r_body.velocity = Vector3.zero;
+            if (movementPressed)
             {
-                audio.volume = Random.Range(0.2f, 0.4f);
-                audio.pitch = Random.Range(0.8f, 1.1f);
-                audio.Play();
+                moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
+                r_body.velocity = moveDirection * Time.deltaTime * speed;
+
+                if (audio.isPlaying == false)
+                {
+                    audio.volume = Random.Range(0.2f, 0.4f);
+                    audio.pitch = Random.Range(0.8f, 1.1f);
+                    audio.Play();
+                }
             }
         }
-
 
         // Animating
 
