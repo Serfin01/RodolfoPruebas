@@ -19,8 +19,8 @@ public class DashEnemy : MonoBehaviour
     bool canMove = true;
 
     float destino;
-    static Transform target0;
-    Vector3 local;
+    //static Transform target0;
+    //Vector3 local;
 
     void Start()
     {
@@ -83,9 +83,9 @@ public class DashEnemy : MonoBehaviour
     {
         //destino = Vector3(trPlayer);
         //transform.LookAt(destino);
-        target0 = trPlayer;
+        //target0 = trPlayer;
         moveSpeed = 30;
-        local = Vector3(this.transform.position);
+        //local = Vector3(this.transform.position);
         /*
         if (distancia <= 0.2f)
         {
@@ -93,10 +93,12 @@ public class DashEnemy : MonoBehaviour
             StartCoroutine(Cast());
         }
         */
+        /*
         if(this.transform.position = target0)
         {
             canMove = false;
             StartCoroutine(Cast());
         }
+        */
     }
 }

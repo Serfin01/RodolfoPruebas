@@ -47,7 +47,7 @@ public class BossPrueba : Enemy
     bool speedBoost = true;
     NavMeshAgent agente;
 
-
+    float lockPos = 0;
     void Start()
     {
         //trPlayer = GameObject.FindGameObjectWithTag("Player").transform;
@@ -69,12 +69,18 @@ public class BossPrueba : Enemy
         if (canMove == true)
         {
             transform.LookAt(trPlayer);
+            transform.rotation = Quaternion.Euler(lockPos, transform.rotation.eulerAngles.y, lockPos);
+
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         if (health <= 0)
         {
             Debug.Log("boss muerto");
             Die();
+        }
+        if (distancia <= 0.2f)
+        {
+            transform.position = trPlayer.position - transform.position;
         }
 
         switch (fase)
