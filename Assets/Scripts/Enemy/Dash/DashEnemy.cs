@@ -18,6 +18,10 @@ public class DashEnemy : MonoBehaviour
     float iniMoveSpeed;
     bool canMove = true;
 
+    float destino;
+    static Transform target0;
+    Vector3 local;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,7 +34,7 @@ public class DashEnemy : MonoBehaviour
         if(canMove == true)
         {
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
-            transform.LookAt(trPlayer);
+            //transform.LookAt(trPlayer);
 
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
@@ -38,12 +42,11 @@ public class DashEnemy : MonoBehaviour
 
             if (distancia <= 5)
             {
-                moveSpeed = 50;
-                if (distancia <= 0.2f)
-                {
-                    canMove = false;
-                    StartCoroutine(Cast());
-                }
+                Dash();
+            }
+            else
+            {
+                transform.LookAt(trPlayer);
             }
 
         }
@@ -76,4 +79,24 @@ public class DashEnemy : MonoBehaviour
         canMove = true;
     }
     
+    public void Dash()
+    {
+        //destino = Vector3(trPlayer);
+        //transform.LookAt(destino);
+        target0 = trPlayer;
+        moveSpeed = 30;
+        local = Vector3(this.transform.position);
+        /*
+        if (distancia <= 0.2f)
+        {
+            canMove = false;
+            StartCoroutine(Cast());
+        }
+        */
+        if(this.transform.position = target0)
+        {
+            canMove = false;
+            StartCoroutine(Cast());
+        }
+    }
 }
