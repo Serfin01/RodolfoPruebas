@@ -11,6 +11,7 @@ public class Espacios
     public bool isfull = false;
     public Image abilityImage;
     public BaseAbility slotAbility;
+    public Image cooldownImage;
 }
 
 public class PlayerAbilities : MonoBehaviour
@@ -259,6 +260,7 @@ public class PlayerAbilities : MonoBehaviour
                 if (!espacios[i].isfull)
                 {
                     espacios[i].slotAbility = baseAbility;
+                    espacios[i].slotAbility.SetImageCooldown(espacios[i].cooldownImage);
                     espacios[i].abilityImage.sprite = abilitySprite[currentAbility];
                     espacios[i].isfull = true;
                     return;
@@ -269,6 +271,11 @@ public class PlayerAbilities : MonoBehaviour
         {
             //tamo lleno bro
         }
+    }
+
+    void CosaRara()
+    {
+
     }
 
     /*

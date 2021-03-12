@@ -6,9 +6,59 @@ using UnityEngine.InputSystem;
 
 public class CreateShield : BaseAbility
 {
+    [SerializeField] GameObject shield;
+    
+    Ray myRay;
+    RaycastHit hit;
+
+    private void Start()
+    {
+        shield = Resources.Load<GameObject>("Escudo");
+        iniCooldown = 3;
+    }
+
+    private void Update()
+    {
+        if (isCooldown)
+        {
+            ApplyCooldown();
+        }
+    }
+
     public override void UseSpell()
     {
         Debug.Log("Shield");
+        myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(myRay, out hit))
+        {
+            if (isCooldown)
+            {
+                //StartCoroutine(Shot());
+            }
+            else
+            {
+                InstantiateShield();
+                isCooldown = true;
+            }
+        }/*
+
+        if (isCooldown)
+        {
+            //StartCoroutine(Shot());
+        }
+        else
+        {
+            InstantiateShield();
+            isCooldown = true;
+            cooldown = iniCooldown;
+        }
+        */
+    }
+
+    void InstantiateShield()
+    {
+        Instantiate(shield, hit.point, Quaternion.identity);
+        cooldown = iniCooldown;
     }
     /*
     [SerializeField] GameObject shield;
