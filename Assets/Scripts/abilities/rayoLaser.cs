@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class rayoLaser : MonoBehaviour
 {
+    [SerializeField] float duration;
 
+    float iniDuration;
     private LineRenderer lr;
     [SerializeField] int damage;
     public Enemy enemy;
@@ -13,6 +15,8 @@ public class rayoLaser : MonoBehaviour
 
     void Start()
     {
+        duration = 3;
+        iniDuration = duration;
         lr = GetComponent<LineRenderer>();
     }
 
@@ -33,6 +37,18 @@ public class rayoLaser : MonoBehaviour
             }
         }
         else lr.SetPosition(1, transform.forward * 5000);
+
+        duration -= Time.deltaTime;
+
+        if (duration <= 0)
+        {
+            DestroyLaser();
+        }
     }
-    
+
+    void DestroyLaser()
+    {
+        Destroy(gameObject);
+    }
+
 }

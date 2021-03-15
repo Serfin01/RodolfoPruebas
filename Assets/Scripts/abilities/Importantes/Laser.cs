@@ -6,9 +6,59 @@ using UnityEngine.InputSystem;
 
 public class Laser : BaseAbility
 {
+    [SerializeField] GameObject laser;
+
+    Ray myRay;
+    RaycastHit hit;
+
+    private void Start()
+    {
+        laser = Resources.Load<GameObject>("Laser");
+        iniCooldown = 3;
+    }
+
+    private void Update()
+    {
+        if (isCooldown)
+        {
+            ApplyCooldown();
+        }
+    }
+
     public override void UseSpell()
     {
         Debug.Log("Laser");
+        myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(myRay, out hit))
+        {
+            if (isCooldown)
+            {
+                //StartCoroutine(Shot());
+            }
+            else
+            {
+                InstantiateLaser();
+                isCooldown = true;
+            }
+        }/*
+
+        if (isCooldown)
+        {
+            //StartCoroutine(Shot());
+        }
+        else
+        {
+            InstantiateShield();
+            isCooldown = true;
+            cooldown = iniCooldown;
+        }
+        */
+    }
+
+    void InstantiateLaser()
+    {
+        Instantiate(laser, hit.point, Quaternion.identity);
+        cooldown = iniCooldown;
     }
     /*
     [SerializeField] GameObject rayo;
