@@ -9,6 +9,8 @@ public class AttackSpeed : BaseAbility
     public override void UseSpell()
     {
         Debug.Log("Speed");
+        Mano mano = GetComponentInChildren<Mano>();
+        mano.cadencia = mano.cadencia / 2;
     }
     /*
     PlayerInput input;

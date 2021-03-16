@@ -7,14 +7,17 @@ using UnityEngine.InputSystem;
 public class Laser : BaseAbility
 {
     [SerializeField] GameObject laser;
-
-    Ray myRay;
-    RaycastHit hit;
+    [SerializeField] GameObject socket;
+    bool canShoot;
+    float shotDuration = 2;
 
     private void Start()
     {
-        laser = Resources.Load<GameObject>("Laser");
+        socket = GameObject.Find("Socket");
+        //laser = GameObject.FindGameObjectWithTag("Laser");
+        //laser = Resources.Load<GameObject>("Laser");
         iniCooldown = 3;
+        laser.SetActive(false);
     }
 
     private void Update()
@@ -23,24 +26,29 @@ public class Laser : BaseAbility
         {
             ApplyCooldown();
         }
+        if (canShoot == true)
+        {
+            laser.SetActive(true);
+        }
+        if (canShoot == false)
+        {
+            laser.SetActive(false);
+        }
     }
 
     public override void UseSpell()
     {
         Debug.Log("Laser");
-        myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(myRay, out hit))
+        if (isCooldown)
         {
-            if (isCooldown)
-            {
-                //StartCoroutine(Shot());
-            }
-            else
-            {
-                InstantiateLaser();
-                isCooldown = true;
-            }
-        }/*
+            //StartCoroutine(Shot());
+        }
+        else
+        {
+            StartCoroutine(Shot());
+            isCooldown = true;
+        }
+        /*
 
         if (isCooldown)
         {
@@ -55,10 +63,15 @@ public class Laser : BaseAbility
         */
     }
 
-    void InstantiateLaser()
+    private IEnumerator Shot()
     {
-        Instantiate(laser, hit.point, Quaternion.identity);
+        canShoot = true;
+        Debug.Log("on");
+        yield return new WaitForSeconds(shotDuration);
+        canShoot = false;
         cooldown = iniCooldown;
+        //overlayCooldown.GetComponent<Image>().fillAmount = 0.5;
+        Debug.Log("off");
     }
     /*
     [SerializeField] GameObject rayo;

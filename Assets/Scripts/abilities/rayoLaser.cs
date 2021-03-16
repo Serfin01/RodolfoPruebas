@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class rayoLaser : MonoBehaviour
 {
-    [SerializeField] float duration;
+    //[SerializeField] float duration;
 
-    float iniDuration;
+    //float iniDuration;
     private LineRenderer lr;
     [SerializeField] int damage;
     public Enemy enemy;
 
     private bool canShoot;
 
+   // GameObject laser;
+
     void Start()
     {
-        duration = 3;
-        iniDuration = duration;
+        //laser = GameObject.Find("Laser");
+        //duration = 3;
+        //iniDuration = duration;
         lr = GetComponent<LineRenderer>();
     }
 
@@ -37,18 +40,19 @@ public class rayoLaser : MonoBehaviour
             }
         }
         else lr.SetPosition(1, transform.forward * 5000);
-
+        /*
         duration -= Time.deltaTime;
 
         if (duration <= 0)
         {
             DestroyLaser();
         }
+        */
     }
-
+    /*
     void DestroyLaser()
     {
-        Destroy(gameObject);
+        Destroy(laser);
     }
-
+    */
 }
