@@ -47,11 +47,17 @@ public class MovePlayer : MonoBehaviour
     {
         if (canMove)
         {
-            r_body.velocity = Vector3.zero;
+            Vector3 newVelocity = r_body.velocity;
+            newVelocity.x = newVelocity.z = 0f;
+            r_body.velocity = newVelocity;
+
             if (movementPressed)
             {
+                float oldVerticalVelocity = r_body.velocity.y;
                 moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
-                r_body.velocity = moveDirection * Time.deltaTime * speed;
+                Vector3 newNewVelocity = moveDirection * Time.deltaTime * speed;
+                newNewVelocity.y = oldVerticalVelocity;
+                r_body.velocity = newNewVelocity;
 
                 if (audio.isPlaying == false)
                 {
