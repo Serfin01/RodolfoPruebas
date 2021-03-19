@@ -31,11 +31,21 @@ public class TurretPatrol : MonoBehaviour
     void Update()
     {
         float distance;
-        distance = Vector3.Distance(transform.position, targetPoints[target].position);
-        if (/*transform.position != targetPoints[target].position*/canMove == true)
+        if (!targetPoints[0])
+        {
+            distance = Vector3.Distance(transform.position, targetPoints[target].position);
+
+            if (distance <= 0.5f)
+            {
+                waitTime -= Time.deltaTime;
+                canMove = false;
+                canShoot = true;
+            }
+        }
+        //distance = Vector3.Distance(transform.position, targetPoints[target].position);
+        if (/*transform.position != targetPoints[target].position*/canMove == true && !targetPoints[0])
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPoints[target].position, speed * Time.deltaTime);
-
         }
 
         /*
@@ -50,12 +60,7 @@ public class TurretPatrol : MonoBehaviour
         }
         */
 
-        if(distance <= 0.5f)
-        {
-            waitTime -= Time.deltaTime;
-            canMove = false;
-            canShoot = true;
-        }
+        
 
         if(waitTime <= 0)
         {
