@@ -32,7 +32,7 @@ public class Invisibility : BaseAbility
     void Update()
     {
         activationTime += Time.deltaTime;
-
+        /*
         if (invi == true && activationTime >= 3)
         {
             invi = false;
@@ -40,6 +40,7 @@ public class Invisibility : BaseAbility
             canBeDamaged = true;
             modelo.SetActive(true);
         }
+        */
         /*
         if (invi == true)
         {

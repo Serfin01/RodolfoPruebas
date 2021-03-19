@@ -13,6 +13,7 @@ public class Scrolls : MonoBehaviour
         {1, typeof(Laser) },
         {2, typeof(Invisibility) },
         {3, typeof(AttackSpeed) },
+        {4, typeof(CreateGeiser) },
     };
 
     void OnEnable()
@@ -30,30 +31,6 @@ public class Scrolls : MonoBehaviour
         player.GetComponent<PlayerAbilities>().AddAbilityImage(currentAbility, abiliti);
 
         Disable();
-            /*
-            PlayerAbilities playerAbilities = GetComponent<PlayerAbilities>();
-            int slot = playerAbilities.AddAbilityImage(currentAbility);
-
-            CreateShield createShield = GetComponent<CreateShield>();
-            Laser laser = GetComponent<Laser>();
-            Invisibility invisibility = GetComponent<Invisibility>();
-            AttackSpeed attackSpeed = GetComponent<AttackSpeed>();
-            switch (currentAbility)
-            {
-                case 1:
-                    createShield.NotifyAddedAtSlot(slot);
-                    break;
-                case 2:
-                    laser.NotifyAddedAtSlot(slot);
-                    break;
-                case 3:
-                    invisibility.NotifyAddedAtSlot(slot);
-                    break;
-                case 4:
-                    attackSpeed.NotifyAddedAtSlot(slot);
-                    break;
-            }
-            */
     }
 
     private void Disable()
@@ -76,5 +53,4 @@ public class Scrolls : MonoBehaviour
             playerTr.ScrollRange(false, null);
         }
     }
-    //rayo.NotifyAddedAtSlot(slot);
 }
