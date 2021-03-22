@@ -39,7 +39,6 @@ public class FollowEnemy : Enemy
     void Damage()
     {
         Debug.Log("la picadura de la cobra gei");
-
     }
 
     void OnDrawGizmosSelected()
