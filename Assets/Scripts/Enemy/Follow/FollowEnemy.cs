@@ -11,6 +11,8 @@ public class FollowEnemy : Enemy
     [SerializeField] float gzRange = 10;
     public int damage;
     public Animator _animator;
+    [SerializeField] Renderer renderer;
+    private bool canMove = true;
 
     // Use this for initialization
     void Start()
@@ -23,17 +25,24 @@ public class FollowEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        NavMeshAgent agente = GetComponent<NavMeshAgent>();
-        agente.SetDestination(trPlayer.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
-
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
         
-        if(health <= 0)
+        if (canMove)
         {
-            GameObject.Destroy(gameObject);
+            NavMeshAgent agente = GetComponent<NavMeshAgent>();
+            agente.SetDestination(trPlayer.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         
+        
+        
+        /*
+        if (this._animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            //StartCoroutine("Fade");
+            GameObject.Destroy(gameObject);
+        }
+        */
     }
 
     void Damage()
@@ -55,5 +64,18 @@ public class FollowEnemy : Enemy
             other.GetComponent<Player>().Damaged(damage);
             _animator.SetTrigger("Punch");
         }
+    }
+    /*
+    void Die()
+    {
+        _animator.SetTrigger("death");
+    }
+    */
+    IEnumerator Die()
+    {
+        canMove = false;
+        _animator.SetTrigger("death");
+        yield return new WaitForSeconds(3f);
+        GameObject.Destroy(gameObject);
     }
 }

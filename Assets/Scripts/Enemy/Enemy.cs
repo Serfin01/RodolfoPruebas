@@ -6,15 +6,19 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] protected int health = 50;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    private bool died = false;
     public void Damaged(int damage)
     {
         health -= damage;
         FindObjectOfType<AudioManager>().Play("enemyHitted");
-
+        if (!died)
+        {
+            if (health <= 0)
+            {
+                //Die();
+                StartCoroutine("Die");
+                died = true;
+            }
+        }
     }
 }
