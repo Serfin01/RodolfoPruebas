@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &8436420281344914724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412770116747919011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4adcde546de20c489a7eef059fb3f0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7111184905329312145
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +67,6 @@ GameObject:
   - component: {fileID: 7111184906088781415}
   - component: {fileID: 7111184906088781414}
   - component: {fileID: 1085491505305441544}
-  - component: {fileID: 4424511791113351828}
   m_Layer: 0
   m_Name: Capy
   m_TagString: Enemy
@@ -124,6 +142,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 7111184906668991217}
   canShoot: 0
+  CapyAnim: {fileID: 8436420281344914724}
 --- !u!114 &7111184906088781414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +161,7 @@ MonoBehaviour:
   canShoot: 1
   colTurret: {fileID: 7111184906088781412}
   audio: {fileID: 1085491505305441544}
+  CapyAnim: {fileID: 8436420281344914724}
 --- !u!82 &1085491505305441544
 AudioSource:
   m_ObjectHideFlags: 0
@@ -239,25 +259,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &4424511791113351828
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111184906088781409}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4adcde546de20c489a7eef059fb3f0d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7111184906668991216
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +373,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecbc76809f87084680d06d8deb4f76f, type: 3}
+--- !u!1 &3412770116747919011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ecbc76809f87084680d06d8deb4f76f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2566472924942746610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2600627550395016217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ecbc76809f87084680d06d8deb4f76f,

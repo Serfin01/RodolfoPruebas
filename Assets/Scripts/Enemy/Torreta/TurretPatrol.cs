@@ -21,29 +21,30 @@ public class TurretPatrol : MonoBehaviour
 
     TurretEnemy turretEnemy;
 
+    public Animator CapyAnim; 
+
     void Start()
     {
         target = 0;
         waitTime = startWaitTime;
         turretEnemy = GetComponent<TurretEnemy>();
+
     }
 
     void Update()
     {
+
         float distance;
-        if (!targetPoints[0])
-        {
-            distance = Vector3.Distance(transform.position, targetPoints[target].position);
+        distance = Vector3.Distance(transform.position, targetPoints[target].position);
 
             if (distance <= 0.5f)
             {
                 waitTime -= Time.deltaTime;
                 canMove = false;
                 canShoot = true;
+                Move();
             }
-        }
-        //distance = Vector3.Distance(transform.position, targetPoints[target].position);
-        if (/*transform.position != targetPoints[target].position*/canMove == true && !targetPoints[0])
+        if (transform.position != targetPoints[target].position/*canMove == true*/)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPoints[target].position, speed * Time.deltaTime);
         }
@@ -68,14 +69,18 @@ public class TurretPatrol : MonoBehaviour
             if (target >= targetPoints.Length)
             {
                 target = 0;
+
             }
             canMove = true;
             canShoot = false;
+
             waitTime = startWaitTime;
+            Move();
         }
 
-        if(canMove == true)
+        if (canMove == true)
         {
+
             GetComponent<Collider>().enabled = false;
             if (audio.isPlaying == false)
             {
@@ -84,6 +89,7 @@ public class TurretPatrol : MonoBehaviour
                 audio.Play();
             }
             turretEnemy.canShoot = false;
+
         }
         else
         {
@@ -91,7 +97,25 @@ public class TurretPatrol : MonoBehaviour
             audio.Stop();
             turretEnemy.canShoot = true;
         }
+
     }
 
-    
+    private void Move()
+    {
+        if (canMove == true)
+        {
+            //CapyAnim.SetTrigger("MeterseSuelo");
+            CapyAnim.SetBool("MeterseSuelo", true);
+            CapyAnim.SetBool("moverse", true);
+            CapyAnim.SetBool("salirSuelo", false);
+            CapyAnim.SetBool("Disparar", false);
+
+        }
+        else
+        {
+            CapyAnim.SetBool("moverse", false);
+            CapyAnim.SetBool("salirSuelo", true);
+        }
+    }
+
 }

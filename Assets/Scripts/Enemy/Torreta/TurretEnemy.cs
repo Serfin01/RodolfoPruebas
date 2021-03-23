@@ -24,6 +24,7 @@ public class TurretEnemy : Enemy
     [SerializeField] Transform firePoint;
 
     public bool canShoot;
+    public Animator CapyAnim;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -82,7 +83,10 @@ public class TurretEnemy : Enemy
     {
         //Debug.Log("shoot");
         if (canShoot) { 
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            CapyAnim.SetBool("MeterseSuelo", false);
+            CapyAnim.SetBool("moverse", false);
+            CapyAnim.SetBool("Disparar", true); 
         }
     }
 

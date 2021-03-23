@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: moverse
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: salirSuelo
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2024085974313630970}
   m_Solo: 0
@@ -33,7 +36,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: meterse suelo
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7404311274271499573}
@@ -61,7 +64,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: salir suelo
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8650734295070657784}
@@ -89,8 +92,8 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: disparo 2
-  m_Speed: 1
-  m_CycleOffset: 0
+  m_Speed: 1.2
+  m_CycleOffset: 0.54
   m_Transitions:
   - {fileID: -2774615541649292783}
   m_StateMachineBehaviours: []
@@ -120,16 +123,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: MeterseSuelo
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Disparar
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7368544433336955197}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0031843185
+  m_TransitionDuration: 0.0006555319
   m_TransitionOffset: 0
-  m_ExitTime: 0.9973464
-  m_HasExitTime: 1
+  m_ExitTime: 0.9994537
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -144,25 +150,25 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: salirSuelo
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Disparar
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: MeterseSuelo
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: moverse
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -219,16 +225,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 2024085974313630970}
-    m_Position: {x: 190, y: 190, z: 0}
+    m_Position: {x: 160, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5034367447568003194}
     m_Position: {x: 520, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5611380978033019952}
-    m_Position: {x: 325.81924, y: 57.75537, z: 0}
+    m_Position: {x: 330, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7368544433336955197}
-    m_Position: {x: 340, y: 270, z: 0}
+    m_Position: {x: 330, y: 300, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -250,16 +256,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: salirSuelo
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: moverse
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5611380978033019952}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0038961172
-  m_TransitionOffset: 0.00077086315
-  m_ExitTime: 0.9772724
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.000115126604
+  m_TransitionOffset: 0.00005042588
+  m_ExitTime: 0.99617726
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -281,10 +290,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0048915744
-  m_TransitionOffset: 0.0019268716
-  m_ExitTime: 0.9972364
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.0014594793
+  m_TransitionOffset: 0
+  m_ExitTime: 0.99953467
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
