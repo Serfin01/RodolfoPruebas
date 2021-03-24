@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7769423676378908289
+--- !u!114 &-8813134339248682131
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,29 +20,25 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Pu\xF1akos_MAT"
-  m_Shader: {fileID: -6465566751694194690, guid: b16e1aed70c5c554db98c5c3976896b9,
-    type: 3}
-  m_ShaderKeywords: 
+  m_Name: isla1
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2050
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_809F7A0A:
-        m_Texture: {fileID: 2800000, guid: beac47fc4b19c914883e8c7936166bd0, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 162acc7d50fb20a4da09774d9d4707de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 48e45b057c2b7f14d917acc2fc2348b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -50,15 +46,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 162acc7d50fb20a4da09774d9d4707de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5664016dd669e09459f728217a574b29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 985245681400dcf4e85bbcdf59713003, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -66,13 +62,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_4544739A: 1.8
-    - Vector1_4C4F859C: 32
-    - Vector1_55C9832D: 0.019
-    - Vector1_64513C53: 0.01
-    - Vector1_9DB75F76: 0.5
-    - Vector1_C6A3DB87: 0.768
-    - Vector1_E47E595F: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -95,11 +84,6 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_36B97322: {r: 1, g: 1, b: 1, a: 0}
-    - Color_62346605: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
-    - Color_625BD9D6: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0}
-    - Color_9ABE808C: {r: 1, g: 1, b: 1, a: 1}
-    - Color_9E649ECF: {r: 0.46226418, g: 0.0283464, b: 0.36542416, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
