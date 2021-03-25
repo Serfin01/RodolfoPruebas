@@ -4174,7 +4174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.35879633, y: 0, z: 0, w: 0.9334159}
-  m_LocalPosition: {x: 3.19, y: 27.408123, z: -70.10531}
+  m_LocalPosition: {x: 6.79, y: 27.408121, z: -72.3653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -4508,7 +4508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.35879633, y: 0, z: 0, w: 0.9334159}
-  m_LocalPosition: {x: 3.19, y: 27.408123, z: -70.10531}
+  m_LocalPosition: {x: 6.79, y: 27.408121, z: -72.3653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6050,9 +6050,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97b84eabab1cb0459d9aab901966a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
   lookRadius: 10
+  dashDistance: 5
   player: {fileID: 2136640122}
   trPlayer: {fileID: 857289125}
+  rotSpeed: 3
+  normalSpeed: 10
+  dashSpeed: 40
 --- !u!195 &2128165865
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7977,7 +7982,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.19
+      value: 6.79
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -7987,7 +7992,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -42.68
+      value: -44.94
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
