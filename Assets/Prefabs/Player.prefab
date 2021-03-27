@@ -383,6 +383,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3331366283476024183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876856914357875629}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876856914357875629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3331366283476024183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8749059508418322394}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8749059508418322399
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +449,7 @@ Transform:
   - {fileID: 9142410845646401629}
   - {fileID: 498167138}
   - {fileID: 4313709714241711872}
+  - {fileID: 876856914357875629}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -490,6 +521,7 @@ MonoBehaviour:
   _animator: {fileID: 562935878587934332}
   musicInPause: {fileID: 7090683900473336882}
   transitionTime: 1
+  ragDoll: {fileID: 0}
 --- !u!114 &8749059508418322393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,22 +534,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916ee560242558d4f96bfda92978c451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayo: {fileID: 271332540142113291}
   AbilitiesNum: 0
   dentro: 0
   espacios:
   - isfull: 0
     abilityImage: {fileID: 0}
     slotAbility: {fileID: 0}
+    cooldownImage: {fileID: 0}
   - isfull: 0
     abilityImage: {fileID: 0}
     slotAbility: {fileID: 0}
+    cooldownImage: {fileID: 0}
   - isfull: 0
     abilityImage: {fileID: 0}
     slotAbility: {fileID: 0}
+    cooldownImage: {fileID: 0}
   - isfull: 0
     abilityImage: {fileID: 0}
     slotAbility: {fileID: 0}
+    cooldownImage: {fileID: 0}
   abilitySprite:
   - {fileID: 21300000, guid: de5f7787cd6463b4990adf611086d61a, type: 3}
   - {fileID: 21300000, guid: 0adbfd7a40e478b4199a2363772791e3, type: 3}
@@ -544,6 +579,12 @@ MonoBehaviour:
   dash: {fileID: 6780406250599615123}
   rotatingElement: {fileID: 9142410845646401629}
   audio: {fileID: 0}
+  canMove: 1
+  groundCheck: {fileID: 876856914357875629}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &3824097433873581559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -992,12 +1033,6 @@ Transform:
 --- !u!4 &3824097434097723065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 358884174, guid: cbd63cea7a2b5e847a472aa85667188f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3824097433873581559}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &271332540142113291 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3950250451033151484, guid: cbd63cea7a2b5e847a472aa85667188f,
     type: 3}
   m_PrefabInstance: {fileID: 3824097433873581559}
   m_PrefabAsset: {fileID: 0}

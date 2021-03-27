@@ -27,6 +27,18 @@ public class MovePlayer : MonoBehaviour
     Animator _animator;
 
     public bool canMove = true;
+    bool isGrounded;
+    float gravity = -10;
+    Vector3 velocity;
+    Vector3 newNewVelocity;
+    [SerializeField] GameObject ragDoll;
+
+    [Header("Set Ground")]
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundDistance = 0.4f;
+    [SerializeField] LayerMask groundMask;
+
+    
 
     private void Awake()
     {
@@ -42,30 +54,34 @@ public class MovePlayer : MonoBehaviour
         dash.emitting = false;
         _animator = GetComponentInChildren<Animator>();
     }
+    void HandleFixed()
+    {
+            r_body.velocity = newNewVelocity;
+    }
 
     void HandleMovement()
     {
-        if (canMove)
+        if (isGrounded)
         {
-            Vector3 newVelocity = r_body.velocity;
-            newVelocity.x = newVelocity.z = 0f;
-            r_body.velocity = newVelocity;
+            moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
+            newNewVelocity = moveDirection * Time.deltaTime * speed;
 
+            if (audio.isPlaying == false)
+            {
+                audio.volume = Random.Range(0.2f, 0.4f);
+                audio.pitch = Random.Range(0.8f, 1.1f);
+                audio.Play();
+            }
+            /*
             if (movementPressed)
             {
-                float oldVerticalVelocity = r_body.velocity.y;
-                moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
-                Vector3 newNewVelocity = moveDirection * Time.deltaTime * speed;
-                newNewVelocity.y = oldVerticalVelocity;
-                r_body.velocity = newNewVelocity;
 
-                if (audio.isPlaying == false)
-                {
-                    audio.volume = Random.Range(0.2f, 0.4f);
-                    audio.pitch = Random.Range(0.8f, 1.1f);
-                    audio.Play();
-                }
             }
+            */
+        }
+        else
+        {
+            ragDoll.SetActive(true);
         }
 
         // Animating
@@ -76,6 +92,23 @@ public class MovePlayer : MonoBehaviour
         //Debug.Log("LocalVelocity " + localVelocity);
         _animator.SetFloat("velZ", localVelocity.z, 0.1f, Time.deltaTime);
         _animator.SetFloat("velX", localVelocity.x, 0.1f, Time.deltaTime);
+    }
+
+    void Update()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+        newNewVelocity.y = velocity.y;
+        velocity.y += gravity * Time.deltaTime;
+        HandleMovement();
+    }
+
+    void Gravity()
+    {
+
     }
 
     private void OnEnable()
@@ -90,7 +123,8 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        HandleMovement();
+        //HandleMovement();
+        HandleFixed();
         FixedUpdateDash();
     }
 
