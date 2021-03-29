@@ -11,6 +11,7 @@ TagManager:
   - LevelLoader
   - Pergamino
   - Laser
+  - fall
   layers:
   - Default
   - TransparentFX

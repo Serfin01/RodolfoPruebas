@@ -32,6 +32,7 @@ public class MovePlayer : MonoBehaviour
     Vector3 velocity;
     Vector3 newNewVelocity;
     [SerializeField] GameObject ragDoll;
+    int fall = 1000;
 
     [Header("Set Ground")]
     [SerializeField] Transform groundCheck;
@@ -104,11 +105,18 @@ public class MovePlayer : MonoBehaviour
         newNewVelocity.y = velocity.y;
         velocity.y += gravity * Time.deltaTime;
         HandleMovement();
+        if (!isGrounded)
+        {
+            //this.GetComponent<Player>().Damaged(fall);
+        }
     }
 
-    void Gravity()
+    private void OnTriggerEnter(Collider other)
     {
-
+        if (other.CompareTag("fall"))
+        {
+            this.GetComponent<Player>().Damaged(fall);
+        }
     }
 
     private void OnEnable()
@@ -187,6 +195,7 @@ public class MovePlayer : MonoBehaviour
                 dash.emitting = true;
                 FindObjectOfType<AudioManager>().Play("dash");
             }
+
         }
         else if (mustStop)
         {
