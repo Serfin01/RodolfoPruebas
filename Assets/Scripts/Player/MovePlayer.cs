@@ -88,6 +88,7 @@ public class MovePlayer : MonoBehaviour
         else
         {
             ragDoll.SetActive(true);
+            //velocity.y = -10f;
         }
 
         // Animating

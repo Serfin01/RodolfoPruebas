@@ -18,7 +18,12 @@ ModelImporter:
   - first:
       74: 3007785961781692365
     second: disparo 2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3a29b94808b47be4ea33a3b7e4a26fa3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
