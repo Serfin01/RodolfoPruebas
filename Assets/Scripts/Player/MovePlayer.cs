@@ -17,9 +17,6 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody r_body;
     public float speed = 700f;
 
-    [SerializeField] int distDash;
-    [SerializeField] TrailRenderer dash;
-
     [SerializeField] Transform rotatingElement;
 
     public AudioSource audio;
@@ -33,6 +30,13 @@ public class MovePlayer : MonoBehaviour
     Vector3 newNewVelocity;
     [SerializeField] GameObject ragDoll;
     int fall = 1000;
+
+    [Header("Dash Settings")]
+    [SerializeField] int distDash;
+    [SerializeField] float inicooldownDash;
+    [SerializeField] TrailRenderer dash;
+    float cooldownDash;
+    bool isCooldownDash = false;
 
     [Header("Set Ground")]
     [SerializeField] Transform groundCheck;
@@ -54,6 +58,7 @@ public class MovePlayer : MonoBehaviour
         input.CharacterControls.Dash.canceled += DisableDash;
         dash.emitting = false;
         _animator = GetComponentInChildren<Animator>();
+        cooldownDash = inicooldownDash;
     }
     void HandleFixed()
     {
@@ -108,6 +113,10 @@ public class MovePlayer : MonoBehaviour
         if (!isGrounded)
         {
             //this.GetComponent<Player>().Damaged(fall);
+        }
+        if (isCooldownDash)
+        {
+            CooldownDash();
         }
     }
 
@@ -180,27 +189,45 @@ public class MovePlayer : MonoBehaviour
     {
         if (performADash)
         {
-            performADash = false;
-            mustStop = true;
-
-            Vector3 dashMovement = Vector3.zero;
-            if (Input.GetAxis("Horizontal") > 0)  { dashMovement.x = distDash;  }
-            if (Input.GetAxis("Horizontal") < 0)  { dashMovement.x = -distDash; }
-            if (Input.GetAxis("Vertical") > 0)    { dashMovement.z = distDash;  }
-            if (Input.GetAxis("Vertical") < 0)    { dashMovement.z = -distDash; }
-
-            if (dashMovement.magnitude > 0.1f)
+            if (!isCooldownDash)
             {
-                r_body.velocity = dashMovement / Time.fixedDeltaTime;
-                dash.emitting = true;
-                FindObjectOfType<AudioManager>().Play("dash");
-            }
+                isCooldownDash = true;
+                cooldownDash = inicooldownDash;
+                performADash = false;
+                mustStop = true;
 
+                Vector3 dashMovement = Vector3.zero;
+                if (Input.GetAxis("Horizontal") > 0) { dashMovement.x = distDash; }
+                if (Input.GetAxis("Horizontal") < 0) { dashMovement.x = -distDash; }
+                if (Input.GetAxis("Vertical") > 0) { dashMovement.z = distDash; }
+                if (Input.GetAxis("Vertical") < 0) { dashMovement.z = -distDash; }
+
+                if (dashMovement.magnitude > 0.1f)
+                {
+                    r_body.velocity = dashMovement / Time.fixedDeltaTime;
+                    dash.emitting = true;
+                    FindObjectOfType<AudioManager>().Play("dash");
+                }
+            }
+            else
+            {
+                performADash = false;
+            }
         }
         else if (mustStop)
         {
             r_body.velocity = Vector3.zero;
             mustStop = false;
+        }
+    }
+
+    void CooldownDash()
+    {
+        cooldownDash -= Time.deltaTime;
+
+        if (cooldownDash <= 0.0f)
+        {
+            isCooldownDash = false;
         }
     }
 
