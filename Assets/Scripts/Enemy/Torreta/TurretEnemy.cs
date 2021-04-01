@@ -7,8 +7,7 @@ public class TurretEnemy : Enemy
     private Transform target;
 
     [Header("Attributes")]
-
-    [SerializeField] GameObject boss;
+    
     [SerializeField] float range = 15f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireCountdown = 0f;
@@ -74,7 +73,6 @@ public class TurretEnemy : Enemy
         if(health <= 0)
         {
             GameObject.Destroy(gameObject);
-            boss.SetActive(true);
             FindObjectOfType<AudioManager>().Play("enemyDeath");
         }
     }

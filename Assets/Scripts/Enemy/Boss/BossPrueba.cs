@@ -21,7 +21,12 @@ public class BossPrueba : Enemy
     [SerializeField] private float bossAttack;
     //[SerializeField] GameObject bulletsFase1;
     //[SerializeField] GameObject bulletsFase2;
-    [SerializeField] ParticleSystem bulletsFase1;
+    [Header("balas semi")]
+    [SerializeField] ParticleSystem bullets1Fase1;
+    [SerializeField] ParticleSystem bullets2Fase1;
+    [SerializeField] ParticleSystem bullets3Fase1;
+
+    [Header("balas full")]
     [SerializeField] ParticleSystem bulletsFase2;
 
     bool canDash = true;
@@ -54,7 +59,9 @@ public class BossPrueba : Enemy
         iniMoveSpeed = moveSpeed;
         waitTime = startWaitTime;
         maxHealth = health;
-        bulletsFase1.Stop();
+        bullets1Fase1.Stop();
+        bullets2Fase1.Stop();
+        bullets3Fase1.Stop();
         bulletsFase2.Stop();
         iniDamage = damage;
         agente = GetComponent<NavMeshAgent>();
@@ -223,11 +230,15 @@ public class BossPrueba : Enemy
     {
         melee = false;
         //bulletsFase1.SetActive(true);
-        bulletsFase1.Play();
+        bullets1Fase1.Play();
+        bullets2Fase1.Play();
+        bullets3Fase1.Play();
 
         yield return new WaitForSeconds(bossAttack);
 
-        bulletsFase1.Stop();
+        bullets1Fase1.Stop();
+        bullets2Fase1.Stop();
+        bullets3Fase1.Stop();
         //bulletsFase1.SetActive(false);
         melee = true;
         cooldown = 1;
@@ -257,6 +268,7 @@ public class BossPrueba : Enemy
     public IEnumerator DashExplosion()
     {
         moveSpeed = iniMoveSpeed;
+        Debug.Log("preexplosion");
 
         yield return new WaitForSeconds(recoveryTime);
 

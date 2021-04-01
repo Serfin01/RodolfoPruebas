@@ -24,6 +24,8 @@ public class Punch : MonoBehaviour
                 Destroy(this.gameObject);
             }
             */
+            other.GetComponent<Player>().Damaged(damage);
+            Destroy(this.gameObject);
         }
 
         if (other.CompareTag("Limit"))

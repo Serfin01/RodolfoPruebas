@@ -9658,6 +9658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  bulletForce: 0
 --- !u!1 &4343152905261764299
 GameObject:
   m_ObjectHideFlags: 0
@@ -24139,6 +24140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  bulletForce: 0
 --- !u!1 &5292741912993861183
 GameObject:
   m_ObjectHideFlags: 0
@@ -33797,6 +33799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  bulletForce: 0
 --- !u!1 &5582426533843214942
 GameObject:
   m_ObjectHideFlags: 0
