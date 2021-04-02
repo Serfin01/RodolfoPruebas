@@ -62,7 +62,7 @@ public class MovePlayer : MonoBehaviour
     }
     void HandleFixed()
     {
-            r_body.velocity = newNewVelocity;
+            r_body.velocity = newNewVelocity * Time.deltaTime;
     }
 
     void HandleMovement()
@@ -70,7 +70,7 @@ public class MovePlayer : MonoBehaviour
         if (isGrounded)
         {
             moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
-            newNewVelocity = moveDirection * Time.deltaTime * speed;
+            newNewVelocity = moveDirection * speed;
 
             if (audio.isPlaying == false)
             {
@@ -104,10 +104,6 @@ public class MovePlayer : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
         newNewVelocity.y = velocity.y;
         velocity.y += gravity * Time.deltaTime;
         HandleMovement();

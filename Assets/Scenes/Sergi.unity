@@ -5106,7 +5106,7 @@ Transform:
   m_Children:
   - {fileID: 752161958}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 43.91, y: 0, z: 0}
 --- !u!1 &1592055889
 GameObject:
@@ -9509,7 +9509,7 @@ PrefabInstance:
       objectReference: {fileID: 388054833}
     - target: {fileID: 815708751, guid: 3d07f696c9f56744cbdd9e13677e4588, type: 3}
       propertyPath: speed
-      value: 1100
+      value: 755
       objectReference: {fileID: 0}
     - target: {fileID: 815708751, guid: 3d07f696c9f56744cbdd9e13677e4588, type: 3}
       propertyPath: inicooldownDash
