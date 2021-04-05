@@ -64,13 +64,13 @@ public class BossPrueba : Enemy
         bullets3Fase1.Stop();
         bulletsFase2.Stop();
         iniDamage = damage;
-        agente = GetComponent<NavMeshAgent>();
+        //agente = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        agente.SetDestination(trPlayer.position);
+        //agente.SetDestination(trPlayer.position);
         distancia = Vector3.Distance(transform.position, trPlayer.position);
 
         if (canMove == true)
@@ -85,10 +85,12 @@ public class BossPrueba : Enemy
             Debug.Log("boss muerto");
             Die();
         }
+        /*
         if (distancia <= 0.2f)
         {
             transform.position = trPlayer.position - transform.position;
         }
+        */
 
         switch (fase)
         {
@@ -253,7 +255,7 @@ public class BossPrueba : Enemy
             melee = false;
             speedBoost = false;
         }
-        if (distancia <= 0.2f)
+        if (distancia <= 2f)
         {
             canMove = false;
             Debug.Log("moverse");
@@ -262,6 +264,10 @@ public class BossPrueba : Enemy
                 StartCoroutine(DashExplosion());
                 explosion = false;
             }
+        }
+        else
+        {
+            Debug.Log("asdasho");
         }
     }
 
@@ -276,9 +282,7 @@ public class BossPrueba : Enemy
         Debug.Log("explosion");
         canMove = true;
         damage = iniDamage;
-
-        explosion = true;
-        speedBoost = true;
+        
         cooldown = 1;
         fase = 6;
     }
@@ -294,6 +298,9 @@ public class BossPrueba : Enemy
         bulletsFase2.Stop();
         //bulletsFase2.SetActive(false);
         melee = true;
+
+        explosion = true;
+        speedBoost = true;
         cooldown = 1;
         fase = 6;
     }
