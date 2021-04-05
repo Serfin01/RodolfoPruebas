@@ -23,10 +23,29 @@ public class LevelLoader_Ending : MonoBehaviour
 
 		SceneManager.LoadScene(1);
 	}
+	
+	public void LoadRetryLevel()
+	{
+		StartCoroutine(LoadLevel1());
+	}
+
+	IEnumerator LoadLevel1()
+	{
+		transition.SetTrigger("Start");
+
+		yield return new WaitForSeconds(transitionTime);
+
+		SceneManager.LoadScene(2);
+	}
 
 	public void GoToMenu()
     {
 		LoadNextLevel();
+	}
+	
+	public void Retry()
+    {
+		LoadRetryLevel();
 	}
 
 }

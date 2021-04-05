@@ -11,6 +11,7 @@ public class FollowEnemy : Enemy
     [SerializeField] float gzRange = 10;
     public int damage;
     public Animator _animator;
+    public Animator RodolfHit;
     [SerializeField] Renderer renderer;
     private bool canMove = true;
 
@@ -19,6 +20,7 @@ public class FollowEnemy : Enemy
     {
 
         trPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        FindObjectOfType<AudioManager>().Play("PuñakosWalk");
 
     }
 
@@ -33,9 +35,12 @@ public class FollowEnemy : Enemy
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-        
-        
-        
+        else
+        {
+            FindObjectOfType<AudioManager>().Stop("PuñakosWalk");
+        }
+
+
         /*
         if (this._animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
         {
@@ -48,6 +53,8 @@ public class FollowEnemy : Enemy
     void Damage()
     {
         Debug.Log("la picadura de la cobra gei");
+        FindObjectOfType<AudioManager>().Play("puñakoPunch");
+        RodolfHit.SetTrigger("hitted");
     }
 
     void OnDrawGizmosSelected()
@@ -73,6 +80,7 @@ public class FollowEnemy : Enemy
     */
     IEnumerator Die()
     {
+        FindObjectOfType<AudioManager>().Play("enemyDeath");
         canMove = false;
         _animator.SetTrigger("death");
         yield return new WaitForSeconds(3f);

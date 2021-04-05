@@ -19,7 +19,7 @@ public class MovePlayer : MonoBehaviour
 
     [SerializeField] Transform rotatingElement;
 
-    public AudioSource audio;
+    public AudioSource audioSteps;
 
     Animator _animator;
 
@@ -71,12 +71,18 @@ public class MovePlayer : MonoBehaviour
         {
             moveDirection = new Vector3(currentMovement.x, 0, currentMovement.y).normalized;
             newNewVelocity = moveDirection * speed;
-
-            if (audio.isPlaying == false)
+            if(movementPressed)
             {
-                audio.volume = Random.Range(0.2f, 0.4f);
-                audio.pitch = Random.Range(0.8f, 1.1f);
-                audio.Play();
+                if (audioSteps.isPlaying == false)
+                {
+                    audioSteps.volume = Random.Range(0.2f, 0.4f);
+                    audioSteps.pitch = Random.Range(0.8f, 1.1f);
+                    audioSteps.Play();
+                }
+            }
+            /*else
+            {
+                audioSteps.Stop();
             }
             /*
             if (movementPressed)
@@ -87,6 +93,7 @@ public class MovePlayer : MonoBehaviour
         }
         else
         {
+            audioSteps.Stop();
             ragDoll.SetActive(true);
             //velocity.y = -10f;
         }

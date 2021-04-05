@@ -26,6 +26,20 @@ public class DashIA : Enemy
     Transform target;
     NavMeshAgent agent;
 
+    public Animator animatorMarti;
+
+    public AudioSource audioSteps;
+    public AudioSource audiorun;
+    public AudioSource audiostop;
+
+
+    private void Awake()
+    {
+        audioSteps.enabled = false;
+        audiorun.enabled = false;
+        audiostop.enabled = false;
+    }
+
     void Start()
     {
         target = player.transform;
@@ -41,24 +55,34 @@ public class DashIA : Enemy
         float distance = Vector3.Distance(target.position, transform.position);
         if (canMove)
         {
+            GetComponent<NavMeshAgent>().enabled = true;
+            animatorMarti.SetFloat("speed", 0f);
             GetComponent<NavMeshAgent>().speed = baseSpeed;
             GetComponent<NavMeshAgent>().acceleration = baseAcceleration;
             if (distance <= lookRadius)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
                 agent.SetDestination(target.position);
+                animatorMarti.SetFloat("speed", 1f);
+                audioSteps.enabled = true;
             }
 
             if(distance <= dashDistance)
             {
                 //Dash();
                 StartCoroutine("Dash");
+                audioSteps.enabled = false;
+                //audioSteps.Stop();
             }
+
         }
         else
         {
+            audioSteps.enabled = false;
+            animatorMarti.SetFloat("speed", 0f);
             GetComponent<NavMeshAgent>().speed = 0;
             GetComponent<NavMeshAgent>().acceleration = 0;
+            GetComponent<NavMeshAgent>().enabled = false;
         }
 
         //GetComponent<NavMeshAgent>().speed = 10f;
@@ -75,15 +99,22 @@ public class DashIA : Enemy
 
     IEnumerator Dash()
     {
+        animatorMarti.SetFloat("speed", 2f);
+        audiorun.enabled = true;
         GetComponent<NavMeshAgent>().speed = dashSpeed;
         GetComponent<NavMeshAgent>().acceleration = dashSpeed;
         //_animator.SetTrigger("death");
         yield return new WaitForSeconds(1f);
+        audiorun.enabled = false;
         canMove = false;
+        audiostop.enabled = true;
+        animatorMarti.SetFloat("speed", 0f);
         GetComponent<NavMeshAgent>().speed = normalSpeed;
         GetComponent<NavMeshAgent>().acceleration = baseAcceleration;
         //normalSpeed = iniSpeed;
         yield return new WaitForSeconds(1f);
+        audiostop.enabled = false;
+        animatorMarti.SetFloat("speed", 1f);
         canMove = true;
     }
 

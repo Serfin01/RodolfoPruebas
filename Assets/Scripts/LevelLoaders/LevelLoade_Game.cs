@@ -29,8 +29,8 @@ public class LevelLoade_Game : MonoBehaviour
     {
 		crossFadeImage.color = Color.black;
 		overVolume.profile.TryGet<LiftGammaGain>(out liftGammaGain);
+		overVolume.profile.TryGet<LiftGammaGain>(out liftGammaGain);
 
-		resolutions = Screen.resolutions;
 
 		resolutionDropdown.ClearOptions();
 
