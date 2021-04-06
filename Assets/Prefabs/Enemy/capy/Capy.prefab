@@ -83,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 7111184906088781409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53, y: 1.57, z: 9.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.82, y: 1.82, z: 1.82}
   m_Children:
   - {fileID: 7111184905329312150}
   m_Father: {fileID: 0}
@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  boss: {fileID: 0}
   range: 15
   fireRate: 1
   fireCountdown: 0

@@ -8609,7 +8609,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -9639,8 +9639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2bcec1416403a64db69e7f0ae93ef7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  bulletForce: 0
+  damage: 10
+  bulletForce: 1
 --- !u!1 &5292741912993861183
 GameObject:
   m_ObjectHideFlags: 0
@@ -13435,7 +13435,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
