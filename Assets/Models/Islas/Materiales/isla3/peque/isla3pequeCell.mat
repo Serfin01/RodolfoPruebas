@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: isla3Cell
+  m_Name: isla3pequeCell
   m_Shader: {fileID: -6465566751694194690, guid: b16e1aed70c5c554db98c5c3976896b9,
     type: 3}
   m_ShaderKeywords: 
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_809F7A0A:
-        m_Texture: {fileID: 2800000, guid: dc1471fe30a729f49a3d81ef46a2c685, type: 3}
+        m_Texture: {fileID: 2800000, guid: 87ddfe97b51f23945b8ec32752e49e52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:

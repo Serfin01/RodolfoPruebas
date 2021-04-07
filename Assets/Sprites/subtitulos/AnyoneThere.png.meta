@@ -1,0 +1,620 @@
+fileFormatVersion: 2
+guid: b809e6c822fa55d4d9d06460a1d39c1d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7153887944266872973
+    second: AnyoneThere_0
+  - first:
+      213: -7382132753472515568
+    second: AnyoneThere_1
+  - first:
+      213: -5882977525762243137
+    second: AnyoneThere_2
+  - first:
+      213: 4955012304709334218
+    second: AnyoneThere_3
+  - first:
+      213: -4033635771736653469
+    second: AnyoneThere_4
+  - first:
+      213: 5068316763955571004
+    second: AnyoneThere_5
+  - first:
+      213: -8679121527408560900
+    second: AnyoneThere_6
+  - first:
+      213: 2690120561356150563
+    second: AnyoneThere_7
+  - first:
+      213: -4163596861027711135
+    second: AnyoneThere_8
+  - first:
+      213: -1645072139543631562
+    second: AnyoneThere_9
+  - first:
+      213: -5581098274110817091
+    second: AnyoneThere_10
+  - first:
+      213: -5327903872479330513
+    second: AnyoneThere_11
+  - first:
+      213: 7207496006731472204
+    second: AnyoneThere_12
+  - first:
+      213: 5316296397611941407
+    second: AnyoneThere_13
+  - first:
+      213: 7321028510155521776
+    second: AnyoneThere_14
+  - first:
+      213: 1731162046132121199
+    second: AnyoneThere_15
+  - first:
+      213: 1979427538676755018
+    second: AnyoneThere_16
+  - first:
+      213: -2001152234557686856
+    second: AnyoneThere_17
+  - first:
+      213: -2328905289807731959
+    second: AnyoneThere_18
+  - first:
+      213: -4118321189109928368
+    second: AnyoneThere_19
+  - first:
+      213: 1909453689123164883
+    second: AnyoneThere_20
+  - first:
+      213: 4440613516006491376
+    second: AnyoneThere_21
+  - first:
+      213: 8730939704109989638
+    second: AnyoneThere_22
+  - first:
+      213: 8062939447295454433
+    second: AnyoneThere_23
+  - first:
+      213: -2454075188861699133
+    second: AnyoneThere_24
+  - first:
+      213: 3816019614074694669
+    second: AnyoneThere_25
+  - first:
+      213: -9165501965289318598
+    second: AnyoneThere_26
+  - first:
+      213: -8898613013631655467
+    second: AnyoneThere_27
+  - first:
+      213: 5524285566465539871
+    second: AnyoneThere_28
+  - first:
+      213: 4680989769261281453
+    second: AnyoneThere_29
+  - first:
+      213: 6278460399893764183
+    second: AnyoneThere_30
+  - first:
+      213: -2671328548472410508
+    second: AnyoneThere_31
+  - first:
+      213: 937731530623242428
+    second: AnyoneThere_32
+  - first:
+      213: 4263730065773892975
+    second: AnyoneThere_33
+  - first:
+      213: -6960459677073730781
+    second: AnyoneThere_34
+  - first:
+      213: 1736245176352564078
+    second: AnyoneThere_35
+  - first:
+      213: 5614674729513095524
+    second: AnyoneThere_36
+  - first:
+      213: -7484658192801413876
+    second: AnyoneThere_37
+  - first:
+      213: -6745159240052779144
+    second: AnyoneThere_38
+  - first:
+      213: -7901822156808913082
+    second: AnyoneThere_39
+  - first:
+      213: -8451977522531532820
+    second: AnyoneThere_40
+  - first:
+      213: 1891818880178682723
+    second: AnyoneThere_41
+  - first:
+      213: 5842152195687540973
+    second: AnyoneThere_42
+  - first:
+      213: 4509799502675123337
+    second: AnyoneThere_43
+  - first:
+      213: -1488897224562019226
+    second: AnyoneThere_44
+  - first:
+      213: -7017881015373079636
+    second: AnyoneThere_45
+  - first:
+      213: 7423453196589674552
+    second: AnyoneThere_46
+  - first:
+      213: -8237786673374961535
+    second: AnyoneThere_47
+  - first:
+      213: -9213107316390192563
+    second: AnyoneThere_48
+  - first:
+      213: -3764387338999728566
+    second: AnyoneThere_49
+  - first:
+      213: -9083549369726543839
+    second: AnyoneThere_50
+  - first:
+      213: -8863002431807101627
+    second: AnyoneThere_51
+  - first:
+      213: -8146900511955738864
+    second: AnyoneThere_52
+  - first:
+      213: 6809343189597978602
+    second: AnyoneThere_53
+  - first:
+      213: 2417872747924624396
+    second: AnyoneThere_54
+  - first:
+      213: 3880111084109995054
+    second: AnyoneThere_55
+  - first:
+      213: 4334580133116726468
+    second: AnyoneThere_56
+  - first:
+      213: -7712814197632178405
+    second: AnyoneThere_57
+  - first:
+      213: 3880806623456453394
+    second: AnyoneThere_58
+  - first:
+      213: 3325298574114598978
+    second: AnyoneThere_59
+  - first:
+      213: -2558536401015591125
+    second: AnyoneThere_60
+  - first:
+      213: 639914381353752382
+    second: AnyoneThere_61
+  - first:
+      213: -8091487065801561371
+    second: AnyoneThere_62
+  - first:
+      213: 3010429075936808845
+    second: AnyoneThere_63
+  - first:
+      213: -2454929653731819161
+    second: AnyoneThere_64
+  - first:
+      213: -1117858163162099793
+    second: AnyoneThere_65
+  - first:
+      213: 5290731322039786888
+    second: AnyoneThere_66
+  - first:
+      213: 685632304795982955
+    second: AnyoneThere_67
+  - first:
+      213: -3818767043781060513
+    second: AnyoneThere_68
+  - first:
+      213: 3037632910175594905
+    second: AnyoneThere_69
+  - first:
+      213: -7389109313695859997
+    second: AnyoneThere_70
+  - first:
+      213: -7750514355470272928
+    second: AnyoneThere_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnyoneThere_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 443
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88f9f0be27b74360800000000000000
+      internalID: 7153887944266872973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 442
+        width: 412
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361045003a5a508c0800000000000000
+      internalID: -4033635771736653469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_11
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 383
+        width: 74
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ff07b08ab7f06b0800000000000000
+      internalID: -5327903872479330513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 382
+        width: 378
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a2475ebd6587b10800000000000000
+      internalID: 1979427538676755018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_23
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 323
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eca78145b055ef60800000000000000
+      internalID: 8062939447295454433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 322
+        width: 352
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da07e0ae46736f040800000000000000
+      internalID: 4680989769261281453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_35
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 262
+        width: 149
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63ea73f9c1681810800000000000000
+      internalID: 1736245176352564078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_42
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 262
+        width: 320
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de869bb087e731150800000000000000
+      internalID: 5842152195687540973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_47
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 202
+        width: 184
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180e90e8aa08dad80800000000000000
+      internalID: -8237786673374961535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_52
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 142
+        width: 211
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f1e64062560fe80800000000000000
+      internalID: -8146900511955738864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_61
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 82
+        width: 263
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37114b4dbe61e800800000000000000
+      internalID: 639914381353752382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_68
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 22
+        width: 293
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58167b3b93010bc0800000000000000
+      internalID: -3818767043781060513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
