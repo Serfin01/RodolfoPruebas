@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PuentesEnter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject puenteEnter;
+    bool roomClear = false;
+    [SerializeField] int enemiesNum;
+
+    public void Clear(int currentEnemiesNum)
     {
-        
+        if (enemiesNum == currentEnemiesNum)
+        {
+            roomClear = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        puenteEnter.SetActive(true); ;
     }
 }

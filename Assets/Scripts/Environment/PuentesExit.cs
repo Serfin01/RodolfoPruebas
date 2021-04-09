@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PuentesExit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject puenteExit;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        puenteExit.SetActive(false);
     }
 }
