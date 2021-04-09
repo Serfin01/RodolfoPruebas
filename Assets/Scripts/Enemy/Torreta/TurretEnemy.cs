@@ -24,11 +24,20 @@ public class TurretEnemy : Enemy
 
     public bool canShoot;
     public Animator CapyAnim;
+
+    public GameObject particulas;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        particulas.SetActive(false);
     }
-    
+
+    private void Awake()
+    {
+        CapyAnim.SetBool("moverse", true);
+        CapyAnim.SetBool("salirSuelo", false);
+    }
+
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -46,7 +55,10 @@ public class TurretEnemy : Enemy
 
         if (nearestEnemy != null && shortestDistance <= range)
         {
+            //CapyAnim.SetBool("moverse", false);
+            //CapyAnim.SetBool("salirSuelo", true);
             target = nearestEnemy.transform;
+            particulas.SetActive(true);
         }
     }
 
@@ -54,6 +66,8 @@ public class TurretEnemy : Enemy
     {
         if(target == null)
         {
+            CapyAnim.SetBool("moverse", true);
+            CapyAnim.SetBool("salirSuelo", false);
             return;
         }
 
@@ -72,8 +86,11 @@ public class TurretEnemy : Enemy
 
         if(health <= 0)
         {
+            //hacer que se espere un poco pa la animacion
             GameObject.Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("enemyDeath");
+            CapyAnim.SetBool("MeterseSuelo", true);
+            CapyAnim.SetBool("Disparar", false);
         }
     }
     //que pida bool canShoot y le meto el if correspondiente
@@ -82,8 +99,6 @@ public class TurretEnemy : Enemy
         //Debug.Log("shoot");
         if (canShoot) { 
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            CapyAnim.SetBool("MeterseSuelo", false);
-            CapyAnim.SetBool("moverse", false);
             CapyAnim.SetBool("Disparar", true); 
         }
     }

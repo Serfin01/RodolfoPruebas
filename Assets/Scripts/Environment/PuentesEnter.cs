@@ -18,6 +18,19 @@ public class PuentesEnter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        puenteEnter.SetActive(true); ;
+        //puenteEnter.SetActive(true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (enemiesNum == 0)
+        {
+            puenteEnter.SetActive(true);
+            Debug.Log("abrete");
+        }
+        if(other.CompareTag("Enemy"))
+        {
+            enemiesNum -= 1;
+        }
     }
 }
