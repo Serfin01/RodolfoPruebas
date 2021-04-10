@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     private bool died = false;
 
-    [SerializeField] GameObject puente;
+    //[SerializeField] GameObject puente;
     public void Damaged(int damage)
     {
         health -= damage;
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             {
                 //Die();
-                puente.GetComponent<PuentesEnter>().Clear(+1);
+                //puente.GetComponent<PuentesEnter>().Clear(+1);
                 StartCoroutine("Die");
                 died = true;
             }

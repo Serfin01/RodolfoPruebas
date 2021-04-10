@@ -8,6 +8,9 @@ public class PuentesEnter : MonoBehaviour
     bool roomClear = false;
     [SerializeField] int enemiesNum;
 
+    [SerializeField]List<GameObject> listOfEnemies = new List<GameObject>();
+
+    /*
     public void Clear(int currentEnemiesNum)
     {
         if (enemiesNum == currentEnemiesNum)
@@ -15,14 +18,30 @@ public class PuentesEnter : MonoBehaviour
             roomClear = true;
         }
     }
-
+    */
     private void OnTriggerEnter(Collider other)
     {
         //puenteEnter.SetActive(true);
+        if (listOfEnemies.Count == 0)
+        {
+            puenteEnter.SetActive(true);
+        }
+        Debug.Log(listOfEnemies.Count);
     }
+    /*
+    public void KilledOpponent(GameObject opponent)
+    {
+        if (listOfEnemies.Contains(opponent))
+        {
+            listOfEnemies.Remove(opponent);
+        }
 
+        print(listOfEnemies.Count);
+    }
+    */
     private void OnTriggerExit(Collider other)
     {
+        /*
         if (enemiesNum == 0)
         {
             puenteEnter.SetActive(true);
@@ -32,5 +51,6 @@ public class PuentesEnter : MonoBehaviour
         {
             enemiesNum -= 1;
         }
+        */
     }
 }
