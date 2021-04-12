@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: dc4b28b96c7fad8409f2d07cd0e36135, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9a7ade4da745a1342b0606684ec0d00b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puenteEnter: {fileID: 1656247434}
-  enemiesNum: 2
+  enemiesClear: 0
   listOfEnemies:
   - {fileID: 1000922700}
   - {fileID: 906901548}
@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puenteEnter: {fileID: 0}
-  enemiesNum: 0
+  enemiesClear: 0
   listOfEnemies: []
 --- !u!65 &1011506844
 BoxCollider:
@@ -6992,7 +6992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puenteEnter: {fileID: 0}
-  enemiesNum: 0
+  enemiesClear: 0
   listOfEnemies: []
 --- !u!65 &1398081105
 BoxCollider:
