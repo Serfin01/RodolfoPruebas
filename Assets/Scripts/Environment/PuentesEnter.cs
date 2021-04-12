@@ -6,7 +6,9 @@ public class PuentesEnter : MonoBehaviour
 {
     [SerializeField] GameObject puenteEnter;
     bool roomClear = false;
-    [SerializeField] int enemiesNum;
+
+    private int enemiesNum;
+    [SerializeField] int enemiesClear;
 
     [SerializeField]List<GameObject> listOfEnemies = new List<GameObject>();
 
@@ -21,12 +23,25 @@ public class PuentesEnter : MonoBehaviour
     */
     private void OnTriggerEnter(Collider other)
     {
+        //enemiesNum = listOfEnemies.Count;
+        for (int nullSearch = 0; listOfEnemies.Count < listOfEnemies.Count; nullSearch++)
+        {
+            if(listOfEnemies[nullSearch] == null)
+            {
+                Debug.Log("aaaaaaa");
+                enemiesNum++;
+            }
+            else
+            {
+                Debug.Log(nullSearch);
+                return;
+            }
+        }
         //puenteEnter.SetActive(true);
-        if (listOfEnemies.Count == 0)
+        if (enemiesNum == enemiesClear)
         {
             puenteEnter.SetActive(true);
         }
-        Debug.Log(listOfEnemies.Count);
     }
     /*
     public void KilledOpponent(GameObject opponent)
