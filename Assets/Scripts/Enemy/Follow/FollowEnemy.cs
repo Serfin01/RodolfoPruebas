@@ -61,13 +61,21 @@ public class FollowEnemy : Enemy
         Gizmos.DrawWireSphere(transform.position, gzRange);
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.rigidbody.CompareTag("Player"))
+        {
+            _animator.SetTrigger("Punch");
+        }
+            //collision.rigidbody.GetComponent<Player>().Damaged(damage);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Damage();
             other.GetComponent<Player>().Damaged(damage);
-            _animator.SetTrigger("Punch");
         }
     }
     /*
@@ -84,4 +92,13 @@ public class FollowEnemy : Enemy
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
     }
+
+    /*IEnumerator Hit()
+    {
+
+
+        yield return new WaitForSeconds(1f);
+
+
+    }*/
 }
