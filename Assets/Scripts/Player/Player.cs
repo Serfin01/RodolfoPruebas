@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
     {
         //currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
     }
 
-    public void Damaged(int damage)
+    public virtual void Damaged(int damage)
     {
         currentHealth -= damage;
 

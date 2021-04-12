@@ -13,6 +13,7 @@ public class PlayerManager : Player
     [SerializeField] GameObject ragDoll;
     public AudioSource ADeath;
 
+
     void Update()
     {
         if (currentHealth <= 0)
@@ -74,5 +75,10 @@ public class PlayerManager : Player
     {
         musicInPause.SetBool("Pause", true);
         isGamePaused = true;
+    }
+
+    public override void Damaged(int damage)
+    {
+        _animator.SetTrigger("hitted");
     }
 }

@@ -11,7 +11,6 @@ public class FollowEnemy : Enemy
     [SerializeField] float gzRange = 10;
     public int damage;
     public Animator _animator;
-    public Animator RodolfHit;
     [SerializeField] Renderer renderer;
     private bool canMove = true;
 
@@ -54,7 +53,6 @@ public class FollowEnemy : Enemy
     {
         Debug.Log("la picadura de la cobra gei");
         FindObjectOfType<AudioManager>().Play("puñakoPunch");
-        RodolfHit.SetTrigger("hitted");
     }
 
     void OnDrawGizmosSelected()
