@@ -80,5 +80,6 @@ public class PlayerManager : Player
     public override void Damaged(int damage)
     {
         _animator.SetTrigger("hitted");
+        currentHealth -= damage;
     }
 }
