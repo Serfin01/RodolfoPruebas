@@ -305,12 +305,13 @@ public class BossPrueba : Enemy
         fase = 6;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (melee)
+            if (!melee)
             {
+                other.GetComponent<Player>().Damaged(damage);
                 /*
                 if (other.GetComponent<Invisibility>().canBeDamaged)
                 {

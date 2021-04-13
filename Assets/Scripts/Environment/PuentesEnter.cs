@@ -4,68 +4,22 @@ using UnityEngine;
 
 public class PuentesEnter : MonoBehaviour
 {
-    [SerializeField] GameObject puenteEnter;
-    bool roomClear = false;
+    [SerializeField] GameObject [] puenteEnter;
 
-    private int enemiesNum;
-    [SerializeField] int enemiesClear;
 
-    [SerializeField]List<GameObject> listOfEnemies = new List<GameObject>();
-
-    /*
-    public void Clear(int currentEnemiesNum)
+    private void Update()
     {
-        if (enemiesNum == currentEnemiesNum)
+        if (transform.childCount == 0 && puenteEnter.Length == 1)
         {
-            roomClear = true;
+            puenteEnter[0].SetActive(true);
         }
-    }
-    */
-    private void OnTriggerEnter(Collider other)
-    {
-        //enemiesNum = listOfEnemies.Count;
-        for (int nullSearch = 0; listOfEnemies.Count < listOfEnemies.Count; nullSearch++)
+        if (transform.childCount == 0 && puenteEnter.Length == 2)
         {
-            if(listOfEnemies[nullSearch] == null)
-            {
-                Debug.Log("aaaaaaa");
-                enemiesNum++;
-            }
-            else
-            {
-                Debug.Log(nullSearch);
-                return;
-            }
+            puenteEnter[2].SetActive(true);
         }
-        //puenteEnter.SetActive(true);
-        if (enemiesNum == enemiesClear)
+        if (transform.childCount == 0 && puenteEnter.Length == 3)
         {
-            puenteEnter.SetActive(true);
+            puenteEnter[3].SetActive(true);
         }
-    }
-    /*
-    public void KilledOpponent(GameObject opponent)
-    {
-        if (listOfEnemies.Contains(opponent))
-        {
-            listOfEnemies.Remove(opponent);
-        }
-
-        print(listOfEnemies.Count);
-    }
-    */
-    private void OnTriggerExit(Collider other)
-    {
-        /*
-        if (enemiesNum == 0)
-        {
-            puenteEnter.SetActive(true);
-            Debug.Log("abrete");
-        }
-        if(other.CompareTag("Enemy"))
-        {
-            enemiesNum -= 1;
-        }
-        */
     }
 }

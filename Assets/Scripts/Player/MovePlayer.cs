@@ -94,7 +94,7 @@ public class MovePlayer : MonoBehaviour
         else
         {
             audioSteps.Stop();
-            ragDoll.SetActive(true);
+            //ragDoll.SetActive(true);
             //velocity.y = -10f;
         }
 
