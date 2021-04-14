@@ -12,19 +12,20 @@ public class PlayerManager : Player
     public static bool isGamePaused = false;
     [SerializeField] GameObject ragDoll;
     public AudioSource ADeath;
-
+    public bool isAlive = true;
 
     void Update()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && isAlive == true)
         {
-            ADeath.Play();
+            
             Debug.Log("maricon");
             gameObject.GetComponentInChildren<Animator>().enabled = false;
             gameObject.GetComponent<MovePlayer>().canMove = false;
             ragDoll.SetActive(true);
+            isAlive = false;
             LoadNextLevel();
-            //Destroy(this.gameObject);
+            ADeath.Play();
         }
         healthBar.SetHealth(currentHealth);
         
@@ -63,6 +64,11 @@ public class PlayerManager : Player
             _animator.SetTrigger("hitted");
 
         }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        FindObjectOfType<AudioManager>().Play("hitted");
     }
 
     public void ResumeGame()
