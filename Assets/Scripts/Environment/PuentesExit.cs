@@ -6,6 +6,7 @@ public class PuentesExit : MonoBehaviour
 {
     [SerializeField] GameObject puenteExit;
     [SerializeField] GameObject[] enemies;
+    //int starterHealth;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,4 +16,10 @@ public class PuentesExit : MonoBehaviour
             enemies[i].SetActive(true);
         }
     }
+    /*
+    public void Pergaminos(int vidaRodolfo)
+    {
+        starterHealth = vidaRodolfo;
+    }
+    */
 }
