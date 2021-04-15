@@ -29,7 +29,8 @@ public class MovePlayer : MonoBehaviour
     Vector3 velocity;
     Vector3 newNewVelocity;
     [SerializeField] GameObject ragDoll;
-    int fall = 1000;
+    int fall = 10;
+    [SerializeField] GameObject spawnRodolfo;
 
     [Header("Dash Settings")]
     [SerializeField] int distDash;
@@ -128,6 +129,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (other.CompareTag("fall"))
         {
+            transform.position = spawnRodolfo.transform.position;
             this.GetComponent<Player>().Damaged(fall);
         }
     }
