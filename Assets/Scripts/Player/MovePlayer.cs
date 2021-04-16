@@ -30,7 +30,7 @@ public class MovePlayer : MonoBehaviour
     Vector3 newNewVelocity;
     [SerializeField] GameObject ragDoll;
     int fall = 10;
-    [SerializeField] GameObject spawnRodolfo;
+    [SerializeField] GameObject [] spawnRodolfo;
 
     [Header("Dash Settings")]
     [SerializeField] int distDash;
@@ -127,9 +127,29 @@ public class MovePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("fall"))
+        if (other.CompareTag("fall1"))
         {
-            transform.position = spawnRodolfo.transform.position;
+            transform.position = spawnRodolfo[0].transform.position;
+            this.GetComponent<Player>().Damaged(fall);
+        }
+        if (other.CompareTag("fall2"))
+        {
+            transform.position = spawnRodolfo[1].transform.position;
+            this.GetComponent<Player>().Damaged(fall);
+        }
+        if (other.CompareTag("fall3"))
+        {
+            transform.position = spawnRodolfo[2].transform.position;
+            this.GetComponent<Player>().Damaged(fall);
+        }
+        if (other.CompareTag("fall4"))
+        {
+            transform.position = spawnRodolfo[3].transform.position;
+            this.GetComponent<Player>().Damaged(fall);
+        }
+        if (other.CompareTag("fall5"))
+        {
+            transform.position = spawnRodolfo[4].transform.position;
             this.GetComponent<Player>().Damaged(fall);
         }
     }

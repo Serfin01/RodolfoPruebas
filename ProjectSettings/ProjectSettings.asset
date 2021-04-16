@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: MoyMoy
   productName: Rodolfo
-  defaultCursor: {fileID: 2800000, guid: e8d6802804956cf4f97b4ccac0ef4e50, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 080729e6eaa5bcc49812096685c665b5, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
