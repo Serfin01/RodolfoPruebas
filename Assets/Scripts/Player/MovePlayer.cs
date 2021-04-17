@@ -25,7 +25,7 @@ public class MovePlayer : MonoBehaviour
 
     public bool canMove = true;
     bool isGrounded;
-    float gravity = -10;
+    float gravity = -200;
     Vector3 velocity;
     Vector3 newNewVelocity;
     [SerializeField] GameObject ragDoll;
@@ -130,27 +130,38 @@ public class MovePlayer : MonoBehaviour
         if (other.CompareTag("fall1"))
         {
             transform.position = spawnRodolfo[0].transform.position;
-            this.GetComponent<Player>().Damaged(fall);
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("fall2"))
         {
             transform.position = spawnRodolfo[1].transform.position;
-            this.GetComponent<Player>().Damaged(fall);
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("fall3"))
         {
             transform.position = spawnRodolfo[2].transform.position;
-            this.GetComponent<Player>().Damaged(fall);
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("fall4"))
         {
             transform.position = spawnRodolfo[3].transform.position;
-            this.GetComponent<Player>().Damaged(fall);
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("fall5"))
         {
             transform.position = spawnRodolfo[4].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
+        }
+        if (other.CompareTag("preFall"))
+        {
+            ragDoll.SetActive(true);
             this.GetComponent<Player>().Damaged(fall);
+            _animator.enabled = false;
         }
     }
 

@@ -12,6 +12,12 @@ TagManager:
   - Pergamino
   - Laser
   - fall
+  - fall1
+  - fall2
+  - fall3
+  - fall4
+  - fall5
+  - preFall
   layers:
   - Default
   - TransparentFX
