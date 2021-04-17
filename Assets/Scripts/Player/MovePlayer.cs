@@ -156,6 +156,12 @@ public class MovePlayer : MonoBehaviour
             transform.position = spawnRodolfo[4].transform.position;
             ragDoll.SetActive(false);
             _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall6"))
+        {
+            transform.position = spawnRodolfo[5].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("preFall"))
         {

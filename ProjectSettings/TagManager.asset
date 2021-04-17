@@ -18,6 +18,7 @@ TagManager:
   - fall4
   - fall5
   - preFall
+  - fall6
   layers:
   - Default
   - TransparentFX
