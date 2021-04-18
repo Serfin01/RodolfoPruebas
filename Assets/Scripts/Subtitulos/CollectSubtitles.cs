@@ -16,6 +16,20 @@ public class CollectSubtitles : MonoBehaviour
         {
             animSubUp.SetTrigger("apear");
             animSubDown.SetTrigger("Disapear");
+
+            TriggerDialogue();
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && Input.GetMouseButtonDown(1))
+        {
+            FindObjectOfType<DialogManager>().DisplayNextSentence();
+        }
+    }
+
+    public void TriggerDialogue()
+    {
+        FindObjectOfType<DialogManager>().StartDialogue(dialogue);
     }
 }
