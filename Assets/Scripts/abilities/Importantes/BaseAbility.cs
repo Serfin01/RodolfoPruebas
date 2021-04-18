@@ -11,6 +11,8 @@ public abstract class BaseAbility : MonoBehaviour
     [SerializeField] protected float iniCooldown;
     [SerializeField] protected Image imageCooldown;
 
+    bool usedSpell = false;
+
     protected virtual void ApplyCooldown()
     {
         cooldown -= Time.deltaTime;
@@ -28,7 +30,7 @@ public abstract class BaseAbility : MonoBehaviour
 
     public virtual void UseSpell()
     {
-        
+        usedSpell = true;
     }
 
     public void SetImageCooldown(Image jose)

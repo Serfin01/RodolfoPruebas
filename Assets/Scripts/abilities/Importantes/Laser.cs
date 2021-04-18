@@ -38,6 +38,7 @@ public class Laser : BaseAbility
 
     public override void UseSpell()
     {
+        base.UseSpell();
         Debug.Log("Laser");
         if (isCooldown)
         {

@@ -8,6 +8,7 @@ public class AttackSpeed : BaseAbility
 {
     public override void UseSpell()
     {
+        base.UseSpell();
         Debug.Log("Speed");
         Mano mano = GetComponentInChildren<Mano>();
         mano.cadencia = mano.cadencia / 2;

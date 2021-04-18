@@ -27,6 +27,7 @@ public class CreateShield : BaseAbility
 
     public override void UseSpell()
     {
+        base.UseSpell();
         Debug.Log("Shield");
         myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(myRay, out hit))

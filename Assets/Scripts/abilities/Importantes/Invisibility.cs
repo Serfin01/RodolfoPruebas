@@ -14,6 +14,7 @@ public class Invisibility : BaseAbility
 
     void Start()
     {
+        base.UseSpell();
         modelo = GameObject.Find("RodolfoBasicAnim");
         iniCooldown = 3;
     }
