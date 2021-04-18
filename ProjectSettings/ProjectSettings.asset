@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: Beta
+  bundleVersion: deltaPrueba
   preloadedAssets:
   - {fileID: 11400000, guid: 2cefa19a42fbda64e9995e46e815439d, type: 2}
   metroInputSource: 0
