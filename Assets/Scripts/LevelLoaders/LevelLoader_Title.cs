@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using TMPro;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class LevelLoader_Title : MonoBehaviour
 {
@@ -16,6 +18,10 @@ public class LevelLoader_Title : MonoBehaviour
 	public TMP_Dropdown resolutionDropdown;
 
 	Resolution[] resolutions;
+
+	[SerializeField] Volume overVolume;
+
+	LiftGammaGain liftGammaGain;
 
 	void Start()
     {
@@ -42,6 +48,7 @@ public class LevelLoader_Title : MonoBehaviour
 		resolutionDropdown.AddOptions(options);
 		resolutionDropdown.value = currentResolutionIndex;
 		resolutionDropdown.RefreshShownValue();
+		overVolume.profile.TryGet<LiftGammaGain>(out liftGammaGain);
 	}
 
 	public void SetResolution (int resolutionIndex)
@@ -63,6 +70,7 @@ public class LevelLoader_Title : MonoBehaviour
 
 		SceneManager.LoadScene(levelIndex);
 	}
+	
 
 	public void PlayGame()	
     {
@@ -103,6 +111,12 @@ public class LevelLoader_Title : MonoBehaviour
 	public void SetFullscreen (bool isFullscreen)
     {
 		Screen.fullScreen = isFullscreen;
+	}
+
+	public void OnSliGammaValue(float newValue)
+	{
+		//PlayerPrefs.SetFloat(gamma_PPrefsTag, newValue);
+		liftGammaGain.gamma.value = Vector4.one * newValue;
 	}
 
 }

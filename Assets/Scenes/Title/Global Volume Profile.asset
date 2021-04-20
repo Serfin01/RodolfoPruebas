@@ -16,10 +16,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.4946897, y: 0.5967762, z: 1, w: 0.29411766}
+    m_Value: {x: 0.79079044, y: 0.80989826, z: 1, w: 0.19300541}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.95249605, z: 0.8747977, w: 0.055147067}
+    m_Value: {x: 1, y: 0.95249605, z: 0.8747977, w: 0.1562593}
   highlights:
     m_OverrideState: 1
     m_Value: {x: 0.973756, y: 1, z: 0.901361, w: 0}
@@ -68,13 +68,13 @@ MonoBehaviour:
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
-    m_OverrideState: 1
-    m_Value: 0
+    m_OverrideState: 0
+    m_Value: -0.91
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 51
+    m_Value: 26.23
     min: -100
     max: 100
 --- !u!114 &-1437905260287077699
@@ -167,13 +167,13 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   lift:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gain:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &8132030880832349786
 MonoBehaviour:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
