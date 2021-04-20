@@ -162,6 +162,36 @@ public class MovePlayer : MonoBehaviour
             transform.position = spawnRodolfo[5].transform.position;
             ragDoll.SetActive(false);
             _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall7"))
+        {
+            transform.position = spawnRodolfo[6].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall8"))
+        {
+            transform.position = spawnRodolfo[7].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall9"))
+        {
+            transform.position = spawnRodolfo[8].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall10"))
+        {
+            transform.position = spawnRodolfo[9].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
+        }        
+        if (other.CompareTag("fall11"))
+        {
+            transform.position = spawnRodolfo[10].transform.position;
+            ragDoll.SetActive(false);
+            _animator.enabled = true;
         }
         if (other.CompareTag("preFall"))
         {

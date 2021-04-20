@@ -10,6 +10,13 @@ public class CollectSubtitles : MonoBehaviour
 
     public Dialogue dialogue;
 
+    Animator triggerAnim;
+
+    private void Start()
+    {
+        triggerAnim = gameObject.GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -25,6 +32,15 @@ public class CollectSubtitles : MonoBehaviour
         if (other.CompareTag("Player") && Input.GetMouseButtonDown(1))
         {
             FindObjectOfType<DialogManager>().DisplayNextSentence();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            animSubUp.SetTrigger("desapear");
+            triggerAnim.SetTrigger("up");
         }
     }
 

@@ -10,13 +10,15 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     private Queue<string> sentences;
-    
 
+    public Animator animSubUp;
+    Animator triggerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        triggerAnim = gameObject.GetComponent<Animator>();
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -50,5 +52,7 @@ public class DialogManager : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("End conver");
+        animSubUp.SetTrigger("desapear");
+        triggerAnim.SetTrigger("up");
     }
 }

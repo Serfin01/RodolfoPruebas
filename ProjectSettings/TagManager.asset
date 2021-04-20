@@ -19,6 +19,12 @@ TagManager:
   - fall5
   - preFall
   - fall6
+  - SubtitleUP
+  - fall7
+  - fall8
+  - fall9
+  - fall10
+  - fall11
   layers:
   - Default
   - TransparentFX
