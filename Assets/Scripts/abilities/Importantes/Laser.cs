@@ -11,13 +11,23 @@ public class Laser : BaseAbility
     bool canShoot;
     float shotDuration = 2;
 
+    [SerializeField] ParticleSystem jamau1;
+    [SerializeField] ParticleSystem jamau2;
+    [SerializeField] LineRenderer linea;
+
+    bool activo = false;
+
     private void Start()
     {
         socket = GameObject.Find("Socket");
         //laser = GameObject.FindGameObjectWithTag("Laser");
         //laser = Resources.Load<GameObject>("Laser");
+        laser = GameObject.Find("Laser");
         iniCooldown = 3;
-        laser.SetActive(false);
+        //laser.SetActive(false);
+        linea = laser.GetComponentInChildren<LineRenderer>();
+        jamau1 = GameObject.Find("Beam").GetComponent<ParticleSystem>();
+        jamau2 = GameObject.Find("paaarticulas").GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -26,13 +36,24 @@ public class Laser : BaseAbility
         {
             ApplyCooldown();
         }
-        if (canShoot == true)
+        if (!activo)
         {
-            laser.SetActive(true);
+            if (canShoot == true)
+            {
+                //laser.SetActive(true);
+                linea.enabled = true;
+                jamau1.Play();
+                jamau2.Play();
+                activo = true;
+            }
         }
         if (canShoot == false)
         {
-            laser.SetActive(false);
+            //laser.SetActive(false);
+            linea.enabled = false;
+            jamau1.Stop();
+            jamau2.Stop();
+            activo = false;
         }
     }
 
@@ -67,10 +88,10 @@ public class Laser : BaseAbility
     private IEnumerator Shot()
     {
         canShoot = true;
+        cooldown = iniCooldown;
         Debug.Log("on");
         yield return new WaitForSeconds(shotDuration);
         canShoot = false;
-        cooldown = iniCooldown;
         //overlayCooldown.GetComponent<Image>().fillAmount = 0.5;
         Debug.Log("off");
     }
