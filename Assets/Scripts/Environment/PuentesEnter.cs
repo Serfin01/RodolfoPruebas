@@ -16,10 +16,13 @@ public class PuentesEnter : MonoBehaviour
         if (transform.childCount == 0 && puenteEnter.Length == 2)
         {
             puenteEnter[1].SetActive(true);
+            puenteEnter[0].SetActive(true);
         }
         if (transform.childCount == 0 && puenteEnter.Length == 3)
         {
             puenteEnter[2].SetActive(true);
+            puenteEnter[0].SetActive(true);
+            puenteEnter[1].SetActive(true);
         }
         if (transform.childCount == 0 && puenteEnter.Length == 1)
         {
@@ -28,10 +31,13 @@ public class PuentesEnter : MonoBehaviour
         if (transform.childCount == 0 && puenteEnter.Length == 2)
         {
             pergamino[1].SetActive(true);
+            pergamino[0].SetActive(true);
         }
         if (transform.childCount == 0 && puenteEnter.Length == 3)
         {
             pergamino[2].SetActive(true);
+            pergamino[1].SetActive(true);
+            pergamino[0].SetActive(true);
         }
     }
 }

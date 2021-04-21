@@ -19,6 +19,8 @@ public class DialogManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         triggerAnim = gameObject.GetComponent<Animator>();
+        //Debug.Log("*** DialogManager.Start: in objecte" + gameObject.name + " used animator " + triggerAnim);
+
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -51,8 +53,9 @@ public class DialogManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("End conver");
+        //Debug.Log("End conver");
         animSubUp.SetTrigger("desapear");
         triggerAnim.SetTrigger("up");
+        //Debug.Log("*** DialogManager.EndDialog: in objecte" + gameObject.name + " used animator " + triggerAnim);
     }
 }

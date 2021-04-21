@@ -122,13 +122,15 @@ public class MovementNikel : MonoBehaviour
             {
                 transform.Translate(distDash, 0, 0);
                 dash.emitting = true;
-                FindObjectOfType<AudioManager>().Play("dash");
+                //FindObjectOfType<AudioManager>().Play("dash");
+                AudioManager.instance.Play("dash");
             }
             if (Input.GetAxis("Horizontal") < 0)
             {
                 transform.Translate(-distDash, 0, 0);
                 dash.emitting = true;
                 FindObjectOfType<AudioManager>().Play("dash");
+                AudioManager.instance.Play("dash");
             }
             if (Input.GetAxis("Vertical") > 0)
             {

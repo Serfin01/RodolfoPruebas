@@ -13,9 +13,11 @@ public class Laser : BaseAbility
 
     [SerializeField] ParticleSystem jamau1;
     [SerializeField] ParticleSystem jamau2;
-    [SerializeField] LineRenderer linea;
+    public LineRenderer linea;
 
-    bool activo = false;
+    rayoLaser rayo;
+
+    bool activo = true;
 
     private void Start()
     {
@@ -28,6 +30,8 @@ public class Laser : BaseAbility
         linea = laser.GetComponentInChildren<LineRenderer>();
         jamau1 = GameObject.Find("Beam").GetComponent<ParticleSystem>();
         jamau2 = GameObject.Find("paaarticulas").GetComponent<ParticleSystem>();
+        rayo = laser.GetComponentInChildren<rayoLaser>();
+        rayo.activo(activo);
     }
 
     private void Update()

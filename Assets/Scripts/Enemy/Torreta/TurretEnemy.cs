@@ -108,4 +108,11 @@ public class TurretEnemy : Enemy
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+    IEnumerator Die()
+    {
+        FindObjectOfType<AudioManager>().Play("enemyDeath");
+        CapyAnim.SetTrigger("MeterseSuelo");
+        yield return new WaitForSeconds(3f);
+        GameObject.Destroy(gameObject);
+    }
 }

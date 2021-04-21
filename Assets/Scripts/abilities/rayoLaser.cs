@@ -10,8 +10,10 @@ public class rayoLaser : MonoBehaviour
     private LineRenderer lr;
     [SerializeField] int damage;
     public Enemy enemy;
+    //[SerializeField] Laser rayo;
 
     private bool canShoot;
+    bool check = false;
 
    // GameObject laser;
 
@@ -33,7 +35,7 @@ public class rayoLaser : MonoBehaviour
             {
                 lr.SetPosition(1, hit.point);
             }
-            if (hit.transform.gameObject.tag == "Enemy")
+            if (hit.transform.gameObject.tag == "Enemy" && check == true)
             {
                 Debug.Log("enemigooo");
                 hit.transform.GetComponent<Enemy>().Damaged(damage);
@@ -49,6 +51,15 @@ public class rayoLaser : MonoBehaviour
         }
         */
     }
+
+    public void activo(bool si)
+    {
+        if(si == true)
+        {
+            check = true;
+        }
+    }
+
     /*
     void DestroyLaser()
     {
