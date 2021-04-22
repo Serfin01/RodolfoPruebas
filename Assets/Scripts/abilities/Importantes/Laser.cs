@@ -31,7 +31,6 @@ public class Laser : BaseAbility
         jamau1 = GameObject.Find("Beam").GetComponent<ParticleSystem>();
         jamau2 = GameObject.Find("paaarticulas").GetComponent<ParticleSystem>();
         rayo = laser.GetComponentInChildren<rayoLaser>();
-        rayo.activo(activo);
     }
 
     private void Update()
@@ -49,6 +48,7 @@ public class Laser : BaseAbility
                 jamau1.Play();
                 jamau2.Play();
                 activo = true;
+                rayo.activo(activo);
             }
         }
         if (canShoot == false)
@@ -58,11 +58,13 @@ public class Laser : BaseAbility
             jamau1.Stop();
             jamau2.Stop();
             activo = false;
+            rayo.activo(activo);
         }
     }
 
     public override void UseSpell()
     {
+        //rayo.activo(activo);
         base.UseSpell();
         Debug.Log("Laser");
         if (isCooldown)

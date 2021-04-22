@@ -58,6 +58,10 @@ public class rayoLaser : MonoBehaviour
         {
             check = true;
         }
+        else
+        {
+            check = false;
+        }
     }
 
     /*
