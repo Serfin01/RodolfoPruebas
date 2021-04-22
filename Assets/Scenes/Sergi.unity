@@ -4498,7 +4498,7 @@ PrefabInstance:
     - target: {fileID: 280910047102777292, guid: 62e31332ab6b7e24fadf54a8e3ed14d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 605347486081681601, guid: 62e31332ab6b7e24fadf54a8e3ed14d4,
         type: 3}
@@ -11135,6 +11135,7 @@ MonoBehaviour:
   - {fileID: 693619}
   - {fileID: 2003606504}
   - {fileID: 1726193172}
+  - {fileID: 1969647076}
 --- !u!65 &1490964523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13834,7 +13835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844290135}
   m_Layer: 0
-  m_Name: habilidades fuera al usarlas en sala, vida pendiente de reunion
+  m_Name: "bajar collider ragdoll y l\xE1ser"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15516,7 +15517,7 @@ PrefabInstance:
     - target: {fileID: 7111184906088781409, guid: 94a41598994ae8d4291a13095c2519dd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7111184906088781414, guid: 94a41598994ae8d4291a13095c2519dd,
         type: 3}
@@ -15636,7 +15637,7 @@ PrefabInstance:
     - target: {fileID: 280910047102777292, guid: 62e31332ab6b7e24fadf54a8e3ed14d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 605347486081681601, guid: 62e31332ab6b7e24fadf54a8e3ed14d4,
         type: 3}

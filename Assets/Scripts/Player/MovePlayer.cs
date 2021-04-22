@@ -274,6 +274,8 @@ public class MovePlayer : MonoBehaviour
                 if (Input.GetAxis("Horizontal") < 0) { dashMovement.x = -distDash; }
                 if (Input.GetAxis("Vertical") > 0) { dashMovement.z = distDash; }
                 if (Input.GetAxis("Vertical") < 0) { dashMovement.z = -distDash; }
+                dashMovement.y = 0;
+                velocity.y = 0;
 
                 if (dashMovement.magnitude > 0.1f)
                 {
