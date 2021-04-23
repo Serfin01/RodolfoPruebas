@@ -25,6 +25,7 @@ TagManager:
   - fall9
   - fall10
   - fall11
+  - BalaProta
   layers:
   - Default
   - TransparentFX

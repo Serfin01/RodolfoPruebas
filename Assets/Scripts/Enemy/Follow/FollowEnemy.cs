@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,6 +13,11 @@ public class FollowEnemy : Enemy
     public Animator _animator;
     [SerializeField] Renderer renderer;
     private bool canMove = true;
+    GameObject navemsh;
+    [SerializeField] Material hitmat;
+    [SerializeField] Material normalmat;
+    [SerializeField] GameObject cuerpo;
+
 
     // Use this for initialization
     void Start()
@@ -77,6 +82,10 @@ public class FollowEnemy : Enemy
             Damage();
             other.GetComponent<Player>().Damaged(damage);
         }
+        if (other.CompareTag("BalaProta"))
+        {
+            StartCoroutine("Hitted");
+        }
     }
     /*
     void Die()
@@ -86,12 +95,22 @@ public class FollowEnemy : Enemy
     */
     IEnumerator Die()
     {
+        NavMeshAgent agente = GetComponent<NavMeshAgent>();
+        agente.isStopped = true;
         FindObjectOfType<AudioManager>().Play("enemyDeath");
         canMove = false;
         _animator.SetTrigger("death");
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
     }
+    
+    IEnumerator Hitted()
+    {
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
+        yield return new WaitForSeconds(0.1f);
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
+    }
+
 
     /*IEnumerator Hit()
     {
