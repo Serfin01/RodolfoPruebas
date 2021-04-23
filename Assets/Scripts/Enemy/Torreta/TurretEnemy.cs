@@ -26,6 +26,12 @@ public class TurretEnemy : Enemy
     public Animator CapyAnim;
 
     public GameObject particulas;
+
+    [Header("RedHit")]
+    [SerializeField] Material hitmat;
+    [SerializeField] Material normalmat;
+    [SerializeField] GameObject cuerpo;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -114,5 +120,12 @@ public class TurretEnemy : Enemy
         CapyAnim.SetTrigger("MeterseSuelo");
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
+    }
+
+    IEnumerator Hitted()
+    {
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
+        yield return new WaitForSeconds(0.1f);
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
     }
 }

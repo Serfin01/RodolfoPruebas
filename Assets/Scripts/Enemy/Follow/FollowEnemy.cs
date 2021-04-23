@@ -82,10 +82,12 @@ public class FollowEnemy : Enemy
             Damage();
             other.GetComponent<Player>().Damaged(damage);
         }
+        /*
         if (other.CompareTag("BalaProta"))
         {
             StartCoroutine("Hitted");
         }
+        */
     }
     /*
     void Die()
@@ -110,7 +112,7 @@ public class FollowEnemy : Enemy
         yield return new WaitForSeconds(0.1f);
         cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
     }
-
+    
 
     /*IEnumerator Hit()
     {

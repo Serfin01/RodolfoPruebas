@@ -32,6 +32,11 @@ public class DashIA : Enemy
     public AudioSource audiorun;
     public AudioSource audiostop;
 
+    [Header("RedHit")]
+    [SerializeField] Material hitmat;
+    [SerializeField] Material normalmat;
+    [SerializeField] GameObject cuerpo;
+
 
     private void Awake()
     {
@@ -124,5 +129,12 @@ public class DashIA : Enemy
         //_animator.SetTrigger("death");
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
+    }
+
+    IEnumerator Hitted()
+    {
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
+        yield return new WaitForSeconds(0.1f);
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
     }
 }

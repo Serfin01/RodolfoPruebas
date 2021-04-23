@@ -22,6 +22,11 @@ public class DashEnemy : MonoBehaviour
     //static Transform target0;
     //Vector3 local;
 
+    [Header("RedHit")]
+    [SerializeField] Material hitmat;
+    [SerializeField] Material normalmat;
+    [SerializeField] GameObject cuerpo;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -100,5 +105,12 @@ public class DashEnemy : MonoBehaviour
             StartCoroutine(Cast());
         }
         */
+    }
+
+    IEnumerator Hitted()
+    {
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
+        yield return new WaitForSeconds(0.1f);
+        cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
     }
 }

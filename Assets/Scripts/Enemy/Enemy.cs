@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     //[SerializeField] GameObject puente;
     public void Damaged(int damage)
     {
+        StartCoroutine("Hitted");
         health -= damage;
         FindObjectOfType<AudioManager>().Play("enemyHitted");
         if (!died)
