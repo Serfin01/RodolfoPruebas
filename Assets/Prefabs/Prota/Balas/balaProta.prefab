@@ -4810,7 +4810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletForce: 30
-  damage: 40
+  damage: 10
 --- !u!135 &7333443667801198375
 SphereCollider:
   m_ObjectHideFlags: 0

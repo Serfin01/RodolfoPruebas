@@ -28,6 +28,9 @@ public class BossPrueba : Enemy
 
     [Header("balas full")]
     [SerializeField] ParticleSystem bulletsFase2;
+    
+    [Header("explosion")]
+    [SerializeField] ParticleSystem explosionParticulas;
 
     bool canDash = true;
     int lastFase;
@@ -255,7 +258,7 @@ public class BossPrueba : Enemy
             melee = false;
             speedBoost = false;
         }
-        if (distancia <= 2f)
+        if (distancia <= 3f)
         {
             canMove = false;
             Debug.Log("moverse");
@@ -275,6 +278,8 @@ public class BossPrueba : Enemy
     {
         moveSpeed = iniMoveSpeed;
         Debug.Log("preexplosion");
+
+        explosionParticulas.Play();
 
         yield return new WaitForSeconds(recoveryTime);
 
