@@ -17,6 +17,7 @@ public class FollowEnemy : Enemy
     [SerializeField] Material hitmat;
     [SerializeField] Material normalmat;
     [SerializeField] GameObject cuerpo;
+    public SphereCollider collider;
 
 
     // Use this for initialization
@@ -38,10 +39,12 @@ public class FollowEnemy : Enemy
             agente.SetDestination(trPlayer.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            collider.enabled = true;
         }
         else
         {
             FindObjectOfType<AudioManager>().Stop("PuñakosWalk");
+            collider.enabled = false;
         }
 
 

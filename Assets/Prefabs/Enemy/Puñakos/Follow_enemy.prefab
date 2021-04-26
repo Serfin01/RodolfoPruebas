@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &280910047102777289
 Transform:
   m_ObjectHideFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   hitmat: {fileID: 2100000, guid: 48146994f900faa4dbe974d0835fe0bc, type: 2}
   normalmat: {fileID: 2100000, guid: 47c755d5282ad3643910cbffa85926f2, type: 2}
   cuerpo: {fileID: 7536242078466437134}
+  collider: {fileID: 280910047102777290}
 --- !u!195 &280910047102777286
 NavMeshAgent:
   m_ObjectHideFlags: 0

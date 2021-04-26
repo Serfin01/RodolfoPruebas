@@ -37,6 +37,8 @@ public class DashIA : Enemy
     [SerializeField] Material normalmat;
     [SerializeField] GameObject cuerpo;
 
+    public BoxCollider collider;
+
 
     private void Awake()
     {
@@ -64,6 +66,7 @@ public class DashIA : Enemy
             animatorMarti.SetFloat("speed", 0f);
             GetComponent<NavMeshAgent>().speed = baseSpeed;
             GetComponent<NavMeshAgent>().acceleration = baseAcceleration;
+            collider.enabled = true;
             if (distance <= lookRadius)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
@@ -85,9 +88,10 @@ public class DashIA : Enemy
         {
             audioSteps.enabled = false;
             animatorMarti.SetFloat("speed", 0f);
+            GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<NavMeshAgent>().speed = 0;
             GetComponent<NavMeshAgent>().acceleration = 0;
-            GetComponent<NavMeshAgent>().enabled = false;
+            collider.enabled = false;
         }
 
         //GetComponent<NavMeshAgent>().speed = 10f;
@@ -126,7 +130,7 @@ public class DashIA : Enemy
     IEnumerator Die()
     {
         canMove = false;
-        //_animator.SetTrigger("death");
+        animatorMarti.SetTrigger("dead");
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
     }
