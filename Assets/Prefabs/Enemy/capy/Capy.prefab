@@ -47,7 +47,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7111184906668991217}
-  - {fileID: 1538333977306307002}
   - {fileID: 7294346522989233081}
   - {fileID: 2600627550395016217}
   m_Father: {fileID: 7111184906088781402}
@@ -67,6 +66,7 @@ GameObject:
   - component: {fileID: 7111184906088781415}
   - component: {fileID: 7111184906088781414}
   - component: {fileID: 1085491505305441544}
+  - component: {fileID: 9153263931053690023}
   m_Layer: 8
   m_Name: Capy
   m_TagString: Enemy
@@ -86,6 +86,7 @@ Transform:
   m_LocalScale: {x: 0.56263125, y: 0.56263137, z: 0.56263125}
   m_Children:
   - {fileID: 7111184905329312150}
+  - {fileID: 1538333977306307002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -143,6 +144,9 @@ MonoBehaviour:
   canShoot: 0
   CapyAnim: {fileID: 8436420281344914724}
   particulas: {fileID: 4580374281033721639}
+  hitmat: {fileID: 0}
+  normalmat: {fileID: 0}
+  cuerpo: {fileID: 0}
 --- !u!114 &7111184906088781414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +265,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &9153263931053690023
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111184906088781409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7111184906668991216
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +359,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0ecbc76809f87084680d06d8deb4f76f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ecbc76809f87084680d06d8deb4f76f,
         type: 3}
@@ -537,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 5342391033541871646, guid: f1950bb4b9c7c404fb66219b011fdbf3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5342391033541871646, guid: f1950bb4b9c7c404fb66219b011fdbf3,
         type: 3}
@@ -582,42 +600,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7111184905329312150}
+    m_TransformParent: {fileID: 7111184906088781402}
     m_Modifications:
-    - target: {fileID: 140997557174867951, guid: 255261d06a114cf418fcc5335bb63974,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693318584413640781, guid: 255261d06a114cf418fcc5335bb63974,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5812002865815673571, guid: 255261d06a114cf418fcc5335bb63974,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6710577690487394518, guid: 255261d06a114cf418fcc5335bb63974,
         type: 3}
       propertyPath: m_Name
       value: MovimientoTierraEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6710577690487394518, guid: 255261d06a114cf418fcc5335bb63974,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8640510361229962827, guid: 255261d06a114cf418fcc5335bb63974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.126
       objectReference: {fileID: 0}
     - target: {fileID: 8640510361229962827, guid: 255261d06a114cf418fcc5335bb63974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.048
       objectReference: {fileID: 0}
     - target: {fileID: 8640510361229962827, guid: 255261d06a114cf418fcc5335bb63974,
         type: 3}
@@ -663,11 +661,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075509521199464723, guid: 255261d06a114cf418fcc5335bb63974,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255261d06a114cf418fcc5335bb63974, type: 3}

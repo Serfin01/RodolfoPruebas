@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6621246692798154211}
   - component: {fileID: 6971723398598741734}
   - component: {fileID: 415509547800443709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovimientoTierraEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 3618634389129739824}
   - component: {fileID: 4720397657632018533}
   - component: {fileID: 6936225740256258057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9586,7 +9586,7 @@ GameObject:
   - component: {fileID: 3612896095571987484}
   - component: {fileID: 8197544675502387818}
   - component: {fileID: 222144551204654360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovimientoTierraEnemy (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14340,7 +14340,7 @@ GameObject:
   - component: {fileID: 8640510361229962827}
   - component: {fileID: 4349516700791082520}
   - component: {fileID: 4183728569943733259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovimientoTierraEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19156,7 +19156,7 @@ GameObject:
   - component: {fileID: 4890661608899195552}
   - component: {fileID: 2591540274947444946}
   - component: {fileID: 9101492434161812734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
