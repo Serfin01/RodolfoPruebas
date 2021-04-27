@@ -88,7 +88,8 @@ public class DashIA : Enemy
         {
             audioSteps.enabled = false;
             animatorMarti.SetFloat("speed", 0f);
-            GetComponent<NavMeshAgent>().enabled = false;
+            agent = GetComponent<NavMeshAgent>();
+            agent.isStopped = true;
             GetComponent<NavMeshAgent>().speed = 0;
             GetComponent<NavMeshAgent>().acceleration = 0;
             collider.enabled = false;

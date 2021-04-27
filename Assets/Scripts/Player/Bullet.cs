@@ -6,6 +6,10 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletForce;
     [SerializeField] int damage;
+
+    public ParticleSystem particul;
+
+    public GameObject Sphere;
     //[SerializeField] GameObject charco;
     //private int countCharco;
 
@@ -43,4 +47,5 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 }
