@@ -5,18 +5,47 @@ using UnityEngine;
 public class a : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
+
     [SerializeField] float speed;
+    [SerializeField] float gravity = -9.81f;
+
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundDistance = 0.4f;
+    [SerializeField] LayerMask groundMask;
+
+    Vector3 velocity;
+    bool isGrounded;
+    bool canMove = true;
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(direction.magnitude >= 0.1f)
+        if(isGrounded && velocity.y < 0)
         {
-            controller.Move(direction * speed * Time.deltaTime);
+            velocity.y = -2f;
+        }
+        /*
+        if (isGrounded)
+        {
+            canMove = true;
+        }
+        else
+        {
+            canMove = false;
+        }
+        */
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+        if (canMove)
+        {
+            controller.Move(move * speed * Time.deltaTime);
         }
 
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
