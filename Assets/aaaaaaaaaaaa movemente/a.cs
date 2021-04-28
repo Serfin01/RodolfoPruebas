@@ -4,18 +4,40 @@ using UnityEngine;
 
 public class a : MonoBehaviour
 {
+    PlayerInput input;
+
     [SerializeField] CharacterController controller;
 
     [SerializeField] float speed;
     [SerializeField] float gravity = -9.81f;
 
+    [Header("Ground Settings")]
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.4f;
     [SerializeField] LayerMask groundMask;
 
+    [Header("Dash Settings")]
+    [SerializeField] float dashSpeed;
+    [SerializeField] float dashTime;
+
     Vector3 velocity;
+    Vector3 move;
     bool isGrounded;
     bool canMove = true;
+
+    [Header("Fall Settings")]
+    [SerializeField] GameObject[] spawnRodolfo;
+    [SerializeField] GameObject ragDoll;
+    int fall = 1000;
+    [SerializeField] GameObject pistola;
+
+    private void Awake()
+    {
+        input = new PlayerInput();
+        input.CharacterControls.Dash.performed += ctx => {
+            callDash();
+        };
+    }
 
     void Update()
     {
@@ -38,7 +60,7 @@ public class a : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        move = transform.right * x + transform.forward * z;
         if (canMove)
         {
             controller.Move(move * speed * Time.deltaTime);
@@ -47,5 +69,135 @@ public class a : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("fall1"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[0].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall2"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[1].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall3"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[2].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall4"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[3].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall5"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[4].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall6"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[5].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall7"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[6].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall8"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[7].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall9"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[8].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall10"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[9].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("fall11"))
+        {
+            controller.enabled = false;
+            transform.position = spawnRodolfo[10].transform.position;
+            ragDoll.SetActive(false);
+            pistola.SetActive(true);
+            controller.enabled = true;
+            //_animator.enabled = true;
+        }
+        if (other.CompareTag("preFall"))
+        {
+            controller.enabled = false;
+            pistola.SetActive(false);
+            ragDoll.SetActive(true);
+            controller.enabled = true;
+            this.GetComponent<Player>().Damaged(fall);
+            //_animator.enabled = false;
+        }
+    }
+
+    void callDash()
+    {
+        StartCoroutine(Dash());
+        Debug.Log("aa");
+    }
+
+    IEnumerator Dash()
+    {
+        float startTime = Time.time;
+
+        while(Time.time < startTime + dashTime)
+        {
+            controller.Move(move * dashSpeed * Time.deltaTime);
+
+            yield return null;
+        }
     }
 }
