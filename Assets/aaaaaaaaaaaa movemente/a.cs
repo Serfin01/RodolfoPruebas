@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class a : MonoBehaviour
 {
-    PlayerInput input;
+    //PlayerInput input;
 
     [SerializeField] CharacterController controller;
 
     [SerializeField] float speed;
     [SerializeField] float gravity = -9.81f;
+
+    [SerializeField] GameObject shadow;
 
     [Header("Ground Settings")]
     [SerializeField] Transform groundCheck;
@@ -19,6 +21,10 @@ public class a : MonoBehaviour
     [Header("Dash Settings")]
     [SerializeField] float dashSpeed;
     [SerializeField] float dashTime;
+    [SerializeField] float inicooldownDash;
+    [SerializeField] TrailRenderer dash;
+    float cooldownDash;
+    bool isCooldownDash = false;
 
     Vector3 velocity;
     Vector3 move;
@@ -30,15 +36,19 @@ public class a : MonoBehaviour
     [SerializeField] GameObject ragDoll;
     int fall = 1000;
     [SerializeField] GameObject pistola;
-
+    
     private void Awake()
     {
+        /*
         input = new PlayerInput();
         input.CharacterControls.Dash.performed += ctx => {
             callDash();
         };
+        */
+        cooldownDash = inicooldownDash;
+        dash.emitting = false;
     }
-
+    
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -47,16 +57,16 @@ public class a : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        /*
+        
         if (isGrounded)
         {
-            canMove = true;
+            shadow.SetActive(true);
         }
         else
         {
-            canMove = false;
+            shadow.SetActive(false);
         }
-        */
+        
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
@@ -69,6 +79,34 @@ public class a : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (isCooldownDash)
+        {
+            CooldownDash();
+        }
+        if (!isCooldownDash)
+        {
+            
+            if (Input.GetKeyDown("space"))
+            {
+                isCooldownDash = true;
+                cooldownDash = inicooldownDash;
+                dash.emitting = true;
+                StartCoroutine(Dash());
+                Debug.Log("dash2");
+            }
+        }
+    }
+
+    void CooldownDash()
+    {
+        cooldownDash -= Time.deltaTime;
+        dash.emitting = false;
+
+        if (cooldownDash <= 0.0f)
+        {
+            isCooldownDash = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -182,13 +220,13 @@ public class a : MonoBehaviour
             //_animator.enabled = false;
         }
     }
-
+    /*
     void callDash()
     {
         StartCoroutine(Dash());
-        Debug.Log("aa");
+        Debug.Log("dash");
     }
-
+    */
     IEnumerator Dash()
     {
         float startTime = Time.time;
