@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class LevelLoade_Game : MonoBehaviour
 {
     public Animator transition;
-    public int transitionTime;
+    public float transitionTime;
 
     public TMP_Dropdown resolutionDropdown;
 

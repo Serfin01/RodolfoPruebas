@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4630406122862446535}
   - component: {fileID: 4790037093623121904}
   - component: {fileID: 576368556939686851}
-  - component: {fileID: 669382715937929263}
+  - component: {fileID: 3336170327540994665}
   m_Layer: 0
   m_Name: isla4
   m_TagString: Untagged
@@ -71,7 +71,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4666531689982253395}
-  m_Mesh: {fileID: -7840162943695730922, guid: 7b818ae10cac8124a8eaac776bbeda50, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: df13b8958a43a5e43ac34b339bb6c109, type: 3}
 --- !u!23 &576368556939686851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &669382715937929263
+--- !u!64 &3336170327540994665
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +122,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7840162943695730922, guid: 7b818ae10cac8124a8eaac776bbeda50, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: df13b8958a43a5e43ac34b339bb6c109, type: 3}

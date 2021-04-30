@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2588415856537979608}
   - component: {fileID: 4284129527524413615}
   - component: {fileID: 8472723976272786667}
-  - component: {fileID: 1210228239434119827}
+  - component: {fileID: 2210508538305849988}
   m_Layer: 0
   m_Name: islapeque_low
   m_TagString: Untagged
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363367311239324866}
-  m_Mesh: {fileID: -7169518163975458635, guid: 2fb0e8c8563dff34e8b05d679604b156, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 79c210e169698e14d9dc403d4a218d13, type: 3}
 --- !u!23 &8472723976272786667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1210228239434119827
+--- !u!64 &2210508538305849988
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7169518163975458635, guid: 2fb0e8c8563dff34e8b05d679604b156, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 79c210e169698e14d9dc403d4a218d13, type: 3}
 --- !u!1 &2020693439151130561
 GameObject:
   m_ObjectHideFlags: 0
