@@ -18,14 +18,13 @@ public class FollowEnemy : Enemy
     [SerializeField] Material normalmat;
     [SerializeField] GameObject cuerpo;
     public SphereCollider collider;
-
+    public AudioSource Steps;
 
     // Use this for initialization
     void Start()
     {
 
-        trPlayer = GameObject.FindGameObjectWithTag("Player").transform;
-        FindObjectOfType<AudioManager>().Play("PuñakosWalk");
+        trPlayer = GameObject.FindGameObjectWithTag("Player").transform;        
 
     }
 
@@ -43,7 +42,8 @@ public class FollowEnemy : Enemy
         }
         else
         {
-            FindObjectOfType<AudioManager>().Stop("PuñakosWalk");
+            Steps.Stop();
+            //FindObjectOfType<AudioManager>().Stop("PuñakosWalk");
             collider.enabled = false;
         }
 
@@ -60,7 +60,7 @@ public class FollowEnemy : Enemy
     void Damage()
     {
         Debug.Log("la picadura de la cobra gei");
-        FindObjectOfType<AudioManager>().Play("puñakoPunch");
+        Steps.Play();
     }
 
     void OnDrawGizmosSelected()

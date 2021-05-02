@@ -30,13 +30,15 @@ public class a : MonoBehaviour
     Vector3 move;
     bool isGrounded;
     bool canMove = true;
+    bool isMoving = true;
 
     [Header("Fall Settings")]
     [SerializeField] GameObject[] spawnRodolfo;
     [SerializeField] GameObject ragDoll;
     int fall = 1000;
     [SerializeField] GameObject pistola;
-    
+    public AudioSource audioSteps;
+
     private void Awake()
     {
         /*
@@ -71,9 +73,29 @@ public class a : MonoBehaviour
         float z = Input.GetAxisRaw("Vertical");
 
         move = transform.right * x + transform.forward * z;
+
         if (canMove)
         {
             controller.Move(move * speed * Time.deltaTime);
+            if (move.x != 0f || move.z != 0f)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            if(isMoving)
+            {
+                if(!audioSteps.isPlaying)
+                {
+                    audioSteps.Play();
+                }
+            }
+            else
+            {
+                audioSteps.Stop();
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
