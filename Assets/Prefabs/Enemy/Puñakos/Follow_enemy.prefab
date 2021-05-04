@@ -101,7 +101,7 @@ MonoBehaviour:
   normalmat: {fileID: 2100000, guid: 47c755d5282ad3643910cbffa85926f2, type: 2}
   cuerpo: {fileID: 7536242078466437134}
   collider: {fileID: 280910047102777290}
-  Steps: {fileID: 0}
+  Steps: {fileID: 5539838156683506303}
 --- !u!195 &280910047102777286
 NavMeshAgent:
   m_ObjectHideFlags: 0

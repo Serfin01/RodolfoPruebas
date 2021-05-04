@@ -13,6 +13,13 @@ public class a : MonoBehaviour
 
     [SerializeField] GameObject shadow;
 
+    Animator _animator;
+
+    [SerializeField] GameObject pistola;
+    public AudioSource audioSteps;
+
+    [SerializeField] Transform rotatingElement;
+
     [Header("Ground Settings")]
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.4f;
@@ -36,8 +43,6 @@ public class a : MonoBehaviour
     [SerializeField] GameObject[] spawnRodolfo;
     [SerializeField] GameObject ragDoll;
     int fall = 1000;
-    [SerializeField] GameObject pistola;
-    public AudioSource audioSteps;
 
     private void Awake()
     {
@@ -49,6 +54,7 @@ public class a : MonoBehaviour
         */
         cooldownDash = inicooldownDash;
         dash.emitting = false;
+        _animator = GetComponentInChildren<Animator>();
     }
     
     void Update()
@@ -96,6 +102,12 @@ public class a : MonoBehaviour
             {
                 audioSteps.Stop();
             }
+
+            Vector3 localVelocity = rotatingElement.InverseTransformDirection(controller.velocity);
+            localVelocity.Normalize();
+
+            _animator.SetFloat("velZ", localVelocity.z, 0.1f, Time.deltaTime);
+            _animator.SetFloat("velX", localVelocity.x, 0.1f, Time.deltaTime);
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -113,7 +125,7 @@ public class a : MonoBehaviour
             {
                 isCooldownDash = true;
                 cooldownDash = inicooldownDash;
-                dash.emitting = true;
+                //dash.emitting = true;
                 StartCoroutine(Dash());
                 Debug.Log("dash2");
             }
@@ -256,7 +268,7 @@ public class a : MonoBehaviour
         while(Time.time < startTime + dashTime)
         {
             controller.Move(move * dashSpeed * Time.deltaTime);
-
+            dash.emitting = true;
             yield return null;
         }
     }

@@ -69,10 +69,11 @@ public class FollowEnemy : Enemy
         Gizmos.DrawWireSphere(transform.position, gzRange);
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(collision.rigidbody.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("aaaaa");
             _animator.SetTrigger("Punch");
         }
             //collision.rigidbody.GetComponent<Player>().Damaged(damage);
