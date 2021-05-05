@@ -18560,7 +18560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 8.63167, y: 27.531612, z: -80.096886}
+  m_LocalPosition: {x: 46.181667, y: 27.53162, z: -168.29689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -19866,7 +19866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 8.63167, y: 27.531612, z: -80.096886}
+  m_LocalPosition: {x: 46.181667, y: 27.53162, z: -168.29689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21776,7 +21776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844290135}
   m_Layer: 0
-  m_Name: "bajar collider ragdoll y l\xE1ser y boss y pergaminos y pu\xF1akos y martillakos"
+  m_Name: boss, marti y caida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25024,7 +25024,7 @@ PrefabInstance:
     - target: {fileID: 7576973973643240313, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576973973643240318, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -25044,7 +25044,7 @@ PrefabInstance:
     - target: {fileID: 7576973973643240319, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_Radius
-      value: 2.58
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 7576973973893525359, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -25619,7 +25619,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.7
+      value: 46.25
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -25629,7 +25629,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -51.9
+      value: -140.1
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}

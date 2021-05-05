@@ -79,6 +79,7 @@ public class PlayerAbilities : MonoBehaviour
             if(closeScroll != null)
             {
                 closeScroll.AddScroll(gameObject);
+                dentro = false;
             }
         }
     }
