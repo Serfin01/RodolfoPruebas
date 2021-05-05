@@ -38,11 +38,13 @@ public class a : MonoBehaviour
     bool isGrounded;
     bool canMove = true;
     bool isMoving = true;
+    float damageFall = 0f;
+    float iniDamageFall = 2f;
 
     [Header("Fall Settings")]
     [SerializeField] GameObject[] spawnRodolfo;
     [SerializeField] GameObject ragDoll;
-    int fall = 1000;
+    int fall = 15;
 
     private void Awake()
     {
@@ -59,6 +61,7 @@ public class a : MonoBehaviour
     
     void Update()
     {
+        damageFall = -Time.deltaTime;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -152,6 +155,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall2"))
@@ -161,6 +165,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall3"))
@@ -170,6 +175,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall4"))
@@ -179,6 +185,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall5"))
@@ -188,6 +195,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall6"))
@@ -197,6 +205,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall7"))
@@ -206,6 +215,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall8"))
@@ -215,6 +225,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall9"))
@@ -224,6 +235,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall10"))
@@ -233,6 +245,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("fall11"))
@@ -242,6 +255,7 @@ public class a : MonoBehaviour
             ragDoll.SetActive(false);
             pistola.SetActive(true);
             controller.enabled = true;
+            //this.GetComponent<Player>().Damaged(fall);
             //_animator.enabled = true;
         }
         if (other.CompareTag("preFall"))
@@ -250,7 +264,14 @@ public class a : MonoBehaviour
             pistola.SetActive(false);
             ragDoll.SetActive(true);
             controller.enabled = true;
-            this.GetComponent<Player>().Damaged(fall);
+
+            if (damageFall <= 0)
+            {
+                //this.GetComponent<Player>().Damaged(fall);
+                damageFall = iniDamageFall;
+
+                Debug.Log(damageFall);
+            }
             //_animator.enabled = false;
         }
     }
@@ -261,6 +282,7 @@ public class a : MonoBehaviour
         Debug.Log("dash");
     }
     */
+
     IEnumerator Dash()
     {
         float startTime = Time.time;

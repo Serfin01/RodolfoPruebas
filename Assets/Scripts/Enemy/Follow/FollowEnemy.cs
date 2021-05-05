@@ -55,6 +55,14 @@ public class FollowEnemy : Enemy
             GameObject.Destroy(gameObject);
         }
         */
+        float distance;
+
+        distance = Vector3.Distance(transform.position, trPlayer.position);
+        //Debug.Log(distance);
+        if (distance <= 2.5f)
+        {
+            _animator.SetTrigger("Punch");
+        }
     }
 
     void Damage()
@@ -73,7 +81,7 @@ public class FollowEnemy : Enemy
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("aaaaa");
+            //Debug.Log("aaaaa");
             _animator.SetTrigger("Punch");
         }
             //collision.rigidbody.GetComponent<Player>().Damaged(damage);
