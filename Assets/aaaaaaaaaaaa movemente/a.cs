@@ -38,8 +38,6 @@ public class a : MonoBehaviour
     bool isGrounded;
     bool canMove = true;
     bool isMoving = true;
-    float damageFall = 0f;
-    float iniDamageFall = 2f;
 
     [Header("Fall Settings")]
     [SerializeField] GameObject[] spawnRodolfo;
@@ -61,7 +59,6 @@ public class a : MonoBehaviour
     
     void Update()
     {
-        damageFall = -Time.deltaTime;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -148,133 +145,43 @@ public class a : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("fall1"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[0].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall2"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[1].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall3"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[2].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall4"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[3].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall5"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[4].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall6"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[5].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall7"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[6].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall8"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[7].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall9"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[8].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall10"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[9].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
-        if (other.CompareTag("fall11"))
-        {
-            controller.enabled = false;
-            transform.position = spawnRodolfo[10].transform.position;
-            ragDoll.SetActive(false);
-            pistola.SetActive(true);
-            controller.enabled = true;
-            //this.GetComponent<Player>().Damaged(fall);
-            //_animator.enabled = true;
-        }
         if (other.CompareTag("preFall"))
         {
-            controller.enabled = false;
-            pistola.SetActive(false);
-            ragDoll.SetActive(true);
-            controller.enabled = true;
-
-            if (damageFall <= 0)
-            {
-                //this.GetComponent<Player>().Damaged(fall);
-                damageFall = iniDamageFall;
-
-                Debug.Log(damageFall);
-            }
-            //_animator.enabled = false;
+            StartCoroutine(ReturnFromFall());
         }
     }
+
+    IEnumerator ReturnFromFall()
+    {
+
+        ragDoll.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+
+        controller.enabled = false;
+        transform.position = SpawnPoint();
+        this.GetComponent<Player>().Damaged(fall);
+        ragDoll.SetActive(true);
+        Debug.Log("marica");
+
+        controller.enabled = true;
+    }
+
+    Vector3 SpawnPoint()
+    {
+        Vector3 closePoint = Vector3.zero;
+        float distance = Mathf.Infinity;
+        for (int i = 0; i < spawnRodolfo.Length; i++)
+        {
+            float cntDistance = Vector3.Distance(gameObject.transform.position, spawnRodolfo[i].transform.position);
+            if(cntDistance < distance)
+            {
+                distance = cntDistance;
+                closePoint = spawnRodolfo[i].transform.position;
+            }
+        }
+        return closePoint;
+    } 
     /*
     void callDash()
     {

@@ -18,10 +18,10 @@ public class DashIA : Enemy
     //private float iniSpeed;
     [SerializeField] float normalSpeed;
     [SerializeField] float dashSpeed;
-    private float baseAcceleration;
-    private float baseSpeed;
 
     bool canMove = true;
+    bool isAttacking = false;
+    bool setDestin = false;
 
     Transform target;
     NavMeshAgent agent;
@@ -51,50 +51,56 @@ public class DashIA : Enemy
     {
         target = player.transform;
         agent = GetComponent<NavMeshAgent>();
-        baseAcceleration = GetComponent<NavMeshAgent>().acceleration;
-        baseSpeed = GetComponent<NavMeshAgent>().speed;
-        //iniSpeed = normalSpeed;
+        normalSpeed = agent.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-        if (canMove)
+        if (canMove && !isAttacking)
         {
-            GetComponent<NavMeshAgent>().enabled = true;
-            animatorMarti.SetFloat("speed", 0f);
-            GetComponent<NavMeshAgent>().speed = baseSpeed;
-            GetComponent<NavMeshAgent>().acceleration = baseAcceleration;
-            collider.enabled = true;
+            agent.SetDestination(target.position);
             if (distance <= lookRadius)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
-                agent.SetDestination(target.position);
-                animatorMarti.SetFloat("speed", 1f);
-                audioSteps.enabled = true;
+                StartCoroutine(Dash());
             }
+            //agent.enabled = true;
+            //animatorMarti.SetFloat("speed", 0f);
+            //collider.enabled = true;
+            //if (distance <= lookRadius)
+            //{
+            //    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
+            //    agent.SetDestination(target.position);
+            //    animatorMarti.SetFloat("speed", 1f);
+            //    audioSteps.enabled = true;
+            //}
 
-            if(distance <= dashDistance)
-            {
-                //Dash();
-                StartCoroutine("Dash");
-                audioSteps.enabled = false;
-                //audioSteps.Stop();
-            }
+                //if(distance <= dashDistance)
+                //{
+                //    //Dash();
+                //    StartCoroutine("Dash");
+                //    audioSteps.enabled = false;
+                //    //audioSteps.Stop();
+                //}
 
         }
         else
         {
+            /*
             audioSteps.enabled = false;
             animatorMarti.SetFloat("speed", 0f);
             agent = GetComponent<NavMeshAgent>();
             agent.isStopped = true;
-            GetComponent<NavMeshAgent>().speed = 0;
-            GetComponent<NavMeshAgent>().acceleration = 0;
             collider.enabled = false;
+            */
         }
 
+        if(setDestin && isAttacking)
+        {
+
+            agent.SetDestination(target.position);
+        }
         //GetComponent<NavMeshAgent>().speed = 10f;
     }
     /*
@@ -109,6 +115,16 @@ public class DashIA : Enemy
 
     IEnumerator Dash()
     {
+        isAttacking = true;
+        agent.speed = 0f;
+
+        yield return new WaitForSeconds(0.3f);
+
+        agent.speed = dashSpeed;
+        setDestin = true;
+        Debug.Log(agent.hasPath);
+
+        /*
         animatorMarti.SetFloat("speed", 2f);
         audiorun.enabled = true;
         GetComponent<NavMeshAgent>().speed = dashSpeed;
@@ -119,13 +135,12 @@ public class DashIA : Enemy
         canMove = false;
         audiostop.enabled = true;
         animatorMarti.SetFloat("speed", 0f);
-        GetComponent<NavMeshAgent>().speed = normalSpeed;
-        GetComponent<NavMeshAgent>().acceleration = baseAcceleration;
         //normalSpeed = iniSpeed;
         yield return new WaitForSeconds(1f);
         audiostop.enabled = false;
         animatorMarti.SetFloat("speed", 1f);
         canMove = true;
+        */
     }
 
     IEnumerator Die()
@@ -141,5 +156,10 @@ public class DashIA : Enemy
         cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
         yield return new WaitForSeconds(0.1f);
         cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 }
