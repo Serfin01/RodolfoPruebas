@@ -1,0 +1,1064 @@
+fileFormatVersion: 2
+guid: a55861bf1eac82b4a81c2ba64120990c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8272680229531959080
+    second: GET HERE_0
+  - first:
+      213: 5348377776227949620
+    second: GET HERE_1
+  - first:
+      213: 1588176737928804404
+    second: GET HERE_2
+  - first:
+      213: 4943511614531363368
+    second: GET HERE_3
+  - first:
+      213: 2912470914915875763
+    second: GET HERE_4
+  - first:
+      213: 3200043429346554475
+    second: GET HERE_5
+  - first:
+      213: 4369248184641356878
+    second: GET HERE_6
+  - first:
+      213: -4495077987324170511
+    second: GET HERE_7
+  - first:
+      213: 1742032915039855225
+    second: GET HERE_8
+  - first:
+      213: 1272290622766775957
+    second: GET HERE_9
+  - first:
+      213: 1686769571859600198
+    second: GET HERE_10
+  - first:
+      213: 4176628198528080176
+    second: GET HERE_11
+  - first:
+      213: 4118720259108253491
+    second: GET HERE_12
+  - first:
+      213: -3697658089467642824
+    second: GET HERE_13
+  - first:
+      213: -3521152612658980957
+    second: GET HERE_14
+  - first:
+      213: 7415436061136401396
+    second: GET HERE_15
+  - first:
+      213: 9071149381074856898
+    second: GET HERE_16
+  - first:
+      213: -944021009487086324
+    second: GET HERE_17
+  - first:
+      213: 6373595010449603210
+    second: GET HERE_18
+  - first:
+      213: 5419866276835930527
+    second: GET HERE_19
+  - first:
+      213: -7269857824342827162
+    second: GET HERE_20
+  - first:
+      213: -7153328403875437791
+    second: GET HERE_21
+  - first:
+      213: -2353717797938532285
+    second: GET HERE_22
+  - first:
+      213: -3600947309656371264
+    second: GET HERE_23
+  - first:
+      213: 5644371266553344731
+    second: GET HERE_24
+  - first:
+      213: -5745196885066854572
+    second: GET HERE_25
+  - first:
+      213: 4722933298977490436
+    second: GET HERE_26
+  - first:
+      213: -2447636390662746433
+    second: GET HERE_27
+  - first:
+      213: -2155864096348850775
+    second: GET HERE_28
+  - first:
+      213: -5971754636755805860
+    second: GET HERE_29
+  - first:
+      213: -4625139425707802377
+    second: GET HERE_30
+  - first:
+      213: 212942421563665585
+    second: GET HERE_31
+  - first:
+      213: -132225038723655875
+    second: GET HERE_32
+  - first:
+      213: 2334138403764673853
+    second: GET HERE_33
+  - first:
+      213: -2719371676983235124
+    second: GET HERE_34
+  - first:
+      213: 422553982993142370
+    second: GET HERE_35
+  - first:
+      213: -5536966045292775959
+    second: GET HERE_36
+  - first:
+      213: -6915563573488978589
+    second: GET HERE_37
+  - first:
+      213: -44222308453591670
+    second: GET HERE_38
+  - first:
+      213: 1176107346018175854
+    second: GET HERE_39
+  - first:
+      213: 1350572751456640209
+    second: GET HERE_40
+  - first:
+      213: -3409042681646165459
+    second: GET HERE_41
+  - first:
+      213: 6658459456151641067
+    second: GET HERE_42
+  - first:
+      213: -8499126454662828038
+    second: GET HERE_43
+  - first:
+      213: 1026697094888513631
+    second: GET HERE_44
+  - first:
+      213: 5872768964945981936
+    second: GET HERE_45
+  - first:
+      213: -8675155516435360684
+    second: GET HERE_46
+  - first:
+      213: 8954560547922600954
+    second: GET HERE_47
+  - first:
+      213: -8234407592355742337
+    second: GET HERE_48
+  - first:
+      213: -1169629208455233361
+    second: GET HERE_49
+  - first:
+      213: 398063109579274252
+    second: GET HERE_50
+  - first:
+      213: 4415160353146792526
+    second: GET HERE_51
+  - first:
+      213: 2494676719129882257
+    second: GET HERE_52
+  - first:
+      213: 7716601781560435273
+    second: GET HERE_53
+  - first:
+      213: 7893475524962048156
+    second: GET HERE_54
+  - first:
+      213: -8022980870761197138
+    second: GET HERE_55
+  - first:
+      213: 9064437275560246221
+    second: GET HERE_56
+  - first:
+      213: -7408745654289794900
+    second: GET HERE_57
+  - first:
+      213: 4339400558143775411
+    second: GET HERE_58
+  - first:
+      213: -237095711891346801
+    second: GET HERE_59
+  - first:
+      213: 3837043244145148727
+    second: GET HERE_60
+  - first:
+      213: 4999479081935168744
+    second: GET HERE_61
+  - first:
+      213: -2477336952720178745
+    second: GET HERE_62
+  - first:
+      213: 4891018527030718133
+    second: GET HERE_63
+  - first:
+      213: -5887085864279037289
+    second: GET HERE_64
+  - first:
+      213: -8461729678771152891
+    second: GET HERE_65
+  - first:
+      213: -815162644684574202
+    second: GET HERE_66
+  - first:
+      213: -1784290986846448927
+    second: GET HERE_67
+  - first:
+      213: -4104503382842825975
+    second: GET HERE_68
+  - first:
+      213: -1994767576368560322
+    second: GET HERE_69
+  - first:
+      213: -8521214415927611737
+    second: GET HERE_70
+  - first:
+      213: -8170408559120619047
+    second: GET HERE_71
+  - first:
+      213: 3190790142552128655
+    second: GET HERE_72
+  - first:
+      213: -424317698441807352
+    second: GET HERE_73
+  - first:
+      213: -7230157332424624138
+    second: GET HERE_74
+  - first:
+      213: -2715122621511354497
+    second: GET HERE_75
+  - first:
+      213: -3834474759081807658
+    second: GET HERE_76
+  - first:
+      213: -5645876303250336474
+    second: GET HERE_77
+  - first:
+      213: 9106878922775816736
+    second: GET HERE_78
+  - first:
+      213: 8508671666185303622
+    second: GET HERE_79
+  - first:
+      213: -6654858578901590799
+    second: GET HERE_80
+  - first:
+      213: -3347098263575003130
+    second: GET HERE_81
+  - first:
+      213: 5130221745479823630
+    second: GET HERE_82
+  - first:
+      213: 7467410937329366635
+    second: GET HERE_83
+  - first:
+      213: -603315232530975482
+    second: GET HERE_84
+  - first:
+      213: 8274001431893859083
+    second: GET HERE_85
+  - first:
+      213: -7711011612500904879
+    second: GET HERE_86
+  - first:
+      213: 8517685039834502761
+    second: GET HERE_87
+  - first:
+      213: -6301586680157336184
+    second: GET HERE_88
+  - first:
+      213: 7028050444018030088
+    second: GET HERE_89
+  - first:
+      213: 2032798444786167077
+    second: GET HERE_90
+  - first:
+      213: -9098897738073546416
+    second: GET HERE_91
+  - first:
+      213: -1539364502337545195
+    second: GET HERE_92
+  - first:
+      213: 4374686785061523370
+    second: GET HERE_93
+  - first:
+      213: 656329965735310578
+    second: GET HERE_94
+  - first:
+      213: 2583405385546629901
+    second: GET HERE_95
+  - first:
+      213: 443843296551868512
+    second: GET HERE_96
+  - first:
+      213: -8723856529158444777
+    second: GET HERE_97
+  - first:
+      213: -6072691785051339854
+    second: GET HERE_98
+  - first:
+      213: -1371075891027377966
+    second: GET HERE_99
+  - first:
+      213: -7284362000490553229
+    second: GET HERE_100
+  - first:
+      213: 3112131312874482921
+    second: GET HERE_101
+  - first:
+      213: -7204718824724770604
+    second: GET HERE_102
+  - first:
+      213: 1009596031426200581
+    second: GET HERE_103
+  - first:
+      213: -1480491923241753614
+    second: GET HERE_104
+  - first:
+      213: -879862682246202486
+    second: GET HERE_105
+  - first:
+      213: -7504298175308780776
+    second: GET HERE_106
+  - first:
+      213: 4191291917556387820
+    second: GET HERE_107
+  - first:
+      213: 6743271746935807002
+    second: GET HERE_108
+  - first:
+      213: 1847649675461615537
+    second: GET HERE_109
+  - first:
+      213: -5323843122001833756
+    second: GET HERE_110
+  - first:
+      213: -4292489105139151045
+    second: GET HERE_111
+  - first:
+      213: 6634378817047676956
+    second: GET HERE_112
+  - first:
+      213: -4226633830253035085
+    second: GET HERE_113
+  - first:
+      213: 6531426433420666195
+    second: GET HERE_114
+  - first:
+      213: 7528636510361166440
+    second: GET HERE_115
+  - first:
+      213: -3938895476787104562
+    second: GET HERE_116
+  - first:
+      213: -7684331543491685567
+    second: GET HERE_117
+  - first:
+      213: 6953001098704458774
+    second: GET HERE_118
+  - first:
+      213: 4209221894303523340
+    second: GET HERE_119
+  - first:
+      213: 7768806995104144972
+    second: GET HERE_120
+  - first:
+      213: -1482085023558595467
+    second: GET HERE_121
+  - first:
+      213: -5454433319807425753
+    second: GET HERE_122
+  - first:
+      213: 8980536605453938192
+    second: GET HERE_123
+  - first:
+      213: 1996541136107431133
+    second: GET HERE_124
+  - first:
+      213: 5056709158459745389
+    second: GET HERE_125
+  - first:
+      213: 8266012627872715008
+    second: GET HERE_126
+  - first:
+      213: -3056750116692698729
+    second: GET HERE_127
+  - first:
+      213: 3472933708288801083
+    second: GET HERE_128
+  - first:
+      213: -3264899458949478017
+    second: GET HERE_129
+  - first:
+      213: -7951020844269284267
+    second: GET HERE_130
+  - first:
+      213: -9193593049471306230
+    second: GET HERE_131
+  - first:
+      213: -3265892959605599960
+    second: GET HERE_132
+  - first:
+      213: 3342030676868445091
+    second: GET HERE_133
+  - first:
+      213: -2675910238272466614
+    second: GET HERE_134
+  - first:
+      213: 1878064638503595710
+    second: GET HERE_135
+  - first:
+      213: -5503668996724666242
+    second: GET HERE_136
+  - first:
+      213: 3716779234119221199
+    second: GET HERE_137
+  - first:
+      213: 5637356899677342271
+    second: GET HERE_138
+  - first:
+      213: 4319163334883139681
+    second: GET HERE_139
+  - first:
+      213: 5562015048860679216
+    second: GET HERE_140
+  - first:
+      213: 1509807781805302760
+    second: GET HERE_141
+  - first:
+      213: 1256652365340560801
+    second: GET HERE_142
+  - first:
+      213: 1020282639856940789
+    second: GET HERE_143
+  - first:
+      213: 423874987487002611
+    second: GET HERE_144
+  - first:
+      213: -4787220120762891265
+    second: GET HERE_145
+  - first:
+      213: -6756493257352198231
+    second: GET HERE_146
+  - first:
+      213: -1602735761598841857
+    second: GET HERE_147
+  - first:
+      213: 2466515279359973669
+    second: GET HERE_148
+  - first:
+      213: 8960036791000221787
+    second: GET HERE_149
+  - first:
+      213: -4917933817314964769
+    second: GET HERE_150
+  - first:
+      213: 5594807807779034960
+    second: GET HERE_151
+  - first:
+      213: 2412590600043232582
+    second: GET HERE_152
+  - first:
+      213: 947451671687275859
+    second: GET HERE_153
+  - first:
+      213: -8095293946408557261
+    second: GET HERE_154
+  - first:
+      213: 5475962397919413764
+    second: GET HERE_155
+  - first:
+      213: 8286183510382151587
+    second: GET HERE_156
+  - first:
+      213: -4028587792178376519
+    second: GET HERE_157
+  - first:
+      213: 1686901424859299976
+    second: GET HERE_158
+  - first:
+      213: -6833944118178762925
+    second: GET HERE_159
+  - first:
+      213: 1005097288703827056
+    second: GET HERE_160
+  - first:
+      213: 5406575269617591886
+    second: GET HERE_161
+  - first:
+      213: -1021885767900902650
+    second: GET HERE_162
+  - first:
+      213: 7817689174134885232
+    second: GET HERE_163
+  - first:
+      213: -9178575604082499641
+    second: GET HERE_164
+  - first:
+      213: -6168053100545219162
+    second: GET HERE_165
+  - first:
+      213: -1273944882491474969
+    second: GET HERE_166
+  - first:
+      213: 5559708200642491113
+    second: GET HERE_167
+  - first:
+      213: -5510778264250837571
+    second: GET HERE_168
+  - first:
+      213: -4024946186559874427
+    second: GET HERE_169
+  - first:
+      213: 2163084103100373898
+    second: GET HERE_170
+  - first:
+      213: 958868492549209842
+    second: GET HERE_171
+  - first:
+      213: 7638250278259419137
+    second: GET HERE_172
+  - first:
+      213: -4305056433351116371
+    second: GET HERE_173
+  - first:
+      213: 6291346378109714315
+    second: GET HERE_174
+  - first:
+      213: 387312974397687458
+    second: GET HERE_175
+  - first:
+      213: -7554051121907761204
+    second: GET HERE_176
+  - first:
+      213: 7941321248908382154
+    second: GET HERE_177
+  - first:
+      213: 4650059319122277689
+    second: GET HERE_178
+  - first:
+      213: -3595631249988374684
+    second: GET HERE_179
+  - first:
+      213: -5493555318787590640
+    second: GET HERE_180
+  - first:
+      213: -5791107429395758961
+    second: GET HERE_181
+  - first:
+      213: -303488797127405424
+    second: GET HERE_182
+  - first:
+      213: 782431731439182104
+    second: GET HERE_183
+  - first:
+      213: 4679884753392475693
+    second: GET HERE_184
+  - first:
+      213: 1727349745338701196
+    second: GET HERE_185
+  - first:
+      213: 8984393834123794079
+    second: GET HERE_186
+  - first:
+      213: 3655091005346220684
+    second: GET HERE_187
+  - first:
+      213: -8723533292377544327
+    second: GET HERE_188
+  - first:
+      213: -6517269127662442129
+    second: GET HERE_189
+  - first:
+      213: 3521601102841807638
+    second: GET HERE_190
+  - first:
+      213: -5372694831637711437
+    second: GET HERE_191
+  - first:
+      213: 5898725728574680675
+    second: GET HERE_192
+  - first:
+      213: 8596668126532696032
+    second: GET HERE_193
+  - first:
+      213: 1588161551794240829
+    second: GET HERE_194
+  - first:
+      213: 3976881316426500873
+    second: GET HERE_195
+  - first:
+      213: 785949777030526267
+    second: GET HERE_196
+  - first:
+      213: -1491716250843652647
+    second: GET HERE_197
+  - first:
+      213: -3091516297383327422
+    second: GET HERE_198
+  - first:
+      213: 592931452223094324
+    second: GET HERE_199
+  - first:
+      213: -4356209394227397271
+    second: GET HERE_200
+  - first:
+      213: 1228811665099496888
+    second: GET HERE_201
+  - first:
+      213: -7808000247926682774
+    second: GET HERE_202
+  - first:
+      213: -8968238911676890294
+    second: GET HERE_203
+  - first:
+      213: 2509102523955968425
+    second: GET HERE_204
+  - first:
+      213: -489054054474474154
+    second: GET HERE_205
+  - first:
+      213: 2894971860530182648
+    second: GET HERE_206
+  - first:
+      213: -1199605229479139182
+    second: GET HERE_207
+  - first:
+      213: -5050862446217637423
+    second: GET HERE_208
+  - first:
+      213: 7662202174118126047
+    second: GET HERE_209
+  - first:
+      213: 1837339928069767911
+    second: GET HERE_210
+  - first:
+      213: 5122403248877683089
+    second: GET HERE_211
+  - first:
+      213: 1254388231340798556
+    second: GET HERE_212
+  - first:
+      213: -6967053452894002587
+    second: GET HERE_213
+  - first:
+      213: -4035816060308101962
+    second: GET HERE_214
+  - first:
+      213: -6057003451195252715
+    second: GET HERE_215
+  - first:
+      213: 4483888794893203332
+    second: GET HERE_216
+  - first:
+      213: -1943272550201355020
+    second: GET HERE_217
+  - first:
+      213: -4300543229327972128
+    second: GET HERE_218
+  - first:
+      213: -8669085870259596404
+    second: GET HERE_219
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GET HERE_11
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 863
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0395524c73d56f930800000000000000
+      internalID: 4176628198528080176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 863
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8801208dd60ec0800000000000000
+      internalID: -3600947309656371264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_42
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 746
+        width: 454
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb524be899976c50800000000000000
+      internalID: 6658459456151641067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_54
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 746
+        width: 453
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c985a942b224b8d60800000000000000
+      internalID: 7893475524962048156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_75
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 628
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77303f6c52f15ad0800000000000000
+      internalID: -2715122621511354497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_87
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 628
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9669ef34a65e43670800000000000000
+      internalID: 8517685039834502761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_109
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 510
+        width: 454
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf514f279b24a910800000000000000
+      internalID: 1847649675461615537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_144
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 393
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fff55a2e08e1e500800000000000000
+      internalID: 423874987487002611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_156
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 393
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7070820007ef270800000000000000
+      internalID: 8286183510382151587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_180
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 275
+        width: 452
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01635bd2b88f2c3b0800000000000000
+      internalID: -5493555318787590640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_196
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 158
+        width: 453
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35b337782148ea00800000000000000
+      internalID: 785949777030526267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GET HERE_213
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 40
+        width: 453
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56228113ccd005f90800000000000000
+      internalID: -6967053452894002587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
