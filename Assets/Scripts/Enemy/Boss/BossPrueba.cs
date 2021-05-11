@@ -327,13 +327,14 @@ public class BossPrueba : Enemy
         }
         
     }
+    /*
     IEnumerator Hitted()
     {
 
         yield return new WaitForSeconds(0.1f);
 
     }
-
+    */
     void Die()
     {
 
