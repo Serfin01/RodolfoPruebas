@@ -19682,7 +19682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 44.131668, y: 27.531626, z: -218.2969}
+  m_LocalPosition: {x: 44.131668, y: 27.53162, z: -167.61688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -21067,7 +21067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 44.131668, y: 27.531626, z: -218.2969}
+  m_LocalPosition: {x: 44.131668, y: 27.53162, z: -167.61688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27346,6 +27346,10 @@ PrefabInstance:
       propertyPath: spawnRodolfo.Array.data[10]
       value: 
       objectReference: {fileID: 1608619657}
+    - target: {fileID: 1374927242, guid: 3d07f696c9f56744cbdd9e13677e4588, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2136640123, guid: 3d07f696c9f56744cbdd9e13677e4588, type: 3}
       propertyPath: spawnRodolfo.Array.data[0]
       value: 
@@ -27443,7 +27447,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -190.1
+      value: -139.42
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
