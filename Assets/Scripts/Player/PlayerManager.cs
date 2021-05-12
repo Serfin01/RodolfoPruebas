@@ -21,7 +21,7 @@ public class PlayerManager : Player
             
             Debug.Log("maricon");
             gameObject.GetComponentInChildren<Animator>().enabled = false;
-            gameObject.GetComponent<MovePlayer>().canMove = false;
+            gameObject.GetComponent<a>().canMove = false;
             ragDoll.SetActive(true);
             isAlive = false;
             LoadNextLevel();

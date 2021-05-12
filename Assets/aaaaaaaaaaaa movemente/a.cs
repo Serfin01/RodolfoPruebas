@@ -10,8 +10,9 @@ public class a : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float gravity = -9.81f;
+    public bool canMove = true;
 
-    [SerializeField] GameObject shadow;
+    //[SerializeField] GameObject shadow;
 
     Animator _animator;
 
@@ -36,7 +37,6 @@ public class a : MonoBehaviour
     Vector3 velocity;
     Vector3 move;
     bool isGrounded;
-    bool canMove = true;
     bool isMoving = true;
 
     [Header("Fall Settings")]
@@ -65,7 +65,7 @@ public class a : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        
+        /*
         if (isGrounded)
         {
             shadow.SetActive(true);
@@ -74,7 +74,7 @@ public class a : MonoBehaviour
         {
             shadow.SetActive(false);
         }
-        
+        */
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
