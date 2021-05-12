@@ -43,9 +43,9 @@ public class LevelLoade_Game : MonoBehaviour
         Screen.SetResolution(width, height, fullscreen);
     }
 
-    public void SetVolume(float volume)
+    public void SetVolume(float sliderValue)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", Mathf.Log10(sliderValue) * 20);
     }
 
     public void OnSliGammaValue(float newValue)
@@ -54,16 +54,14 @@ public class LevelLoade_Game : MonoBehaviour
         liftGammaGain.gamma.value = Vector4.one * newValue;
     }
 
-    public void SetMusicVolume(float volume)
+    public void SetMusicVolume(float sliderValue)
     {
-        audioMixer.SetFloat("Music", volume);
-
+        audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
     }
 
-    public void SetSfxVolume(float volume)
+    public void SetSfxVolume(float sliderValue)
     {
-        audioMixer.SetFloat("Sfx", volume);
-
+        audioMixer.SetFloat("Sfx", Mathf.Log10(sliderValue) * 20);
     }
 
     public void SetQuality(int qualityIndex)
