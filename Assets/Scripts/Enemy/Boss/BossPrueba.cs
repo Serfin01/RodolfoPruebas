@@ -258,7 +258,7 @@ public class BossPrueba : Enemy
             melee = false;
             speedBoost = false;
         }
-        if (distancia <= 3f)
+        if (distancia <= 4f)
         {
             canMove = false;
             Debug.Log("moverse");
@@ -354,5 +354,12 @@ public class BossPrueba : Enemy
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(5);
+    }
+
+    IEnumerator Hitted()
+    {
+        //cuerpo.GetComponent<SkinnedMeshRenderer>().material = hitmat;
+        yield return new WaitForSeconds(0.1f);
+        //cuerpo.GetComponent<SkinnedMeshRenderer>().material = normalmat;
     }
 }

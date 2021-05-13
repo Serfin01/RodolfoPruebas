@@ -13,6 +13,7 @@ public class PlayerManager : Player
     [SerializeField] GameObject ragDoll;
     public AudioSource ADeath;
     public bool isAlive = true;
+    [SerializeField] int healing;
 
     void Update()
     {
@@ -63,6 +64,13 @@ public class PlayerManager : Player
             FindObjectOfType<AudioManager>().Play("hitted");
             _animator.SetTrigger("hitted");
 
+        }
+        if (other.CompareTag("MediKit"))
+        {
+            if(currentHealth < maxHealth)
+            {
+                currentHealth += healing;
+            }
         }
     }
 
