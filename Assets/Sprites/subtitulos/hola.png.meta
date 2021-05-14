@@ -177,9 +177,9 @@ TextureImporter:
       name: hola_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 12
         y: 403
-        width: 60
+        width: 78
         height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -198,9 +198,9 @@ TextureImporter:
       name: hola_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 11
         y: 300
-        width: 117
+        width: 138
         height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -219,9 +219,9 @@ TextureImporter:
       name: hola_3
       rect:
         serializedVersion: 2
-        x: 19
+        x: 9
         y: 200
-        width: 209
+        width: 232
         height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -240,9 +240,9 @@ TextureImporter:
       name: hola_6
       rect:
         serializedVersion: 2
-        x: 19
+        x: 10
         y: 100
-        width: 293
+        width: 307
         height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -261,9 +261,9 @@ TextureImporter:
       name: hola_9
       rect:
         serializedVersion: 2
-        x: 19
+        x: 14
         y: 0
-        width: 381
+        width: 373
         height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

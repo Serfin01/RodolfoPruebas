@@ -16732,6 +16732,7 @@ GameObject:
   - component: {fileID: 1309327513}
   - component: {fileID: 1309327516}
   - component: {fileID: 1309327517}
+  - component: {fileID: 1309327518}
   m_Layer: 5
   m_Name: TriggerSubtitles
   m_TagString: Untagged
@@ -16779,6 +16780,7 @@ MonoBehaviour:
     - 'I can show you the way, just listen to me. '
     - See those little islands? You can use the (space) dash to go from one to another.
       Try it!
+  radio: {fileID: 1309327518}
 --- !u!4 &1309327515
 Transform:
   m_ObjectHideFlags: 0
@@ -16826,6 +16828,103 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &1309327518
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309327512}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 768438988030003119, guid: 2b606f523d4dc1c4eaf76528debfc17b,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 92d1af90b2fee98449c170afafc41ef1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.543
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1318495957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19733,7 +19832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 5.431667, y: 27.531622, z: -80.5969}
+  m_LocalPosition: {x: -96.16844, y: 27.531624, z: -74.2969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -21118,7 +21217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 5.431667, y: 27.531622, z: -80.5969}
+  m_LocalPosition: {x: -96.16844, y: 27.531624, z: -74.2969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22496,6 +22595,7 @@ MonoBehaviour:
     - 'You can defend yourself with (left click) your gun.
 
 '
+  radio: {fileID: 0}
 --- !u!4 &1771154886
 Transform:
   m_ObjectHideFlags: 0
@@ -24468,12 +24568,12 @@ PrefabInstance:
     - target: {fileID: 8868487683579952230, guid: f81443aeebac64347a673bbd01a58069,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.6
+      value: 7.89
       objectReference: {fileID: 0}
     - target: {fileID: 8868487683579952230, guid: f81443aeebac64347a673bbd01a58069,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.84
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8868487683579952230, guid: f81443aeebac64347a673bbd01a58069,
         type: 3}
@@ -24563,7 +24663,7 @@ PrefabInstance:
     - target: {fileID: 8868487683579952231, guid: f81443aeebac64347a673bbd01a58069,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.3
+      value: 1.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81443aeebac64347a673bbd01a58069, type: 3}
@@ -27766,7 +27866,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5
+      value: -96.1
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -27776,7 +27876,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -52.4
+      value: -46.1
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}

@@ -218,6 +218,18 @@ TextureImporter:
   - first:
       213: -7750514355470272928
     second: AnyoneThere_71
+  - first:
+      213: -6712961110302975970
+    second: AnyoneThere_0
+  - first:
+      213: 4915762228337374207
+    second: AnyoneThere_4
+  - first:
+      213: 6571738041698136145
+    second: AnyoneThere_11
+  - first:
+      213: 3092119522849177900
+    second: AnyoneThere_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -354,19 +366,61 @@ TextureImporter:
       name: AnyoneThere_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 443
-        width: 39
-        height: 41
+        x: 27
+        y: 892
+        width: 77
+        height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d88f9f0be27b74360800000000000000
-      internalID: 7153887944266872973
+      spriteID: e18116ddf65c6d2a0800000000000000
+      internalID: -6712961110302975970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 892
+        width: 789
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0129e787f556d8990800000000000000
+      internalID: -7382132753472515568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_3
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 771
+        width: 153
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4b3e7307db3c440800000000000000
+      internalID: 4955012304709334218
       vertices: []
       indices: 
       edges: []
@@ -375,40 +429,166 @@ TextureImporter:
       name: AnyoneThere_4
       rect:
         serializedVersion: 2
-        x: 76
-        y: 442
-        width: 412
-        height: 43
+        x: 230
+        y: 771
+        width: 750
+        height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361045003a5a508c0800000000000000
-      internalID: -4033635771736653469
+      spriteID: ff3f45ca3bb483440800000000000000
+      internalID: 4915762228337374207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnyoneThere_11
+      name: AnyoneThere_6
       rect:
         serializedVersion: 2
-        x: 12
-        y: 383
-        width: 74
-        height: 41
+        x: 27
+        y: 650
+        width: 222
+        height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2ff07b08ab7f06b0800000000000000
-      internalID: -5327903872479330513
+      spriteID: cf4fd5c64f09d8780800000000000000
+      internalID: -8679121527408560900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_7
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 650
+        width: 709
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3279b9ec56a355520800000000000000
+      internalID: 2690120561356150563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 529
+        width: 288
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6392c94ea978b29e0800000000000000
+      internalID: -1645072139543631562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_10
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 529
+        width: 633
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc341b80b4fb82b0800000000000000
+      internalID: -5581098274110817091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_12
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 408
+        width: 365
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d96416e6b260460800000000000000
+      internalID: 7207496006731472204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_13
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 287
+        width: 424
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e395c186747c940800000000000000
+      internalID: 5316296397611941407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnyoneThere_14
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 166
+        width: 516
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feb35a34a4899560800000000000000
+      internalID: 7321028510155521776
       vertices: []
       indices: 
       edges: []
@@ -417,187 +597,19 @@ TextureImporter:
       name: AnyoneThere_16
       rect:
         serializedVersion: 2
-        x: 114
-        y: 382
-        width: 378
-        height: 43
+        x: 27
+        y: 45
+        width: 586
+        height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4a2475ebd6587b10800000000000000
-      internalID: 1979427538676755018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_23
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 323
-        width: 107
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1eca78145b055ef60800000000000000
-      internalID: 8062939447295454433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_29
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 322
-        width: 352
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da07e0ae46736f040800000000000000
-      internalID: 4680989769261281453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_35
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 262
-        width: 149
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e63ea73f9c1681810800000000000000
-      internalID: 1736245176352564078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_42
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 262
-        width: 320
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de869bb087e731150800000000000000
-      internalID: 5842152195687540973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_47
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 202
-        width: 184
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 180e90e8aa08dad80800000000000000
-      internalID: -8237786673374961535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_52
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 142
-        width: 211
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01f1e64062560fe80800000000000000
-      internalID: -8146900511955738864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_61
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 82
-        width: 263
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e37114b4dbe61e800800000000000000
-      internalID: 639914381353752382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnyoneThere_68
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 22
-        width: 293
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f58167b3b93010bc0800000000000000
-      internalID: -3818767043781060513
+      spriteID: c21c972c25a69ea20800000000000000
+      internalID: 3092119522849177900
       vertices: []
       indices: 
       edges: []

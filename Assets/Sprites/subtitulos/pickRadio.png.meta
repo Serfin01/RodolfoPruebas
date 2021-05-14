@@ -628,11 +628,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 27
-        y: 854
-        width: 330
-        height: 116
+        y: 847
+        width: 379
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,12 +648,12 @@ TextureImporter:
       name: pickRadio_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 854
-        width: 333
-        height: 116
+        x: 422
+        y: 850
+        width: 380
+        height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -670,11 +670,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 25
-        y: 724
-        width: 333
-        height: 116
+        y: 721
+        width: 380
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -690,12 +690,12 @@ TextureImporter:
       name: pickRadio_3
       rect:
         serializedVersion: 2
-        x: 371
-        y: 723
-        width: 333
-        height: 117
+        x: 422
+        y: 719
+        width: 379
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -712,11 +712,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 594
-        width: 332
-        height: 117
+        y: 590
+        width: 379
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -732,12 +732,12 @@ TextureImporter:
       name: pickRadio_5
       rect:
         serializedVersion: 2
-        x: 371
-        y: 594
-        width: 333
-        height: 117
+        x: 421
+        y: 590
+        width: 382
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -754,11 +754,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 465
-        width: 332
-        height: 116
+        y: 459
+        width: 379
+        height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -774,12 +774,12 @@ TextureImporter:
       name: pickRadio_7
       rect:
         serializedVersion: 2
-        x: 371
-        y: 465
-        width: 333
-        height: 116
+        x: 420
+        y: 461
+        width: 380
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -796,11 +796,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 335
-        width: 332
-        height: 117
+        y: 333
+        width: 379
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -816,12 +816,12 @@ TextureImporter:
       name: pickRadio_9
       rect:
         serializedVersion: 2
-        x: 371
-        y: 335
-        width: 333
-        height: 117
+        x: 421
+        y: 329
+        width: 379
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -838,11 +838,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 206
-        width: 332
-        height: 116
+        y: 201
+        width: 379
+        height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -858,12 +858,12 @@ TextureImporter:
       name: pickRadio_11
       rect:
         serializedVersion: 2
-        x: 371
-        y: 206
-        width: 332
-        height: 116
+        x: 421
+        y: 203
+        width: 380
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -880,11 +880,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 27
-        y: 76
-        width: 331
-        height: 116
+        y: 72
+        width: 379
+        height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -900,12 +900,12 @@ TextureImporter:
       name: pickRadio_13
       rect:
         serializedVersion: 2
-        x: 371
-        y: 76
-        width: 333
-        height: 116
+        x: 422
+        y: 71
+        width: 379
+        height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

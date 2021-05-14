@@ -10,6 +10,8 @@ public class CollectSubtitles : MonoBehaviour
 
     public Dialogue dialogue;
 
+    public AudioSource radio;
+
     Animator triggerAnim;
     DialogManager dialogManager;
 
@@ -28,6 +30,7 @@ public class CollectSubtitles : MonoBehaviour
             animSubDown.SetTrigger("Disapear");
 
             TriggerDialogue();
+            radio.Play();
         }
     }
     private void OnTriggerStay(Collider other)
@@ -46,6 +49,7 @@ public class CollectSubtitles : MonoBehaviour
             animSubUp.SetTrigger("desapear");
             triggerAnim.SetTrigger("up");
             //Debug.Log("*** CollectSubtitles.OnTriggerExit: in objecte" + gameObject.name + " found animator " + triggerAnim);
+            radio.Stop();
         }
     }
 
