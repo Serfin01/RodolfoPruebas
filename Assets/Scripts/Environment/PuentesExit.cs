@@ -15,6 +15,7 @@ public class PuentesExit : MonoBehaviour
         {
             enemies[i].SetActive(true);
         }
+
     }
     /*
     public void Pergaminos(int vidaRodolfo)

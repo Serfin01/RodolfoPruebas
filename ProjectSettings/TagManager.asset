@@ -15,6 +15,7 @@ TagManager:
   - SubtitleUP
   - BalaProta
   - MediKit
+  - enter
   layers:
   - Default
   - TransparentFX

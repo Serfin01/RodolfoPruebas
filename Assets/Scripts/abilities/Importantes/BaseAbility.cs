@@ -33,6 +33,17 @@ public abstract class BaseAbility : MonoBehaviour
         usedSpell = true;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("enter"))
+        {
+            if (usedSpell == true)
+            {
+                Debug.Log("fuera");
+            }
+        }
+    }
+
     public void SetImageCooldown(Image jose)
     {
         imageCooldown = jose;

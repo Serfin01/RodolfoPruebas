@@ -19832,7 +19832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: -96.16844, y: 27.531624, z: -74.2969}
+  m_LocalPosition: {x: 6.241667, y: 27.53162, z: -90.22688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -21217,7 +21217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: -96.16844, y: 27.531624, z: -74.2969}
+  m_LocalPosition: {x: 6.241667, y: 27.53162, z: -90.22688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23287,7 +23287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844290135}
   m_Layer: 0
-  m_Name: marti
+  m_Name: marti, boss, fuera habilidades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27340,7 +27340,7 @@ PrefabInstance:
     - target: {fileID: 7693044935936994107, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7693044936090062975, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -27472,6 +27472,11 @@ PrefabInstance:
       propertyPath: enemies.Array.data[6]
       value: 
       objectReference: {fileID: 177466003}
+    - target: {fileID: 7693044936908508664, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_TagString
+      value: enter
+      objectReference: {fileID: 0}
     - target: {fileID: 7693044937075920764, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: enemies.Array.data[0]
@@ -27866,7 +27871,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -96.1
+      value: 6.31
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -27876,7 +27881,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -46.1
+      value: -62.03
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
