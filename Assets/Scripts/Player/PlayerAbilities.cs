@@ -21,7 +21,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public bool dentro = false;
 
-    [SerializeField] Espacios[] espacios = new Espacios[4];
+    public Espacios[] espacios = new Espacios[4];
 
     [SerializeField] Sprite[] abilitySprite = new Sprite[5];
 
@@ -109,6 +109,22 @@ public class PlayerAbilities : MonoBehaviour
         else
         {
             //tamo lleno bro
+        }
+    }
+    
+
+    public void RemoveAbilityImage(int currentAbilityRemove)
+    {
+        for (int i = 0; i < espacios.Length; i++)
+        {
+            if (espacios[i].isfull)
+            {
+                espacios[i].slotAbility = null;
+                espacios[i].slotAbility.SetImageCooldown(espacios[i].cooldownImage);
+                espacios[i].abilityImage.sprite = null;
+                espacios[i].isfull = false;
+                return;
+            }
         }
     }
 }

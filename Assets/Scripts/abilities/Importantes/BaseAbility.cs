@@ -12,7 +12,14 @@ public abstract class BaseAbility : MonoBehaviour
     [SerializeField] protected Image imageCooldown;
 
     bool usedSpell = false;
+    GameObject player;
+    PlayerAbilities playerAb;
+    public int espacio = 0;
 
+    private void Start()
+    {
+        playerAb = GameObject.Find("Player").GetComponent<PlayerAbilities>();
+    }
     protected virtual void ApplyCooldown()
     {
         cooldown -= Time.deltaTime;
@@ -31,15 +38,29 @@ public abstract class BaseAbility : MonoBehaviour
     public virtual void UseSpell()
     {
         usedSpell = true;
+        //Espacio();
     }
 
-    private void OnTriggerEnter(Collider other)
+    void Espacio()
+    {
+        for (int i = 0; i < playerAb.espacios.Length; i++)
+        {
+            if (playerAb.espacios[i].isfull)
+            {
+                espacio++;
+                return;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("enter"))
         {
             if (usedSpell == true)
             {
                 Debug.Log("fuera");
+                playerAb.RemoveAbilityImage(espacio);
             }
         }
     }

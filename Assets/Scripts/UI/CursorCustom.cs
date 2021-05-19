@@ -7,8 +7,8 @@ public class CursorCustom : MonoBehaviour
 {
     public static CursorCustom instance;
 
-    [SerializeField] GameObject menuCursor;
-    [SerializeField] Texture2D gameCursor;
+    [SerializeField] GameObject cursor;
+    //[SerializeField] Texture2D gameCursor;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,7 +33,7 @@ public class CursorCustom : MonoBehaviour
     {
         Cursor.visible = false;
         Vector2 mousePos = Input.mousePosition;
-        menuCursor.transform.position = mousePos;
+        cursor.transform.position = mousePos;
     }
 
     void Menu()
