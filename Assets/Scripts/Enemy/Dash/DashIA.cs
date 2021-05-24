@@ -54,7 +54,6 @@ public class DashIA : Enemy
         normalSpeed = agent.speed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
@@ -65,42 +64,19 @@ public class DashIA : Enemy
             {
                 StartCoroutine(Dash());
             }
-            //agent.enabled = true;
-            //animatorMarti.SetFloat("speed", 0f);
-            //collider.enabled = true;
-            //if (distance <= lookRadius)
-            //{
-            //    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trPlayer.position - transform.position), rotSpeed * Time.deltaTime);
-            //    agent.SetDestination(target.position);
-            //    animatorMarti.SetFloat("speed", 1f);
-            //    audioSteps.enabled = true;
-            //}
-
-                //if(distance <= dashDistance)
-                //{
-                //    //Dash();
-                //    StartCoroutine("Dash");
-                //    audioSteps.enabled = false;
-                //    //audioSteps.Stop();
-                //}
 
         }
-        else
+        if (isAttacking)
         {
-            /*
-            audioSteps.enabled = false;
-            animatorMarti.SetFloat("speed", 0f);
-            agent = GetComponent<NavMeshAgent>();
-            agent.isStopped = true;
-            collider.enabled = false;
-            */
+            
+            if(agent.remainingDistance <= 0.01f)
+            {
+                isAttacking = false;
+                canMove = false;
+                StartCoroutine(TimeStunned());
+            }
         }
 
-        if(setDestin && isAttacking)
-        {
-
-            agent.SetDestination(target.position);
-        }
         //GetComponent<NavMeshAgent>().speed = 10f;
     }
     /*
@@ -121,8 +97,10 @@ public class DashIA : Enemy
         yield return new WaitForSeconds(0.3f);
 
         agent.speed = dashSpeed;
+        Vector3 currentPlayerPos = trPlayer.position;
+        agent.SetDestination(currentPlayerPos);
+        
         setDestin = true;
-        Debug.Log(agent.hasPath);
 
         /*
         animatorMarti.SetFloat("speed", 2f);
@@ -141,6 +119,14 @@ public class DashIA : Enemy
         animatorMarti.SetFloat("speed", 1f);
         canMove = true;
         */
+    }
+    IEnumerator TimeStunned()
+    {
+
+        yield return new WaitForSeconds(2f);
+
+        canMove = true;
+        agent.speed = normalSpeed;
     }
 
     IEnumerator Die()

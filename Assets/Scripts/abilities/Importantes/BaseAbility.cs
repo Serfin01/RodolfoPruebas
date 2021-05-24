@@ -14,7 +14,6 @@ public abstract class BaseAbility : MonoBehaviour
     bool usedSpell = false;
     GameObject player;
     PlayerAbilities playerAb;
-    public int espacio = 0;
 
     private void Start()
     {
@@ -41,29 +40,6 @@ public abstract class BaseAbility : MonoBehaviour
         //Espacio();
     }
 
-    void Espacio()
-    {
-        for (int i = 0; i < playerAb.espacios.Length; i++)
-        {
-            if (playerAb.espacios[i].isfull)
-            {
-                espacio++;
-                return;
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("enter"))
-        {
-            if (usedSpell == true)
-            {
-                Debug.Log("fuera");
-                playerAb.RemoveAbilityImage(espacio);
-            }
-        }
-    }
 
     public void SetImageCooldown(Image jose)
     {

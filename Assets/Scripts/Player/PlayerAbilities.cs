@@ -12,6 +12,7 @@ public class Espacios
     public Image abilityImage;
     public BaseAbility slotAbility;
     public Image cooldownImage;
+    public bool abilityUsed = false;
 }
 
 public class PlayerAbilities : MonoBehaviour
@@ -52,7 +53,15 @@ public class PlayerAbilities : MonoBehaviour
 
     void CastSpell()
     {
-        espacios[numberKey].slotAbility.UseSpell();
+        if (espacios[numberKey].slotAbility != null)
+        {
+            espacios[numberKey].slotAbility.UseSpell();
+            espacios[numberKey].abilityUsed = true;
+        }
+        else
+        {
+            //sonidito de aqui no hay hab
+        }
     }
 
     private void OnEnable()
@@ -113,17 +122,17 @@ public class PlayerAbilities : MonoBehaviour
     }
     
 
-    public void RemoveAbilityImage(int currentAbilityRemove)
+    public void RemoveAbilityImage()
     {
         for (int i = 0; i < espacios.Length; i++)
         {
-            if (espacios[i].isfull)
+            if (espacios[i].isfull && espacios[i].abilityUsed)
             {
+                Destroy(espacios[i].slotAbility);
                 espacios[i].slotAbility = null;
-                espacios[i].slotAbility.SetImageCooldown(espacios[i].cooldownImage);
                 espacios[i].abilityImage.sprite = null;
                 espacios[i].isfull = false;
-                return;
+                espacios[i].abilityUsed = false;
             }
         }
     }
