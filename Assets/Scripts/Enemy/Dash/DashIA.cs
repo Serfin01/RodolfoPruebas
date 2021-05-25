@@ -37,7 +37,7 @@ public class DashIA : Enemy
     [SerializeField] Material normalmat;
     [SerializeField] GameObject cuerpo;
 
-    public BoxCollider collider;
+    public BoxCollider colider;
 
 
     private void Awake()
@@ -59,18 +59,23 @@ public class DashIA : Enemy
         float distance = Vector3.Distance(target.position, transform.position);
         if (canMove && !isAttacking)
         {
+            animatorMarti.SetTrigger("run");
+            audioSteps.enabled = true;
             agent.SetDestination(target.position);
             if (distance <= lookRadius)
             {
                 StartCoroutine(Dash());
             }
 
+
         }
         if (isAttacking)
         {
-            
-            if(agent.remainingDistance <= 0.01f)
+            //animatorMarti.SetTrigger("attack");
+            if (agent.remainingDistance <= 0.01f)
             {
+                //animatorMarti.SetTrigger("stop");
+                Debug.Log("parao");
                 isAttacking = false;
                 canMove = false;
                 StartCoroutine(TimeStunned());
@@ -91,10 +96,13 @@ public class DashIA : Enemy
 
     IEnumerator Dash()
     {
+        animatorMarti.SetTrigger("attack");
+        audiorun.enabled = true;
         isAttacking = true;
         agent.speed = 0f;
 
         yield return new WaitForSeconds(0.3f);
+
 
         agent.speed = dashSpeed;
         Vector3 currentPlayerPos = trPlayer.position;
@@ -122,6 +130,10 @@ public class DashIA : Enemy
     }
     IEnumerator TimeStunned()
     {
+        //Debug.Log("parao");
+
+        animatorMarti.SetTrigger("stop");
+        audiostop.enabled = true;
 
         yield return new WaitForSeconds(2f);
 
@@ -133,6 +145,8 @@ public class DashIA : Enemy
     {
         canMove = false;
         animatorMarti.SetTrigger("dead");
+        agent.isStopped = true;
+        colider.enabled = false;
         yield return new WaitForSeconds(3f);
         GameObject.Destroy(gameObject);
     }

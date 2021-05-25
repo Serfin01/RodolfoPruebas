@@ -10098,7 +10098,7 @@ MonoBehaviour:
   sounds:
   - name: dash
     clip: {fileID: 8300000, guid: 3c966b1e22eed984c82dff5a2e3f9953, type: 3}
-    volume: 0.175
+    volume: 0.316
     volumeVariance: 0.078
     pitch: 1
     pitchVariance: 0.175
@@ -10136,7 +10136,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: enemyDeath
     clip: {fileID: 8300000, guid: c7fc4aa56724e2d40a4bb9ec28b732a4, type: 3}
-    volume: 0.462
+    volume: 0.337
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.128
@@ -10145,7 +10145,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: "Pu\xF1akosWalk"
     clip: {fileID: 8300000, guid: 25a009c9db6992a42b967fde16cba0f8, type: 3}
-    volume: 0.272
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.128
@@ -10182,7 +10182,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: "pu\xF1akoPunch"
     clip: {fileID: 8300000, guid: c8e1206902337a946ab159db9d98b371, type: 3}
-    volume: 0.64
+    volume: 1
     volumeVariance: 0
     pitch: 1.69
     pitchVariance: 0
@@ -13129,6 +13129,12 @@ Rigidbody:
 --- !u!1 &1198729433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2518297750193428389, guid: 3b8cfd684a095884798f4c3cd88ca145,
+    type: 3}
+  m_PrefabInstance: {fileID: 7693044936939668959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1198729439 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2518297750193428386, guid: 3b8cfd684a095884798f4c3cd88ca145,
     type: 3}
   m_PrefabInstance: {fileID: 7693044936939668959}
   m_PrefabAsset: {fileID: 0}
@@ -23847,7 +23853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 9.298021, y: 27.531622, z: -181.54689}
+  m_LocalPosition: {x: 9.307272, y: 27.531622, z: -181.54689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -25342,7 +25348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 9.298021, y: 27.531622, z: -181.54689}
+  m_LocalPosition: {x: 9.307272, y: 27.531622, z: -181.54689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32028,7 +32034,7 @@ PrefabInstance:
     - target: {fileID: 2518297750193428389, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2518297751787266896, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -32039,6 +32045,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858707800779484, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 25.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747858708725030319, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.408
       objectReference: {fileID: 0}
     - target: {fileID: 2910837202999529621, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -32204,6 +32245,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178372606318961074, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3681909689700104332, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -32428,6 +32499,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 60157e25893ad0f469791d488144cf3f, type: 2}
+    - target: {fileID: 7337313056968173732, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337313056968173732, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337313056968173732, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337313056968173732, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337313056968173732, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 498.62
+      objectReference: {fileID: 0}
     - target: {fileID: 7350514841022494385, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32441,7 +32537,7 @@ PrefabInstance:
     - target: {fileID: 7576973972708038684, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7576973973088850875, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -32608,6 +32704,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7693044935840257433, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044935840257433, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044935840257433, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044935840257433, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044935840257433, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7693044935936994107, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
@@ -32708,6 +32829,11 @@ PrefabInstance:
       propertyPath: dashSpeed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7693044936677270666, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: colider
+      value: 
+      objectReference: {fileID: 1198729439}
     - target: {fileID: 7693044936677270667, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_AngularSpeed
@@ -32841,6 +32967,41 @@ PrefabInstance:
     - target: {fileID: 7693044937075920765, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 499.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693044937084150352, guid: 3b8cfd684a095884798f4c3cd88ca145,
+        type: 3}
+      propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7693044937288310524, guid: 3b8cfd684a095884798f4c3cd88ca145,
