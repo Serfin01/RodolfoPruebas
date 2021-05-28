@@ -193,11 +193,13 @@ public class a : MonoBehaviour
     IEnumerator Dash()
     {
         float startTime = Time.time;
+        FindObjectOfType<AudioManager>().Play("dash");
 
-        while(Time.time < startTime + dashTime)
+        while (Time.time < startTime + dashTime)
         {
             controller.Move(move * dashSpeed * Time.deltaTime);
             dash.emitting = true;
+
             yield return null;
         }
     }

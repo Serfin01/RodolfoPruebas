@@ -32,6 +32,8 @@ public class TurretEnemy : Enemy
     [SerializeField] Material normalmat;
     [SerializeField] GameObject cuerpo;
 
+    public AudioSource audioShoot;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -101,6 +103,7 @@ public class TurretEnemy : Enemy
         if (canShoot) {
             CapyAnim.SetBool("Disparar", true);
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            audioShoot.Play();
         }
     }
 

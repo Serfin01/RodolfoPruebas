@@ -23,7 +23,7 @@ public class FollowEnemy : Enemy
     // Use this for initialization
     void Start()
     {
-
+        Steps.Play();
         trPlayer = GameObject.FindGameObjectWithTag("Player").transform;        
 
     }
@@ -68,7 +68,6 @@ public class FollowEnemy : Enemy
     void Damage()
     {
         Debug.Log("la picadura de la cobra gei");
-        Steps.Play();
     }
 
     void OnDrawGizmosSelected()
@@ -93,6 +92,7 @@ public class FollowEnemy : Enemy
         {
             Damage();
             other.GetComponent<Player>().Damaged(damage);
+            FindObjectOfType<AudioManager>().Play("puñakoPunch");
         }
         /*
         if (other.CompareTag("BalaProta"))
