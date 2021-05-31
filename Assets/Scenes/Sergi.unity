@@ -1479,15 +1479,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123030916}
     m_Modifications:
+    - target: {fileID: 2964311835806044619, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: m_TagString
+      value: BulletEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
         type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: TriggerModule.collisionShape0
+      value: 
+      objectReference: {fileID: 857289125}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: TriggerModule.inside
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311835806044628, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964311836205995704, guid: fb1c56550d982b540936b89ebcdf5196,
         type: 3}
       propertyPath: m_Name
       value: explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964311836205995704, guid: fb1c56550d982b540936b89ebcdf5196,
+        type: 3}
+      propertyPath: m_TagString
+      value: BulletEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 2964311836205995707, guid: fb1c56550d982b540936b89ebcdf5196,
         type: 3}
@@ -3640,6 +3690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ShapeModule.radius.value
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717754708172766250, guid: c38b0edbab73062449d1a6a71d3a582b,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38b0edbab73062449d1a6a71d3a582b, type: 3}
@@ -12637,7 +12692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db784507e05a494b9dc052f4dbec0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   trPlayer: {fileID: 1938820798}
   moveSpeed: 3
   startWaitTime: 3
@@ -12648,7 +12703,7 @@ MonoBehaviour:
   bullets3Fase1: {fileID: 965309836}
   bulletsFase2: {fileID: 1846016480}
   explosionParticulas: {fileID: 1228963379}
-  punch: {fileID: 5655736305663846146, guid: b5ca8b5d652f23542a16ddeb463fcdfd, type: 3}
+  punch: {fileID: 3326433410030087472, guid: 7dc11871ba8ea6549979fceeb5fb8b40, type: 3}
   transition: {fileID: 326770372}
   transitionTime: 1
   damage: 30
@@ -24100,7 +24155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576936878}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 200.25168, y: 27.531622, z: -167.1369}
+  m_LocalPosition: {x: 203.39168, y: 27.531622, z: -171.68689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752161958}
@@ -25595,7 +25650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639170965}
   m_LocalRotation: {x: 0.3738782, y: 0, z: 0, w: 0.92747784}
-  m_LocalPosition: {x: 200.25168, y: 27.531622, z: -167.1369}
+  m_LocalPosition: {x: 203.39168, y: 27.531622, z: -171.68689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27732,7 +27787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844290135}
   m_Layer: 0
-  m_Name: ' boss, torreta dispara antes de aparecer'
+  m_Name: plataformeo roto, torreta dispara antes de aparecer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32784,7 +32839,7 @@ PrefabInstance:
     - target: {fileID: 7576973972708038684, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576973973088850875, guid: 3b8cfd684a095884798f4c3cd88ca145,
         type: 3}
@@ -33640,7 +33695,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 200.32
+      value: 203.46
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -33650,7 +33705,7 @@ PrefabInstance:
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -138.94
+      value: -143.49
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322394, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}
@@ -33691,6 +33746,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749059508418322396, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: m_Height
+      value: 3.3289027
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749059508418322396, guid: 3d07f696c9f56744cbdd9e13677e4588,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.7603498
       objectReference: {fileID: 0}
     - target: {fileID: 8749059508418322398, guid: 3d07f696c9f56744cbdd9e13677e4588,
         type: 3}

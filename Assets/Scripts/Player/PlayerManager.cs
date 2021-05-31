@@ -96,4 +96,11 @@ public class PlayerManager : Player
         _animator.SetTrigger("hitted");
         currentHealth -= damage;
     }
+
+
+    private void OnParticleTrigger()
+    {
+        Damaged(20);
+        Debug.Log("dañoParticula");
+    }
 }

@@ -347,6 +347,7 @@ public class BossPrueba : Enemy
         StartCoroutine(LoadLevel());
     }
 
+
     IEnumerator LoadLevel()
     {
         transition.SetTrigger("Start");

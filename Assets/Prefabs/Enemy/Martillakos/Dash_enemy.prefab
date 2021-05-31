@@ -318,7 +318,7 @@ MonoBehaviour:
   hitmat: {fileID: 2100000, guid: 449dfd2df2b5d654c969f353b07dd1b4, type: 2}
   normalmat: {fileID: 2100000, guid: 5ed423501ab938e468da0125bc143b13, type: 2}
   cuerpo: {fileID: 8882242601011248643}
-  collider: {fileID: 5202191838511679680}
+  colider: {fileID: 5202191838511679680}
 --- !u!195 &2128165865
 NavMeshAgent:
   m_ObjectHideFlags: 0
