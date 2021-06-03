@@ -59,12 +59,9 @@ public class a : MonoBehaviour
     
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+       
 
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+     
         /*
         if (isGrounded)
         {
@@ -110,9 +107,9 @@ public class a : MonoBehaviour
             _animator.SetFloat("velX", localVelocity.x, 0.1f, Time.deltaTime);
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        Gravity();
 
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime); //Solo la gravedad
 
         if (isCooldownDash)
         {
@@ -132,6 +129,20 @@ public class a : MonoBehaviour
         }
     }
 
+    void Gravity()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        
+        if (isGrounded)
+        {
+            velocity.y = -2f;
+            Debug.Log(velocity.y);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+        Debug.Log(velocity.y);
+
+    }
     void CooldownDash()
     {
         cooldownDash -= Time.deltaTime;
