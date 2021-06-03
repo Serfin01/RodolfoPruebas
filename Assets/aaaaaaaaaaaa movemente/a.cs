@@ -136,11 +136,9 @@ public class a : MonoBehaviour
         if (isGrounded)
         {
             velocity.y = -2f;
-            Debug.Log(velocity.y);
         }
 
         velocity.y += gravity * Time.deltaTime;
-        Debug.Log(velocity.y);
 
     }
     void CooldownDash()

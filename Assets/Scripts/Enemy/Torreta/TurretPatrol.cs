@@ -95,6 +95,7 @@ public class TurretPatrol : MonoBehaviour
         {
             GetComponent<Collider>().enabled = true;
             audio.Stop();
+            turretEnemy.InicializeCountDown();
             turretEnemy.canShoot = true;
         }
 
@@ -114,7 +115,7 @@ public class TurretPatrol : MonoBehaviour
         else
         {
             CapyAnim.SetBool("moverse", false);
-            CapyAnim.SetBool("salirSuelo", true);
+            CapyAnim.SetBool("Disparar", true);
         }
     }
 

@@ -82,13 +82,12 @@ public class TurretEnemy : Enemy
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        if(fireCountdown <= 0f)
-        {
-            Shoot();
-            fireCountdown = 1f / fireRate;
-        }
+        //if(fireCountdown <= 0f)
+        //{
+        //    InicializeCountDown();
+        //}
 
-        fireCountdown -= Time.deltaTime;
+        //fireCountdown -= Time.deltaTime;
 
         if(health <= 0)
         {
@@ -97,14 +96,19 @@ public class TurretEnemy : Enemy
         }
     }
     //que pida bool canShoot y le meto el if correspondiente
+
+    public void InicializeCountDown()
+    {
+        fireCountdown = 1f / fireRate;
+        Debug.Log("iasas");
+    }
     public void Shoot()
     {
-        //Debug.Log("shoot");
-        if (canShoot) {
-            CapyAnim.SetBool("Disparar", true);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            audioShoot.Play();
-        }
+        
+        CapyAnim.SetBool("Disparar", true);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        audioShoot.Play();
+        
     }
 
     void OnDrawGizmosSelected()

@@ -11,10 +11,13 @@ public class CreateShield : BaseAbility
     Ray myRay;
     RaycastHit hit;
 
+    int ignoreMask;
+
     private void Start()
     {
         shield = Resources.Load<GameObject>("Escudo");
         iniCooldown = 3;
+        ignoreMask = LayerMask.GetMask("Ground");
     }
 
     private void Update()
@@ -30,18 +33,24 @@ public class CreateShield : BaseAbility
         base.UseSpell();
         Debug.Log("Shield");
         myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(myRay, out hit))
+        if (Physics.Raycast(myRay, out hit, Mathf.Infinity, ignoreMask))
         {
-            if (isCooldown)
+            Debug.Log(hit.collider.gameObject.name);
+            if(hit.collider.gameObject.layer == 8)
             {
-                //StartCoroutine(Shot());
+                if (isCooldown)
+                {
+                    //StartCoroutine(Shot());
+                }
+                else
+                {
+                    InstantiateShield();
+                    isCooldown = true;
+                }
             }
-            else
-            {
-                InstantiateShield();
-                isCooldown = true;
-            }
-        }/*
+            
+        }
+            /*
 
         if (isCooldown)
         {
