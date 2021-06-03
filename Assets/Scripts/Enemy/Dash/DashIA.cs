@@ -103,7 +103,6 @@ public class DashIA : Enemy
 
         yield return new WaitForSeconds(0.3f);
 
-
         agent.speed = dashSpeed;
         Vector3 currentPlayerPos = trPlayer.position;
         agent.SetDestination(currentPlayerPos);
@@ -132,11 +131,10 @@ public class DashIA : Enemy
     {
         //Debug.Log("parao");
 
-        animatorMarti.SetTrigger("stop");
         audiostop.enabled = true;
-
+        animatorMarti.SetTrigger("stop");
         yield return new WaitForSeconds(2f);
-
+        animatorMarti.SetTrigger("run");
         canMove = true;
         agent.speed = normalSpeed;
     }
