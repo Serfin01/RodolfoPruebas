@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader_Ending : MonoBehaviour
+public class LevelLoader_Cine : MonoBehaviour
 {
 	public Animator transition;
 
@@ -21,7 +21,7 @@ public class LevelLoader_Ending : MonoBehaviour
 
 		yield return new WaitForSeconds(transitionTime);
 
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(3);
 	}
 	
 	public void LoadRetryLevel()
@@ -35,7 +35,7 @@ public class LevelLoader_Ending : MonoBehaviour
 
 		yield return new WaitForSeconds(transitionTime);
 
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(3);
 	}
 
 	public void GoToMenu()

@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 1a52f7dc3008ae04a874c2fb31ddb52e
   - enabled: 1
+    path: Assets/Scenes/Cinematica.unity
+    guid: 09a9fe6f8f26a744481169ca5a6fca94
+  - enabled: 1
     path: Assets/Scenes/Sergi.unity
     guid: 92c412c75d7309849960078ebe91f53e
-  - enabled: 1
-    path: Assets/Materials/Options.unity
-    guid: 9a498f8df12f33545aaa4a96dbc11d6a
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: 5c58d1adba379ec4bbee8de5898abeb5
