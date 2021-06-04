@@ -14,6 +14,7 @@ public class PuentesEnter : MonoBehaviour
         if (transform.childCount == 0 && puenteEnter.Length == 1)
         {
             puenteEnter[0].SetActive(true);
+            GetComponent<PuentesEnter>().enabled = false;
         }
         if (transform.childCount == 0 && puenteEnter.Length == 2)
         {

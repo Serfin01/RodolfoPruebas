@@ -9,7 +9,7 @@ public class ShootTurretAnimation : MonoBehaviour
     void Start()
     {
         turretEnemy = GetComponentInParent<TurretEnemy>();
-        Debug.LogError(turretEnemy.gameObject.name);
+        //Debug.LogError(turretEnemy.gameObject.name);
         
     }
 
