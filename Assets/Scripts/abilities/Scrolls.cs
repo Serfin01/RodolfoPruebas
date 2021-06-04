@@ -13,7 +13,6 @@ public class Scrolls : MonoBehaviour
         {1, typeof(Laser) },
         {2, typeof(Invisibility) },
         {3, typeof(AttackSpeed) },
-        {4, typeof(CreateGeiser) },
     };
 
     void OnEnable()
