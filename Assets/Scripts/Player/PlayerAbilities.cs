@@ -89,6 +89,7 @@ public class PlayerAbilities : MonoBehaviour
             {
                 closeScroll.AddScroll(gameObject);
                 dentro = false;
+                FindObjectOfType<AudioManager>().Play("pergamino");
             }
         }
     }

@@ -70,6 +70,7 @@ public class PlayerManager : Player
             if(currentHealth < maxHealth)
             {
                 currentHealth += healing;
+                FindObjectOfType<AudioManager>().Play("zumo");
             }
         }
     }
