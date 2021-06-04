@@ -24,7 +24,13 @@ public class BossCinematic : MonoBehaviour
             videoobj.SetActive(true);
             cam1.SetActive(false);
             Debug.Log("videoPlays");
+        }
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
             if (Input.GetButtonDown("Fire1"))
             {
                 Time.timeScale = 1f;
@@ -34,6 +40,23 @@ public class BossCinematic : MonoBehaviour
                 Destroy(this);
             }
         }
+
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Time.timeScale = 1f;
+                cam1.SetActive(true);
+                videoobj.SetActive(false);
+                Debug.Log("videoEnds");
+                Destroy(this);
+            }
+        }
+
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
