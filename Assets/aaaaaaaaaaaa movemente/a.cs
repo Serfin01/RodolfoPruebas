@@ -44,6 +44,10 @@ public class a : MonoBehaviour
     [SerializeField] GameObject ragDoll;
     int fall = 15;
 
+    public GameObject Godmode;
+
+    bool GodmodeOn;
+    
     private void Awake()
     {
         /*
@@ -109,6 +113,22 @@ public class a : MonoBehaviour
 
         Gravity();
 
+        /*if (Input.GetKeyDown(KeyCode.F10))
+        {
+            Debug.Log("f10");
+            if(!GodmodeOn)
+            {
+                godmodeON();
+                Debug.Log("godmodeon");
+            }
+            else
+            {
+                godmodeOFF();
+                Debug.Log("godmodeFF");
+            }
+
+        }*/
+
         controller.Move(velocity * Time.deltaTime); //Solo la gravedad
 
         if (isCooldownDash)
@@ -127,6 +147,7 @@ public class a : MonoBehaviour
                 Debug.Log("dash2");
             }
         }
+
     }
 
     void Gravity()
@@ -212,4 +233,22 @@ public class a : MonoBehaviour
             yield return null;
         }
     }
+
+    /*void godmodeON ()
+    {
+        Godmode.SetActive(true);
+        GetComponent<Collider>().enabled = false;
+        gravity = 0f;
+        velocity.y = 0f;
+        GodmodeOn = true;
+    }
+
+    void godmodeOFF ()
+    {
+        GetComponent<Collider>().enabled = true;
+        Godmode.SetActive(false);
+        gravity = -9.81f;
+        velocity.y = -2f;
+        GodmodeOn = false;
+    }*/
 }

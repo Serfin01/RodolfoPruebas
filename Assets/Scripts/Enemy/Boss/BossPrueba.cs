@@ -354,7 +354,7 @@ public class BossPrueba : Enemy
         //Debug.Log("se carga la sieguiente escena");
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 
     IEnumerator Hitted()
