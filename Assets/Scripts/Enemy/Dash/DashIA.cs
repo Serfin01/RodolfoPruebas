@@ -29,8 +29,8 @@ public class DashIA : Enemy
     public Animator animatorMarti;
 
     public AudioSource audioSteps;
-    public AudioSource audiorun;
-    public AudioSource audiostop;
+    //public AudioSource audiorun;
+    //public AudioSource audiostop;
 
     [Header("RedHit")]
     [SerializeField] Material hitmat;
@@ -43,8 +43,8 @@ public class DashIA : Enemy
     private void Awake()
     {
         audioSteps.enabled = false;
-        audiorun.enabled = false;
-        audiostop.enabled = false;
+        //audiorun.enabled = false;
+        //audiostop.enabled = false;
     }
 
     void Start()
@@ -97,7 +97,7 @@ public class DashIA : Enemy
     IEnumerator Dash()
     {
         animatorMarti.SetTrigger("attack");
-        audiorun.enabled = true;
+        //audiorun.enabled = true;
         isAttacking = true;
         agent.speed = 0f;
 
@@ -131,7 +131,7 @@ public class DashIA : Enemy
     {
         //Debug.Log("parao");
 
-        audiostop.enabled = true;
+        //audiostop.enabled = true;
         animatorMarti.SetTrigger("stop");
         yield return new WaitForSeconds(2f);
         animatorMarti.SetTrigger("run");
