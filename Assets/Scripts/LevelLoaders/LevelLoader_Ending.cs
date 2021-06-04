@@ -35,7 +35,7 @@ public class LevelLoader_Ending : MonoBehaviour
 
 		yield return new WaitForSeconds(transitionTime);
 
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(3);
 	}
 
 	public void GoToMenu()
